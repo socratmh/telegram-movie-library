@@ -164,6 +164,11 @@ export function adminMigrateLibrary(id, data) {
   return mutate(`${ADMIN}/libraries/${id}/migrate`, 'POST', data);
 }
 
+/** Admin: launch TV channel migration. */
+export function adminMigrateTVLibrary(id, data) {
+  return mutate(`${ADMIN}/tv-libraries/${id}/migrate`, 'POST', data);
+}
+
 /** Admin: list all tasks. */
 export function adminFetchTasks() {
   return request(`${ADMIN}/tasks`);

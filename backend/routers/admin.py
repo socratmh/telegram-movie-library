@@ -253,6 +253,28 @@ def admin_migrate_library(library_id: int, body: MigrationRequest, request: Requ
     return TaskResponse(**task.to_dict())
 
 
+@router.post("/tv-libraries/{library_id}/migrate", response_model=TaskResponse)
+def admin_migrate_tv_library(library_id: int, body: MigrationRequest, request: Request):
+    """Launch channel migration for a TV library."""
+    SessionLocal = _get_session_factory(request)
+    with SessionLocal() as session:
+        lib = session.execute(
+            select(TVLibrary).where(TVLibrary.id == library_id)
+        ).scalar_one_or_none()
+        if not lib:
+            raise HTTPException(404, "TV Library not found")
+
+    tasks = _get_tasks(request)
+    task = tasks.launch_tv_migration(
+        library_id,
+        body.new_channel,
+        body.new_channel_id,
+        body.dry_run,
+        f"TV Migration: library {library_id}" + (" (dry-run)" if body.dry_run else ""),
+    )
+    return TaskResponse(**task.to_dict())
+
+
 # ------------------------------------------------------------------
 # Task status & logs
 # ------------------------------------------------------------------

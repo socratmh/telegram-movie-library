@@ -169,6 +169,41 @@ class TaskManager:
         self._run_script(task, cmd, {})
         return task
 
+    def launch_tv_migration(
+        self,
+        library_id: int,
+        new_channel: str,
+        new_channel_id: str | None = None,
+        dry_run: bool = False,
+        description: str = "",
+    ) -> TaskInfo:
+        """Launch migrate_tv_channel_links.py for a specific TV library."""
+        task_id = self._make_id("tv-migrate")
+        log_path = _LOG_DIR / f"{task_id}.log"
+
+        cmd = [
+            _PYTHON,
+            str(_PROJECT_ROOT / "migrate_tv_channel_links.py"),
+            "--library-id", str(library_id),
+            "--new-channel", new_channel,
+        ]
+        if new_channel_id:
+            cmd.extend(["--new-channel-id", new_channel_id])
+        if dry_run:
+            cmd.append("--dry-run")
+
+        task = TaskInfo(
+            id=task_id,
+            task_type=TaskType.MIGRATION,
+            library_id=library_id,
+            log_file=str(log_path),
+            description=description or f"TV Migration library {library_id}{' (dry-run)' if dry_run else ''}",
+            extra={"dry_run": dry_run, "new_channel": new_channel, "new_channel_id": new_channel_id, "is_tv": True},
+        )
+
+        self._run_script(task, cmd, {})
+        return task
+
     def launch_tv_scan(
         self,
         library_id: int,

@@ -1,0 +1,24 @@
+[DB] Using SQLite: sqlite:///C:\Users\socrat\Desktop\Movis_with_Telegram\database\movies.db
+TV Library: ??????? ?????? (id=1)
+  Old channel: https://t.me/Series7h7
+  New channel: https://t.me/Series7h7
+
+Loaded 175 existing TV series for matching.
+
+Connecting to Telegram and scraping: https://t.me/Series7h7
+This may take a while for large channels...
+
+Auto-resolved channel ID from Telegram: 3447332061
+
+Scraped 370 messages, found 175 TV series candidates.
+
+============================================================
+  TV MATCHING RESULTS
+============================================================
+  Total scraped series     : 175
+  Matched (exact title)    : 175
+  Matched (fuzzy)          : 0
+  Unmatched                : 0
+============================================================
+
+DRY RUN — no database changes made.

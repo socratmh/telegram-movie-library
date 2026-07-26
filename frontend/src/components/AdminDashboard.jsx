@@ -7,6 +7,7 @@ import {
   adminScanLibrary,
   adminUpdateTmdb,
   adminMigrateLibrary,
+  adminMigrateTVLibrary,
   adminFetchTasks,
   adminFetchTaskLogs,
   adminCancelTask,
@@ -169,7 +170,7 @@ function TVLibraryForm({ library, onSave, onCancel }) {
 }
 
 
-function MigrateForm({ library, onClose }) {
+function MigrateForm({ library, isTV = false, onClose }) {
   const [form, setForm] = useState({
     new_channel: '',
     new_channel_id: '',
@@ -188,7 +189,11 @@ function MigrateForm({ library, onClose }) {
     try {
       const payload = { ...form };
       if (!payload.new_channel_id) payload.new_channel_id = null;
-      await adminMigrateLibrary(library.id, payload);
+      if (isTV) {
+        await adminMigrateTVLibrary(library.id, payload);
+      } else {
+        await adminMigrateLibrary(library.id, payload);
+      }
       onClose('launched');
     } catch (err) {
       alert('Error: ' + err.message);
@@ -200,7 +205,7 @@ function MigrateForm({ library, onClose }) {
   return (
     <div className="admin-modal-overlay" onClick={onClose}>
       <div className="admin-modal" onClick={(e) => e.stopPropagation()}>
-        <h3>Migrate Channel — {library.name}</h3>
+        <h3>Migrate Channel — {library.name} {isTV ? '(TV Series)' : ''}</h3>
         <p className="admin-migrate-info">
           Current channel: <code>{library.telegram_channel}</code>
         </p>
@@ -500,7 +505,7 @@ export default function AdminDashboard({ onBack, onLogout, lang = 'en' }) {
                       <button className="admin-btn admin-btn-sm admin-btn-secondary" onClick={() => setEditLib(lib)} title="Edit">✏️</button>
                       <button className="admin-btn admin-btn-sm admin-btn-primary" onClick={() => handleScan(lib)} title="Scan channel">📡</button>
                       <button className="admin-btn admin-btn-sm admin-btn-accent" onClick={() => handleTmdb(lib)} title="TMDB update">🎬</button>
-                      <button className="admin-btn admin-btn-sm admin-btn-warning" onClick={() => setMigrateLib(lib)} title="Migrate channel">🔄</button>
+                      <button className="admin-btn admin-btn-sm admin-btn-warning" onClick={() => setMigrateLib({ library: lib, isTV: false })} title="Migrate channel">🔄</button>
                       <button className="admin-btn admin-btn-sm admin-btn-danger" onClick={() => handleDeleteLib(lib)} title="Delete">🗑️</button>
                     </td>
                   </tr>
@@ -559,6 +564,7 @@ export default function AdminDashboard({ onBack, onLogout, lang = 'en' }) {
                       <button className="admin-btn admin-btn-sm admin-btn-secondary" onClick={() => setEditTVLib(lib)} title="Edit">✏️</button>
                       <button className="admin-btn admin-btn-sm admin-btn-primary" onClick={() => handleTVScan(lib)} title="Scan channel">📡</button>
                       <button className="admin-btn admin-btn-sm admin-btn-accent" onClick={() => handleTVTmdb(lib)} title="TMDB update">🎬</button>
+                      <button className="admin-btn admin-btn-sm admin-btn-warning" onClick={() => setMigrateLib({ library: lib, isTV: true })} title="Migrate channel">🔄</button>
                       <button className="admin-btn admin-btn-sm admin-btn-danger" onClick={() => handleDeleteTVLib(lib)} title="Delete">🗑️</button>
                     </td>
                   </tr>
@@ -643,7 +649,8 @@ export default function AdminDashboard({ onBack, onLogout, lang = 'en' }) {
       )}
       {migrateLib && (
         <MigrateForm
-          library={migrateLib}
+          library={migrateLib.library}
+          isTV={migrateLib.isTV}
           onClose={(result) => { setMigrateLib(null); if (result) { setActiveTab('tasks'); refreshData(); } }}
         />
       )}

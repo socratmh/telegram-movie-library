@@ -50,5 +50,7 @@
   "48": "Layout.jsx",
   "49": "Pagination.jsx",
   "50": "SearchBar.jsx",
-  "51": "StatsPanel.jsx"
+  "51": "StatsPanel.jsx",
+  "52": "process_series",
+  "53": "adminAuth.js"
 }
