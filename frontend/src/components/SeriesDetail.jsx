@@ -106,7 +106,9 @@ export default function SeriesDetail({ seriesId, onClose, lang = 'en' }) {
               {tmdb?.poster_url ? (
                 <img className="modal-poster" src={tmdb.poster_url} alt={series.title} />
               ) : (
-                <div className="modal-poster-placeholder">📺</div>
+                <div className="modal-poster-placeholder">
+                  <span className="no-poster-text">{series.title}</span>
+                </div>
               )}
 
               {/* Info */}

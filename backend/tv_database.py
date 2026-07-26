@@ -8,7 +8,7 @@ from sqlalchemy import select, func, distinct, case, and_
 from sqlalchemy.orm import Session
 
 from database.models import init_db
-from database.tv_models import TVLibrary, TVSeries, TMDBTVSeries
+from database.tv_models import TVLibrary, TVSeries, TMDBTVSeries, FeaturedTVSeries
 
 TMDB_IMAGE_BASE = "https://image.tmdb.org/t/p"
 
@@ -299,3 +299,100 @@ class SeriesQueries:
                 "series_with_tmdb": with_tmdb,
                 "series_without_tmdb": total - with_tmdb,
             }
+
+    # ------------------------------------------------------------------
+    # Featured TV Series queries
+    # ------------------------------------------------------------------
+
+    def get_featured_tv_series(self) -> list[dict[str, Any]]:
+        with self._get_session() as session:
+            rows = session.execute(
+                select(FeaturedTVSeries).order_by(FeaturedTVSeries.created_at.desc(), FeaturedTVSeries.id.desc())
+            ).scalars().all()
+            return [
+                {
+                    "id": row.id,
+                    "title": row.title,
+                    "poster_url": row.poster_url,
+                    "telegram_channel_link": row.telegram_channel_link,
+                    "description": row.description,
+                    "category": row.category or "Trending",
+                }
+                for row in rows
+            ]
+
+    def get_featured_tv_series_by_id(self, item_id: int) -> dict[str, Any] | None:
+        with self._get_session() as session:
+            row = session.execute(
+                select(FeaturedTVSeries).where(FeaturedTVSeries.id == item_id)
+            ).scalar_one_or_none()
+            if row is None:
+                return None
+            return {
+                "id": row.id,
+                "title": row.title,
+                "poster_url": row.poster_url,
+                "telegram_channel_link": row.telegram_channel_link,
+                "description": row.description,
+                "category": row.category or "Trending",
+            }
+
+    def create_featured_tv_series(self, data: dict[str, Any]) -> dict[str, Any]:
+        with self._get_session() as session:
+            entry = FeaturedTVSeries(
+                title=data["title"],
+                poster_url=data["poster_url"],
+                telegram_channel_link=data["telegram_channel_link"],
+                description=data.get("description"),
+                category=data.get("category") or "Trending",
+            )
+            session.add(entry)
+            session.commit()
+            session.refresh(entry)
+            return {
+                "id": entry.id,
+                "title": entry.title,
+                "poster_url": entry.poster_url,
+                "telegram_channel_link": entry.telegram_channel_link,
+                "description": entry.description,
+                "category": entry.category,
+            }
+
+    def update_featured_tv_series(self, item_id: int, data: dict[str, Any]) -> dict[str, Any] | None:
+        with self._get_session() as session:
+            entry = session.execute(
+                select(FeaturedTVSeries).where(FeaturedTVSeries.id == item_id)
+            ).scalar_one_or_none()
+            if entry is None:
+                return None
+            if "title" in data and data["title"] is not None:
+                entry.title = data["title"]
+            if "poster_url" in data and data["poster_url"] is not None:
+                entry.poster_url = data["poster_url"]
+            if "telegram_channel_link" in data and data["telegram_channel_link"] is not None:
+                entry.telegram_channel_link = data["telegram_channel_link"]
+            if "description" in data:
+                entry.description = data["description"]
+            if "category" in data and data["category"] is not None:
+                entry.category = data["category"]
+            session.commit()
+            session.refresh(entry)
+            return {
+                "id": entry.id,
+                "title": entry.title,
+                "poster_url": entry.poster_url,
+                "telegram_channel_link": entry.telegram_channel_link,
+                "description": entry.description,
+                "category": entry.category,
+            }
+
+    def delete_featured_tv_series(self, item_id: int) -> bool:
+        with self._get_session() as session:
+            entry = session.execute(
+                select(FeaturedTVSeries).where(FeaturedTVSeries.id == item_id)
+            ).scalar_one_or_none()
+            if entry is None:
+                return False
+            session.delete(entry)
+            session.commit()
+            return True

@@ -1,7 +1,7 @@
 /**
  * API client — thin wrapper around fetch for the /api endpoints.
  */
-import { getAuthHeaders, refreshAccessToken } from './adminAuth';
+import { getAuthHeaders, getAuthHeadersAsync, refreshAccessToken } from './adminAuth';
 
 // Use 127.0.0.1 to avoid Windows localhost IPv6 resolution issues
 const isLocal = window.location.hostname === 'localhost' || 
@@ -267,4 +267,71 @@ export function adminScanTVLibrary(id) {
 /** Admin: launch TMDB update for TV library. */
 export function adminUpdateTVTmdb(id) {
   return mutate(`${ADMIN}/tv-libraries/${id}/update-tmdb`, 'POST');
+}
+
+// ---------------------------------------------------------------------------
+// Featured TV Series & Media Upload APIs
+// ---------------------------------------------------------------------------
+
+/** Public: fetch all featured/trending TV series. */
+export function fetchFeaturedTVSeries() {
+  return request('/api/featured-tv');
+}
+
+/** Admin: list all featured TV series entries. */
+export function adminFetchFeaturedTVSeries() {
+  return request(`${ADMIN}/featured-tv`);
+}
+
+/** Admin: create a new featured TV series entry. */
+export function adminCreateFeaturedTVSeries(data) {
+  return mutate(`${ADMIN}/featured-tv`, 'POST', data);
+}
+
+/** Admin: update a featured TV series entry. */
+export function adminUpdateFeaturedTVSeries(id, data) {
+  return mutate(`${ADMIN}/featured-tv/${id}`, 'PUT', data);
+}
+
+/** Admin: delete a featured TV series entry. */
+export function adminDeleteFeaturedTVSeries(id) {
+  return mutate(`${ADMIN}/featured-tv/${id}`, 'DELETE');
+}
+
+/** Admin: upload an image file (returns { url: '/uploads/xxx.png' }). */
+export async function adminUploadImage(formData) {
+  const authHeaders = await getAuthHeadersAsync();
+  const res = await fetch(`${ADMIN}/upload-image`, {
+    method: 'POST',
+    headers: {
+      ...authHeaders,
+    },
+    body: formData,
+  });
+  if (!res.ok) {
+    const errorBody = await res.json().catch(() => ({}));
+    throw new Error(errorBody.detail || `Upload error HTTP ${res.status}`);
+  }
+  return res.json();
+}
+
+/** Helper to format image URLs (e.g. resolve relative /uploads/ URLs to full backend URL). */
+export function formatImageUrl(url) {
+  if (!url) return '';
+  if (url.startsWith('http://') || url.startsWith('https://') || url.startsWith('data:')) {
+    return url;
+  }
+  if (url.startsWith('/uploads') || url.startsWith('uploads/')) {
+    const cleanPath = url.startsWith('/') ? url : `/${url}`;
+    const host = window.location.hostname || '127.0.0.1';
+    const isLocal = host === 'localhost' || 
+                    host === '127.0.0.1' || 
+                    host.startsWith('192.168.') || 
+                    host.startsWith('10.');
+    const backendBase = isLocal
+      ? `http://${host}:8000`
+      : (import.meta.env.VITE_API_URL || '');
+    return `${backendBase}${cleanPath}`;
+  }
+  return url;
 }

@@ -21,7 +21,7 @@ export default function SeriesCard({ series, onClick, lang = 'en' }) {
         />
       ) : (
         <div className="movie-card-no-poster" aria-label={isAr ? 'الملصق غير متوفر' : 'No poster available'}>
-          📺
+          <span className="no-poster-text">{series.title}</span>
         </div>
       )}
 

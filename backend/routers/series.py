@@ -6,6 +6,7 @@ from fastapi import APIRouter, Depends, HTTPException, Query, Request
 
 from backend.tv_database import SeriesQueries
 from backend.tv_models import (
+    FeaturedTVListResponse,
     SeriesDetailResponse,
     SeriesGenreListResponse,
     SeriesPaginatedResponse,
@@ -19,6 +20,14 @@ router = APIRouter(prefix="/api", tags=["series"])
 
 def _get_queries(request: Request) -> SeriesQueries:
     return request.app.state.series_queries  # type: ignore[return-value]
+
+
+@router.get("/featured-tv", response_model=FeaturedTVListResponse)
+def list_featured_tv(
+    queries: SeriesQueries = Depends(_get_queries),
+) -> FeaturedTVListResponse:
+    """Return all manually managed featured/trending TV series."""
+    return FeaturedTVListResponse(items=queries.get_featured_tv_series())
 
 
 # ---------------------------------------------------------------------------

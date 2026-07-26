@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { fetchLibraries, fetchTVLibraries } from '../api/client';
 import { translateLibraryName } from '../utils/translator';
+import FeaturedSeriesSection from './FeaturedSeriesSection';
 
 export default function LibraryGrid({ onSelectLibrary, onSelectTVLibrary, lang = 'en' }) {
   const [libraries, setLibraries] = useState([]);
@@ -128,6 +129,11 @@ export default function LibraryGrid({ onSelectLibrary, onSelectTVLibrary, lang =
             <p>{isAr ? 'لا توجد مكتبات مسلسلات حالياً' : 'No TV series libraries found'}</p>
           </div>
         )}
+      </div>
+
+      {/* Featured & Trending TV Series Section */}
+      <div style={{ marginTop: '5rem', paddingBottom: '2rem' }}>
+        <FeaturedSeriesSection lang={lang} />
       </div>
     </div>
   );

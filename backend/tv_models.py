@@ -164,3 +164,36 @@ class SeriesStatsResponse(BaseModel):
     total_series: int
     series_with_tmdb: int
     series_without_tmdb: int
+
+
+# ---------------------------------------------------------------------------
+# Featured TV Series
+# ---------------------------------------------------------------------------
+
+class FeaturedTVResponse(BaseModel):
+    id: int
+    title: str
+    poster_url: str
+    telegram_channel_link: str
+    description: str | None = None
+    category: str | None = "Trending"
+
+
+class FeaturedTVListResponse(BaseModel):
+    items: list[FeaturedTVResponse]
+
+
+class FeaturedTVCreateRequest(BaseModel):
+    title: str
+    poster_url: str
+    telegram_channel_link: str
+    description: str | None = None
+    category: str | None = "Trending"
+
+
+class FeaturedTVUpdateRequest(BaseModel):
+    title: str | None = None
+    poster_url: str | None = None
+    telegram_channel_link: str | None = None
+    description: str | None = None
+    category: str | None = None

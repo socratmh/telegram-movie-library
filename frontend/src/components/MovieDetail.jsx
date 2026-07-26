@@ -90,7 +90,9 @@ export default function MovieDetail({ movieId, onClose, lang = 'en' }) {
               {tmdb?.poster_url ? (
                 <img className="modal-poster" src={tmdb.poster_url} alt={movie.title} />
               ) : (
-                <div className="modal-poster-placeholder">🎬</div>
+                <div className="modal-poster-placeholder">
+                  <span className="no-poster-text">{movie.title}</span>
+                </div>
               )}
 
               {/* Info */}

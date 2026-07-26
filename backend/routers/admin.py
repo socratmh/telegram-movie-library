@@ -2,7 +2,10 @@
 
 from __future__ import annotations
 
-from fastapi import APIRouter, Depends, HTTPException, Request
+import os
+import uuid
+from pathlib import Path
+from fastapi import APIRouter, Depends, HTTPException, Request, File, UploadFile
 from sqlalchemy import select, func
 
 from backend.auth import get_current_admin
@@ -20,6 +23,10 @@ from backend.tv_models import (
     TVLibraryCreateRequest,
     TVLibraryUpdateRequest,
     TVLibraryDetailResponse,
+    FeaturedTVCreateRequest,
+    FeaturedTVUpdateRequest,
+    FeaturedTVResponse,
+    FeaturedTVListResponse,
 )
 from database.models import init_db, Library, Movie, TMDBMovie, TelegramMessage
 from database.tv_models import TVLibrary, TVSeries, TMDBTVSeries
@@ -484,4 +491,70 @@ def admin_update_tv_tmdb_library(library_id: int, request: Request):
     tasks = _get_tasks(request)
     task = tasks.launch_tv_tmdb_update(library_id, f"TV TMDB update: library {library_id}")
     return TaskResponse(**task.to_dict())
+
+
+# ------------------------------------------------------------------
+# File Upload Endpoint
+# ------------------------------------------------------------------
+
+@router.post("/upload-image")
+async def admin_upload_image(file: UploadFile = File(...)):
+    """Upload a custom image/poster file and return the access URL."""
+    if not file.content_type or not file.content_type.startswith("image/"):
+        raise HTTPException(400, "File must be an image (jpg, png, webp, etc.)")
+
+    upload_dir = Path("uploads")
+    upload_dir.mkdir(parents=True, exist_ok=True)
+
+    ext = Path(file.filename or "image.jpg").suffix.lower()
+    if not ext or ext not in [".jpg", ".jpeg", ".png", ".webp", ".gif", ".svg"]:
+        ext = ".jpg"
+
+    filename = f"{uuid.uuid4().hex}{ext}"
+    target_path = upload_dir / filename
+
+    content = await file.read()
+    with open(target_path, "wb") as f:
+        f.write(content)
+
+    return {"url": f"/uploads/{filename}"}
+
+
+# ------------------------------------------------------------------
+# Featured TV Series CRUD Endpoints
+# ------------------------------------------------------------------
+
+@router.get("/featured-tv", response_model=FeaturedTVListResponse)
+def admin_list_featured_tv(request: Request) -> FeaturedTVListResponse:
+    """Return all manually managed featured TV series entries."""
+    series_queries = request.app.state.series_queries
+    return FeaturedTVListResponse(items=series_queries.get_featured_tv_series())
+
+
+@router.post("/featured-tv", response_model=FeaturedTVResponse)
+def admin_create_featured_tv(body: FeaturedTVCreateRequest, request: Request) -> FeaturedTVResponse:
+    """Create a new manually managed featured TV series entry."""
+    series_queries = request.app.state.series_queries
+    created = series_queries.create_featured_tv_series(body.model_dump())
+    return FeaturedTVResponse(**created)
+
+
+@router.put("/featured-tv/{item_id}", response_model=FeaturedTVResponse)
+def admin_update_featured_tv(item_id: int, body: FeaturedTVUpdateRequest, request: Request) -> FeaturedTVResponse:
+    """Update an existing featured TV series entry."""
+    series_queries = request.app.state.series_queries
+    updated = series_queries.update_featured_tv_series(item_id, body.model_dump(exclude_unset=True))
+    if updated is None:
+        raise HTTPException(404, "Featured TV Series entry not found")
+    return FeaturedTVResponse(**updated)
+
+
+@router.delete("/featured-tv/{item_id}")
+def admin_delete_featured_tv(item_id: int, request: Request):
+    """Delete a featured TV series entry."""
+    series_queries = request.app.state.series_queries
+    success = series_queries.delete_featured_tv_series(item_id)
+    if not success:
+        raise HTTPException(404, "Featured TV Series entry not found")
+    return {"status": "success", "message": f"Deleted featured TV series {item_id}"}
 

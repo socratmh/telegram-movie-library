@@ -58,3 +58,16 @@ class TVSeries(Base):
 
     library = relationship("TVLibrary", back_populates="series")
     tmdb_tv = relationship("TMDBTVSeries")
+
+
+class FeaturedTVSeries(Base):
+    """Manually managed Trending/Popular/Currently Airing TV series independent of scraped libraries."""
+    __tablename__ = 'featured_tv_series'
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    title = Column(String, nullable=False)
+    poster_url = Column(String, nullable=False)
+    telegram_channel_link = Column(String, nullable=False)
+    description = Column(Text, nullable=True)
+    category = Column(String, nullable=True, default="Trending")  # e.g. "Trending", "Popular", "Currently Airing"
+    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))

@@ -1,7 +1,7 @@
-from __future__ import annotations
-
+import os
 from fastapi import FastAPI, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from starlette.middleware.base import BaseHTTPMiddleware
 
 from backend.config import get_database_path, get_database_url, get_app_env
@@ -57,7 +57,7 @@ class SecurityHeadersMiddleware(BaseHTTPMiddleware):
             "script-src 'self' 'unsafe-inline' 'unsafe-eval'; "
             "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; "
             "font-src 'self' https://fonts.gstatic.com; "
-            "img-src 'self' https://image.tmdb.org data:; "
+            "img-src 'self' https://image.tmdb.org data: blob: http: https:; "
             f"{connect_src} "
             "frame-ancestors 'none'"
         )
@@ -71,6 +71,10 @@ class SecurityHeadersMiddleware(BaseHTTPMiddleware):
 
 
 app.add_middleware(SecurityHeadersMiddleware)
+
+# Mount static uploads directory
+os.makedirs("uploads", exist_ok=True)
+app.mount("/uploads", StaticFiles(directory="uploads"), name="uploads")
 
 # ------------------------------------------------------------------
 # CORS — allow the future Vite dev server and common local origins

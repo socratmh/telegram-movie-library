@@ -17,6 +17,12 @@ import {
   adminDeleteTVLibrary,
   adminScanTVLibrary,
   adminUpdateTVTmdb,
+  adminFetchFeaturedTVSeries,
+  adminCreateFeaturedTVSeries,
+  adminUpdateFeaturedTVSeries,
+  adminDeleteFeaturedTVSeries,
+  adminUploadImage,
+  formatImageUrl,
 } from '../api/client';
 import { translateLibraryName } from '../utils/translator';
 
@@ -235,6 +241,129 @@ function MigrateForm({ library, isTV = false, onClose }) {
 }
 
 
+function FeaturedTVForm({ item, onSave, onCancel }) {
+  const isEdit = !!item;
+  const [form, setForm] = useState({
+    title: item?.title || '',
+    poster_url: item?.poster_url || '',
+    telegram_channel_link: item?.telegram_channel_link || '',
+    description: item?.description || '',
+    category: item?.category || 'Trending',
+  });
+  const [saving, setSaving] = useState(false);
+  const [uploading, setUploading] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm((f) => ({ ...f, [name]: value }));
+  };
+
+  const handleFileUpload = async (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    setUploading(true);
+    try {
+      const formData = new FormData();
+      formData.append('file', file);
+      const res = await adminUploadImage(formData);
+      if (res && res.url) {
+        setForm((f) => ({ ...f, poster_url: res.url }));
+      }
+    } catch (err) {
+      alert('Image upload failed: ' + err.message);
+    } finally {
+      setUploading(false);
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSaving(true);
+    try {
+      if (isEdit) {
+        await adminUpdateFeaturedTVSeries(item.id, form);
+      } else {
+        await adminCreateFeaturedTVSeries(form);
+      }
+      onSave();
+    } catch (err) {
+      alert('Error saving featured series: ' + err.message);
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  return (
+    <div className="admin-modal-overlay" onClick={onCancel}>
+      <div className="admin-modal" onClick={(e) => e.stopPropagation()}>
+        <h3>{isEdit ? 'Edit Featured TV Series' : 'New Featured TV Series'}</h3>
+        <form onSubmit={handleSubmit} className="admin-form">
+          <label>
+            <span>Title</span>
+            <input name="title" value={form.title} onChange={handleChange} required placeholder="e.g. Breaking Bad" />
+          </label>
+
+          <label>
+            <span>Category Tag</span>
+            <select name="category" value={form.category} onChange={handleChange}>
+              <option value="Trending">Trending (شائع)</option>
+              <option value="Popular">Popular (الأكثر مشاهدة)</option>
+              <option value="Currently Airing">Currently Airing (يعرض حالياً)</option>
+            </select>
+          </label>
+
+          <label>
+            <span>Poster Image (Upload File or Enter URL)</span>
+            <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+              <input
+                name="poster_url"
+                value={form.poster_url}
+                onChange={handleChange}
+                required
+                placeholder="Image URL or upload file..."
+                style={{ flex: 1 }}
+              />
+              <label className="admin-btn admin-btn-sm admin-btn-secondary" style={{ cursor: 'pointer', margin: 0, whiteSpace: 'nowrap' }}>
+                {uploading ? 'Uploading...' : '📁 Upload Image'}
+                <input type="file" accept="image/*" onChange={handleFileUpload} style={{ display: 'none' }} disabled={uploading} />
+              </label>
+            </div>
+          </label>
+
+          {form.poster_url && (
+            <div style={{ margin: '0.5rem 0', textAlign: 'center' }}>
+              <img
+                src={formatImageUrl(form.poster_url)}
+                alt="Poster preview"
+                style={{ maxHeight: '120px', borderRadius: '6px', border: '1px solid var(--bg-glass-border)', objectFit: 'cover' }}
+                onError={(e) => { e.target.style.display = 'none'; }}
+              />
+            </div>
+          )}
+
+          <label>
+            <span>Telegram Channel / Message Link</span>
+            <input name="telegram_channel_link" value={form.telegram_channel_link} onChange={handleChange} required placeholder="https://t.me/c/12345678/100 or @channel" />
+          </label>
+
+          <label>
+            <span>Short Description (Optional)</span>
+            <textarea name="description" value={form.description} onChange={handleChange} rows={3} placeholder="Brief summary or description..." />
+          </label>
+
+          <div className="admin-form-actions">
+            <button type="submit" className="admin-btn admin-btn-primary" disabled={saving || uploading}>
+              {saving ? 'Saving...' : (isEdit ? 'Update Series' : 'Create Series')}
+            </button>
+            <button type="button" className="admin-btn admin-btn-secondary" onClick={onCancel}>Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+}
+
+
 function TaskLogViewer({ taskId, onClose }) {
   const [logs, setLogs] = useState('Loading...');
   const [status, setStatus] = useState('');
@@ -294,24 +423,28 @@ function TaskLogViewer({ taskId, onClose }) {
 export default function AdminDashboard({ onBack, onLogout, lang = 'en' }) {
   const [libraries, setLibraries] = useState([]);
   const [tvLibraries, setTvLibraries] = useState([]);
+  const [featuredTV, setFeaturedTV] = useState([]);
   const [tasks, setTasks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [editLib, setEditLib] = useState(null);        // null | 'new' | library object
   const [editTVLib, setEditTVLib] = useState(null);    // null | 'new' | library object
+  const [editFeaturedTV, setEditFeaturedTV] = useState(null); // null | 'new' | item
   const [migrateLib, setMigrateLib] = useState(null);   // null | library object
   const [viewLogs, setViewLogs] = useState(null);       // null | task_id
   const [activeTab, setActiveTab] = useState('libraries');
 
   const refreshData = useCallback(async () => {
     try {
-      const [libs, tvLibs, taskData] = await Promise.all([
+      const [libs, tvLibs, taskData, featuredData] = await Promise.all([
         adminFetchLibraries(),
         adminFetchTVLibraries(),
         adminFetchTasks(),
+        adminFetchFeaturedTVSeries().catch(() => ({ items: [] })),
       ]);
       setLibraries(Array.isArray(libs) ? libs : []);
       setTvLibraries(Array.isArray(tvLibs) ? tvLibs : []);
       setTasks(taskData?.tasks || []);
+      setFeaturedTV(featuredData?.items || []);
     } catch (err) {
       console.error('Admin refresh error:', err);
       if (err.message?.includes('401') || err.message?.includes('Unauthorized')) {
@@ -339,9 +472,19 @@ export default function AdminDashboard({ onBack, onLogout, lang = 'en' }) {
   };
 
   const handleDeleteTVLib = async (lib) => {
-    if (!confirm(`Delete TV library "${lib.name}" and all its ${lib.series_count} TV series? This cannot be undone.`)) return;
+    if (!confirm(`Delete TV library "${lib.name}" and all its ${lib.series_count} series? This cannot be undone.`)) return;
     try {
       await adminDeleteTVLibrary(lib.id);
+      refreshData();
+    } catch (err) {
+      alert('Error: ' + err.message);
+    }
+  };
+
+  const handleDeleteFeaturedTV = async (item) => {
+    if (!confirm(`Delete featured TV series "${item.title}"? This cannot be undone.`)) return;
+    try {
+      await adminDeleteFeaturedTVSeries(item.id);
       refreshData();
     } catch (err) {
       alert('Error: ' + err.message);
@@ -449,6 +592,11 @@ export default function AdminDashboard({ onBack, onLogout, lang = 'en' }) {
         <button className={`admin-tab ${activeTab === 'tv-libraries' ? 'active' : ''}`} onClick={() => setActiveTab('tv-libraries')}>
           📺 TV Libraries {tvLibraries.length > 0 && (
             <span className="admin-badge admin-badge-info">{tvLibraries.length}</span>
+          )}
+        </button>
+        <button className={`admin-tab ${activeTab === 'featured-tv' ? 'active' : ''}`} onClick={() => setActiveTab('featured-tv')}>
+          🌟 Featured TV {featuredTV.length > 0 && (
+            <span className="admin-badge admin-badge-info">{featuredTV.length}</span>
           )}
         </button>
         <button className={`admin-tab ${activeTab === 'tasks' ? 'active' : ''}`} onClick={() => setActiveTab('tasks')}>
@@ -632,6 +780,59 @@ export default function AdminDashboard({ onBack, onLogout, lang = 'en' }) {
         </div>
       )}
 
+      {/* Featured TV Series Tab */}
+      {activeTab === 'featured-tv' && (
+        <div className="admin-section">
+          <div className="admin-section-header">
+            <h2>Featured & Trending TV Series</h2>
+            <button className="admin-btn admin-btn-primary" onClick={() => setEditFeaturedTV('new')}>+ New Featured Series</button>
+          </div>
+
+          <div className="admin-table-wrap">
+            <table className="admin-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Poster</th>
+                  <th>Title</th>
+                  <th>Category</th>
+                  <th>Telegram Link</th>
+                  <th>Description</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                {featuredTV.map((item) => (
+                  <tr key={item.id}>
+                    <td className="admin-cell-id">{item.id}</td>
+                    <td>
+                      {item.poster_url ? (
+                        <img src={formatImageUrl(item.poster_url)} alt="" style={{ width: '45px', height: '65px', objectFit: 'cover', borderRadius: '4px' }} />
+                      ) : (
+                        <span style={{ fontSize: '1.5rem' }}>📺</span>
+                      )}
+                    </td>
+                    <td className="admin-cell-name">{translateLibraryName(item.title, lang)}</td>
+                    <td><span className="admin-badge admin-badge-info">{item.category}</span></td>
+                    <td className="admin-cell-channel" title={item.telegram_channel_link}>
+                      {item.telegram_channel_link?.length > 30 ? item.telegram_channel_link.slice(0, 30) + '…' : item.telegram_channel_link}
+                    </td>
+                    <td className="admin-cell-desc" style={{ maxWidth: '250px' }}>{item.description || '—'}</td>
+                    <td className="admin-cell-actions">
+                      <button className="admin-btn admin-btn-sm admin-btn-secondary" onClick={() => setEditFeaturedTV(item)} title="Edit">✏️</button>
+                      <button className="admin-btn admin-btn-sm admin-btn-danger" onClick={() => handleDeleteFeaturedTV(item)} title="Delete">🗑️</button>
+                    </td>
+                  </tr>
+                ))}
+                {featuredTV.length === 0 && (
+                  <tr><td colSpan="7" className="admin-empty">No featured TV series found. Add one to display it on the main page.</td></tr>
+                )}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
+
       {/* Modals */}
       {editLib && (
         <LibraryForm
@@ -645,6 +846,13 @@ export default function AdminDashboard({ onBack, onLogout, lang = 'en' }) {
           library={editTVLib === 'new' ? null : editTVLib}
           onSave={() => { setEditTVLib(null); refreshData(); }}
           onCancel={() => setEditTVLib(null)}
+        />
+      )}
+      {editFeaturedTV && (
+        <FeaturedTVForm
+          item={editFeaturedTV === 'new' ? null : editFeaturedTV}
+          onSave={() => { setEditFeaturedTV(null); refreshData(); }}
+          onCancel={() => setEditFeaturedTV(null)}
         />
       )}
       {migrateLib && (
