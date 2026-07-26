@@ -5,8 +5,8 @@
     "semantic_hash": "634ffeddb62e7c3294ba39fcc475fa5d"
   },
   "backend/app.py": {
-    "mtime": 1785057985.6578288,
-    "ast_hash": "49a65506dc3bbaebe53542fd05b0f64d",
+    "mtime": 1785101515.065192,
+    "ast_hash": "3520213abb7813532bbfe5bfead2a935",
     "semantic_hash": ""
   },
   "backend/config.py": {
@@ -70,8 +70,8 @@
     "semantic_hash": ""
   },
   "frontend/src/api/client.js": {
-    "mtime": 1785091897.8057747,
-    "ast_hash": "6a0b72df34a9b2d7da52bc498f274ca7",
+    "mtime": 1785098929.3781898,
+    "ast_hash": "41e74b7fade385e341f23cf46fa95491",
     "semantic_hash": ""
   },
   "frontend/src/components/GenreFilter.jsx": {
@@ -85,13 +85,13 @@
     "semantic_hash": ""
   },
   "frontend/src/components/MovieCard.jsx": {
-    "mtime": 1784579210.885039,
-    "ast_hash": "c0808580d391ad19774dded2733c0862",
+    "mtime": 1785100040.9944973,
+    "ast_hash": "50eec6898be6ed15549ded9f56a74f73",
     "semantic_hash": ""
   },
   "frontend/src/components/MovieDetail.jsx": {
-    "mtime": 1784579210.8870375,
-    "ast_hash": "1f52ef485b5e52a214e8ccd127e99312",
+    "mtime": 1785100077.4648292,
+    "ast_hash": "ed5cb47d668b1f65c862089ca44a5e11",
     "semantic_hash": ""
   },
   "frontend/src/components/MovieGrid.jsx": {
@@ -125,9 +125,9 @@
     "semantic_hash": "e13723e2574429d9a6d849727e3ff695"
   },
   "frontend/vite.config.js": {
-    "mtime": 1782641402.024784,
-    "ast_hash": "34dc5da5e2203a3e36a817986df682fe",
-    "semantic_hash": "34dc5da5e2203a3e36a817986df682fe"
+    "mtime": 1785098296.1006913,
+    "ast_hash": "863542c288d89884566f68ae3a6c4b7d",
+    "semantic_hash": ""
   },
   "main.py": {
     "mtime": 1784579210.9180198,
@@ -170,8 +170,8 @@
     "semantic_hash": ""
   },
   "frontend/src/components/LibraryGrid.jsx": {
-    "mtime": 1785090677.2211163,
-    "ast_hash": "411db60530492544f0f16e88ce7aa696",
+    "mtime": 1785100503.8648427,
+    "ast_hash": "8763fff06e6e6538041d7fc799b2045d",
     "semantic_hash": ""
   },
   "scratch/check_libs.py": {
@@ -250,8 +250,8 @@
     "semantic_hash": ""
   },
   "frontend/index.html": {
-    "mtime": 1784579210.8730454,
-    "ast_hash": "c4a3608eed196d6f376ec2abff946018",
+    "mtime": 1785099977.6402807,
+    "ast_hash": "de0f54e21028e285bfc20a5c206e6d8a",
     "semantic_hash": ""
   },
   "requirements.txt": {
@@ -285,8 +285,8 @@
     "semantic_hash": ""
   },
   "backend/routers/admin.py": {
-    "mtime": 1785091884.927552,
-    "ast_hash": "ca6d767cccb4065e39e7a88f127d0b55",
+    "mtime": 1785093297.4906418,
+    "ast_hash": "7556ac96dd5ef28a964ac3971575977a",
     "semantic_hash": ""
   },
   "backend/services/__init__.py": {
@@ -300,8 +300,8 @@
     "semantic_hash": ""
   },
   "frontend/src/components/AdminDashboard.jsx": {
-    "mtime": 1785091971.8881164,
-    "ast_hash": "5a13ebca48531faf423f2aef3b9eb092",
+    "mtime": 1785098443.5447142,
+    "ast_hash": "ce074edab1e30d0a589ebcb1b9be1f67",
     "semantic_hash": ""
   },
   "scraper/__init__.py": {
@@ -390,33 +390,33 @@
     "semantic_hash": ""
   },
   "backend/routers/series.py": {
-    "mtime": 1785062185.9741974,
-    "ast_hash": "5e956c299aad4c5ffb955fb1c89c64b4",
+    "mtime": 1785093249.178324,
+    "ast_hash": "9e05482654848b31a074d0d7d1a8334b",
     "semantic_hash": ""
   },
   "backend/tv_database.py": {
-    "mtime": 1785062174.975727,
-    "ast_hash": "7515b2629bd39206605c012789b983f1",
+    "mtime": 1785093235.0599346,
+    "ast_hash": "bc84e909d107d776385153010e984005",
     "semantic_hash": ""
   },
   "backend/tv_models.py": {
-    "mtime": 1785062165.178893,
-    "ast_hash": "d059c66725d5321145b80afc8588df01",
+    "mtime": 1785093212.383225,
+    "ast_hash": "8e49fb4635ef5eee3c2cc5788fd28096",
     "semantic_hash": ""
   },
   "database/tv_models.py": {
-    "mtime": 1785062132.3784163,
-    "ast_hash": "fb15749744d56cddf33a5792e5d8f171",
+    "mtime": 1785093141.8564086,
+    "ast_hash": "524c4e5ac9081bf30bf4351585340a74",
     "semantic_hash": ""
   },
   "frontend/src/components/SeriesCard.jsx": {
-    "mtime": 1785090650.0136251,
-    "ast_hash": "97bdeb05972f9592678ad44136974755",
+    "mtime": 1785100013.6843817,
+    "ast_hash": "701774b34bda1a90ef2d26efb78f8b08",
     "semantic_hash": ""
   },
   "frontend/src/components/SeriesDetail.jsx": {
-    "mtime": 1785064502.4167118,
-    "ast_hash": "52b455e283a32c46c1f7f367eabe2876",
+    "mtime": 1785100061.381029,
+    "ast_hash": "be17113a00c61e50bdda2846136fb942",
     "semantic_hash": ""
   },
   "frontend/src/components/SeriesGrid.jsx": {
@@ -467,6 +467,21 @@
   "migrate_tv_channel_links.py": {
     "mtime": 1785091846.909214,
     "ast_hash": "2959a58d2523678d5652048f1b34ddbf",
+    "semantic_hash": ""
+  },
+  "frontend/src/components/FeaturedSeriesSection.jsx": {
+    "mtime": 1785100594.6990683,
+    "ast_hash": "a5bfaa25999a9cc78d8af6be30a21479",
+    "semantic_hash": ""
+  },
+  "uploads/a6c406a0f49f460e8eed7b32cafb0fd3.jpg": {
+    "mtime": 1785098702.5725183,
+    "ast_hash": "472e7c3a55529eb644608ec21cdae55e",
+    "semantic_hash": ""
+  },
+  "uploads/fdb42b861966426aae784f1b50c9bb7e.jpg": {
+    "mtime": 1785099140.804946,
+    "ast_hash": "916a4341bb0f5d1aa25fc63f0c8b7d83",
     "semantic_hash": ""
   }
 }
