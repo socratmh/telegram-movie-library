@@ -1,5 +1,6 @@
 const GENRE_MAP = {
   'Action': 'أكشن',
+  'Action & Adventure': 'أكشن ومغامرة',
   'Adventure': 'مغامرة',
   'Animation': 'رسوم متحركة',
   'Comedy': 'كوميديا',
@@ -10,13 +11,20 @@ const GENRE_MAP = {
   'Fantasy': 'خيال',
   'History': 'تاريخ',
   'Horror': 'رعب',
+  'Kids': 'أطفال',
   'Music': 'موسيقى',
   'Mystery': 'غموض',
+  'News': 'أخبار',
+  'Reality': 'واقعي',
   'Romance': 'رومانسية',
+  'Sci-Fi & Fantasy': 'خيال علمي وخيال',
   'Science Fiction': 'خيال علمي',
+  'Soap': 'مسلسل درامي',
+  'Talk': 'حوار',
   'TV Movie': 'فيلم تلفزيوني',
   'Thriller': 'إثارة',
   'War': 'حرب',
+  'War & Politics': 'حرب وسياسة',
   'Western': 'غربي'
 };
 

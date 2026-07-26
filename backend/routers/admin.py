@@ -16,7 +16,13 @@ from backend.models import (
     TaskResponse,
 )
 from backend.services.task_manager import TaskManager
+from backend.tv_models import (
+    TVLibraryCreateRequest,
+    TVLibraryUpdateRequest,
+    TVLibraryDetailResponse,
+)
 from database.models import init_db, Library, Movie, TMDBMovie, TelegramMessage
+from database.tv_models import TVLibrary, TVSeries, TMDBTVSeries
 
 router = APIRouter(
     prefix="/api/admin",
@@ -290,3 +296,170 @@ def admin_cancel_task(task_id: str, request: Request):
         raise HTTPException(404, "Task not found")
     tasks.cancel_task(task_id)
     return TaskResponse(**task.to_dict())
+
+
+# ------------------------------------------------------------------
+# TV Series admin endpoints
+# ------------------------------------------------------------------
+
+# ------------------------------------------------------------------
+# TV Library CRUD & Tasks
+# ------------------------------------------------------------------
+
+@router.get("/tv-libraries", response_model=list[TVLibraryDetailResponse])
+def admin_list_tv_libraries(request: Request):
+    """List ALL TV libraries with detailed stats."""
+    SessionLocal = _get_session_factory(request)
+    with SessionLocal() as session:
+        libs = session.execute(
+            select(TVLibrary).order_by(TVLibrary.id)
+        ).scalars().all()
+
+        result = []
+        for lib in libs:
+            series_count = session.scalar(
+                select(func.count(TVSeries.id)).where(TVSeries.library_id == lib.id)
+            ) or 0
+            series_with_tmdb = session.scalar(
+                select(func.count(TVSeries.id)).where(
+                    TVSeries.library_id == lib.id,
+                    TVSeries.tmdb_tv_id.isnot(None),
+                )
+            ) or 0
+
+            result.append(TVLibraryDetailResponse(
+                id=lib.id,
+                name=lib.name,
+                slug=lib.slug,
+                telegram_channel=lib.telegram_channel,
+                telegram_channel_id=lib.telegram_channel_id,
+                is_active=lib.is_active,
+                series_count=series_count,
+                series_with_tmdb=series_with_tmdb,
+                series_without_tmdb=series_count - series_with_tmdb,
+            ))
+        return result
+
+
+@router.post("/tv-libraries", response_model=TVLibraryDetailResponse, status_code=201)
+def admin_create_tv_library(body: TVLibraryCreateRequest, request: Request):
+    """Create a new TV series library."""
+    SessionLocal = _get_session_factory(request)
+    with SessionLocal() as session:
+        lib = TVLibrary(
+            name=body.name,
+            slug=body.slug,
+            telegram_channel=body.telegram_channel,
+            telegram_channel_id=body.telegram_channel_id,
+            is_active=body.is_active,
+        )
+        session.add(lib)
+        session.commit()
+        session.refresh(lib)
+        return TVLibraryDetailResponse(
+            id=lib.id,
+            name=lib.name,
+            slug=lib.slug,
+            telegram_channel=lib.telegram_channel,
+            telegram_channel_id=lib.telegram_channel_id,
+            is_active=lib.is_active,
+        )
+
+
+@router.put("/tv-libraries/{library_id}", response_model=TVLibraryDetailResponse)
+def admin_update_tv_library(library_id: int, body: TVLibraryUpdateRequest, request: Request):
+    """Update TV series library details."""
+    SessionLocal = _get_session_factory(request)
+    with SessionLocal() as session:
+        lib = session.execute(
+            select(TVLibrary).where(TVLibrary.id == library_id)
+        ).scalar_one_or_none()
+        if not lib:
+            raise HTTPException(404, "TV Library not found")
+
+        if body.name is not None:
+            lib.name = body.name
+        if body.slug is not None:
+            lib.slug = body.slug
+        if body.telegram_channel is not None:
+            lib.telegram_channel = body.telegram_channel
+        if body.telegram_channel_id is not None:
+            lib.telegram_channel_id = body.telegram_channel_id
+        if body.is_active is not None:
+            lib.is_active = body.is_active
+
+        session.commit()
+        session.refresh(lib)
+
+        series_count = session.scalar(
+            select(func.count(TVSeries.id)).where(TVSeries.library_id == lib.id)
+        ) or 0
+        series_with_tmdb = session.scalar(
+            select(func.count(TVSeries.id)).where(
+                TVSeries.library_id == lib.id,
+                TVSeries.tmdb_tv_id.isnot(None),
+            )
+        ) or 0
+
+        return TVLibraryDetailResponse(
+            id=lib.id,
+            name=lib.name,
+            slug=lib.slug,
+            telegram_channel=lib.telegram_channel,
+            telegram_channel_id=lib.telegram_channel_id,
+            is_active=lib.is_active,
+            series_count=series_count,
+            series_with_tmdb=series_with_tmdb,
+            series_without_tmdb=series_count - series_with_tmdb,
+        )
+
+
+@router.delete("/tv-libraries/{library_id}", status_code=204)
+def admin_delete_tv_library(library_id: int, request: Request):
+    """Delete a TV library and all its associated series."""
+    SessionLocal = _get_session_factory(request)
+    with SessionLocal() as session:
+        lib = session.execute(
+            select(TVLibrary).where(TVLibrary.id == library_id)
+        ).scalar_one_or_none()
+        if not lib:
+            raise HTTPException(404, "TV Library not found")
+
+        session.query(TVSeries).filter(TVSeries.library_id == library_id).delete()
+        session.delete(lib)
+        session.commit()
+    return None
+
+
+@router.post("/tv-libraries/{library_id}/scan", response_model=TaskResponse)
+def admin_scan_tv_library(library_id: int, request: Request):
+    """Launch scraper for a TV library's Telegram channel."""
+    SessionLocal = _get_session_factory(request)
+    with SessionLocal() as session:
+        lib = session.execute(
+            select(TVLibrary).where(TVLibrary.id == library_id)
+        ).scalar_one_or_none()
+        if not lib:
+            raise HTTPException(404, "TV Library not found")
+        channel = lib.telegram_channel
+
+    tasks = _get_tasks(request)
+    task = tasks.launch_tv_scan(library_id, channel, f"TV Scan: {channel}")
+    return TaskResponse(**task.to_dict())
+
+
+@router.post("/tv-libraries/{library_id}/update-tmdb", response_model=TaskResponse)
+def admin_update_tv_tmdb_library(library_id: int, request: Request):
+    """Launch TMDB updater for a TV library."""
+    SessionLocal = _get_session_factory(request)
+    with SessionLocal() as session:
+        lib = session.execute(
+            select(TVLibrary).where(TVLibrary.id == library_id)
+        ).scalar_one_or_none()
+        if not lib:
+            raise HTTPException(404, "TV Library not found")
+
+    tasks = _get_tasks(request)
+    task = tasks.launch_tv_tmdb_update(library_id, f"TV TMDB update: library {library_id}")
+    return TaskResponse(**task.to_dict())
+

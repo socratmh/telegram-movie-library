@@ -1,0 +1,21 @@
+[DB] Using SQLite: sqlite:///C:\Users\socrat\Desktop\Movis_with_Telegram\database\movies.db
+============================================================
+  TV SERIES TMDB UPDATER START
+============================================================
+  Total series in DB       : 0
+  Already linked to TMDB   : 0
+  Unlinked to process      : 0
+  Concurrency Level        : 4 Threads
+============================================================
+
+============================================================
+  TV SERIES TMDB UPDATE COMPLETE
+============================================================
+  Total processed         : 0
+  Successfully matched    : 0
+  Not found               : 0
+  Errors/Skipped          : 0
+  Already linked          : 0
+  Total execution time    : 0.0 seconds
+============================================================
+

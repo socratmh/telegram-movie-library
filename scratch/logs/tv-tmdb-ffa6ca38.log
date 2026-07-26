@@ -1,0 +1,729 @@
+[DB] Using SQLite: sqlite:///C:\Users\socrat\Desktop\Movis_with_Telegram\database\movies.db
+============================================================
+  TV SERIES TMDB UPDATER START
+============================================================
+  Total series in DB       : 175
+  Already linked to TMDB   : 0
+  Unlinked to process      : 175
+  Concurrency Level        : 4 Threads
+============================================================
+
+[2/175] Processing: "1899"
+  Cleaned: "1899" | Year: N/A
+  Matched: Yes -> "1899" (TMDB ID: 90669, Air: 2022-11-17)
+
+[3/175] Processing: "A Good Girl's Guide to Murder"
+  Cleaned: "A Good Girl s Guide to Murder" | Year: N/A
+  Matched: Yes -> "A Good Girl's Guide to Murder" (TMDB ID: 218342, Air: 2024-07-10)
+
+[5/175] Processing: "A Murder at the End of the World"
+  Cleaned: "A Murder at the End of the World" | Year: N/A
+  Matched: Yes -> "A Murder at the End of the World" (TMDB ID: 134095, Air: 2023-11-14)
+
+[1/175] Processing: "11.22.63"
+  Cleaned: "11 22 63" | Year: N/A
+  Matched: Yes -> "11.22.63" (TMDB ID: 64464, Air: 2016-02-15)
+
+[6/175] Processing: "Adolescence"
+  Cleaned: "Adolescence" | Year: N/A
+  Matched: Yes -> "Adolescence" (TMDB ID: 249042, Air: 2025-03-13)
+
+[8/175] Processing: "Alice In Borderland"
+  Cleaned: "Alice In Borderland" | Year: N/A
+  Matched: Yes -> "Alice in Borderland" (TMDB ID: 110316, Air: 2020-12-10)
+
+[7/175] Processing: "Agatha All Along"
+  Cleaned: "Agatha All Along" | Year: N/A
+  Matched: Yes -> "Agatha All Along" (TMDB ID: 138501, Air: 2024-09-18)
+
+[9/175] Processing: "All Her Fault"
+  Cleaned: "All Her Fault" | Year: N/A
+  Matched: Yes -> "All Her Fault" (TMDB ID: 246386, Air: 2025-11-07)
+
+[4/175] Processing: "A Knight Of The Seven Kingdoms"
+  Cleaned: "A Knight Of The Seven Kingdoms" | Year: N/A
+  Matched: Yes -> "A Knight of the Seven Kingdoms" (TMDB ID: 224372, Air: 2026-01-18)
+
+[10/175] Processing: "Alta Mar"
+  Cleaned: "Alta Mar" | Year: N/A
+  Matched: Yes -> "High Seas" (TMDB ID: 88239, Air: 2019-05-24)
+
+[11/175] Processing: "And Then There Were None"
+  Cleaned: "And Then There Were None" | Year: N/A
+  Matched: Yes -> "And Then There Were None" (TMDB ID: 64684, Air: 2015-12-26)
+
+[12/175] Processing: "Anne With An E"
+  Cleaned: "Anne With An E" | Year: N/A
+  Matched: Yes -> "Anne with an E" (TMDB ID: 70785, Air: 2017-03-19)
+
+[13/175] Processing: "Arcane"
+  Cleaned: "Arcane" | Year: N/A
+  Matched: Yes -> "Arcane" (TMDB ID: 94605, Air: 2021-11-06)
+
+[14/175] Processing: "Babylon Berlin"
+  Cleaned: "Babylon Berlin" | Year: N/A
+  Matched: Yes -> "Babylon Berlin" (TMDB ID: 66980, Air: 2017-10-13)
+
+[15/175] Processing: "Band Of Brothers"
+  Cleaned: "Band Of Brothers" | Year: N/A
+  Matched: Yes -> "Band of Brothers" (TMDB ID: 4613, Air: 2001-09-09)
+
+[17/175] Processing: "Berlin"
+  Cleaned: "Berlin" | Year: N/A
+  Matched: Yes -> "Berlin" (TMDB ID: 146176, Air: 2023-12-29)
+
+[18/175] Processing: "Better Call Saul"
+  Cleaned: "Better Call Saul" | Year: N/A
+  Matched: Yes -> "Better Call Saul" (TMDB ID: 60059, Air: 2015-02-08)
+
+[19/175] Processing: "Black Bird"
+  Cleaned: "Black Bird" | Year: N/A
+  Matched: Yes -> "Black Bird" (TMDB ID: 155537, Air: 2022-07-07)
+
+[16/175] Processing: "Banshee"
+  Cleaned: "Banshee" | Year: N/A
+  Matched: Yes -> "Banshee" (TMDB ID: 41727, Air: 2013-01-11)
+
+[20/175] Processing: "Black Mirror"
+  Cleaned: "Black Mirror" | Year: N/A
+  Matched: Yes -> "Black Mirror" (TMDB ID: 42009, Air: 2011-12-04)
+
+[21/175] Processing: "Blacklist"
+  Cleaned: "Blacklist" | Year: N/A
+  Matched: Yes -> "Blacklist" (TMDB ID: 95845, Air: 2019-10-13)
+
+[22/175] Processing: "Blindspot"
+  Cleaned: "Blindspot" | Year: N/A
+  Matched: Yes -> "Blindspot" (TMDB ID: 62710, Air: 2015-09-21)
+
+[23/175] Processing: "Bodyguard"
+  Cleaned: "Bodyguard" | Year: N/A
+  Matched: Yes -> "Bodyguard" (TMDB ID: 80307, Air: 2018-08-26)
+
+[24/175] Processing: "Bosch Legacy"
+  Cleaned: "Bosch Legacy" | Year: N/A
+  Matched: Yes -> "Bosch: Legacy" (TMDB ID: 153657, Air: 2022-05-05)
+
+[25/175] Processing: "Breaking Bad"
+  Cleaned: "Breaking Bad" | Year: N/A
+  Matched: Yes -> "Breaking Bad" (TMDB ID: 1396, Air: 2008-01-20)
+
+[26/175] Processing: "Brooklyn Nine Nine Brooklyn 99"
+  Cleaned: "Brooklyn Nine Nine Brooklyn 99" | Year: N/A
+  Matched: Yes -> "Brooklyn Nine-Nine" (TMDB ID: 48891, Air: 2013-09-17)
+
+[27/175] Processing: "Camelot"
+  Cleaned: "Camelot" | Year: N/A
+  Matched: Yes -> "Camelot" (TMDB ID: 33958, Air: 2011-02-25)
+
+[29/175] Processing: "Chernobyl"
+  Cleaned: "Chernobyl" | Year: N/A
+  Matched: Yes -> "Chernobyl" (TMDB ID: 87108, Air: 2019-05-06)
+
+[30/175] Processing: "Citadel"
+  Cleaned: "Citadel" | Year: N/A
+  Matched: Yes -> "Citadel" (TMDB ID: 114922, Air: 2023-04-27)
+
+[32/175] Processing: "Covert Affairs"
+  Cleaned: "Covert Affairs" | Year: N/A
+  Matched: Yes -> "Covert Affairs" (TMDB ID: 31631, Air: 2010-07-13)
+
+[31/175] Processing: "Citadel Diana"
+  Cleaned: "Citadel Diana" | Year: N/A
+  Matched: Yes -> "Citadel: Diana" (TMDB ID: 214032, Air: 2024-10-10)
+
+[33/175] Processing: "Daredevil"
+  Cleaned: "Daredevil" | Year: N/A
+  Matched: Yes -> "Daredevils" (TMDB ID: 35124, Air: 2009-09-14)
+
+[35/175] Processing: "Daredevil Punisher Defenders"
+  Cleaned: "Daredevil Punisher Defenders" | Year: N/A
+  Matched: No (Not Found)
+
+[28/175] Processing: "Cape Fear"
+  Cleaned: "Cape Fear" | Year: N/A
+  Matched: Yes -> "Cape Fear" (TMDB ID: 277439, Air: 2026-06-04)
+
+[34/175] Processing: "Daredevil Born Again"
+  Cleaned: "Daredevil Born Again" | Year: N/A
+  Matched: Yes -> "Daredevil: Born Again" (TMDB ID: 202555, Air: 2025-03-04)
+
+[36/175] Processing: "Dark"
+  Cleaned: "Dark" | Year: N/A
+  Matched: Yes -> "Dark" (TMDB ID: 70523, Air: 2017-12-01)
+
+[37/175] Processing: "Dept Q"
+  Cleaned: "Dept Q" | Year: N/A
+  Matched: Yes -> "Dept. Q" (TMDB ID: 245703, Air: 2025-05-29)
+
+[38/175] Processing: "Detective Hole"
+  Cleaned: "Detective Hole" | Year: N/A
+  Matched: Yes -> "Detective Hole" (TMDB ID: 249597, Air: 2026-03-26)
+
+[39/175] Processing: "Dexter"
+  Cleaned: "Dexter" | Year: N/A
+  Matched: Yes -> "Dexter" (TMDB ID: 1405, Air: 2006-10-01)
+
+[40/175] Processing: "Dexter New Blood"
+  Cleaned: "Dexter New Blood" | Year: N/A
+  Matched: Yes -> "Dexter: New Blood" (TMDB ID: 131927, Air: 2021-11-07)
+
+[41/175] Processing: "Dexter Original Sin"
+  Cleaned: "Dexter Original Sin" | Year: N/A
+  Matched: Yes -> "Dexter: Original Sin" (TMDB ID: 219937, Air: 2024-12-15)
+
+[42/175] Processing: "Dexter Resurrection"
+  Cleaned: "Dexter Resurrection" | Year: N/A
+  Matched: Yes -> "Dexter: Resurrection" (TMDB ID: 259909, Air: 2025-07-13)
+
+[44/175] Processing: "Emily In Paris"
+  Cleaned: "Emily In Paris" | Year: N/A
+  Matched: Yes -> "Emily in Paris" (TMDB ID: 82596, Air: 2020-10-02)
+
+[43/175] Processing: "Dr House House MD"
+  Cleaned: "Dr House House MD" | Year: N/A
+  Matched: Yes -> "House" (TMDB ID: 1408, Air: 2004-11-16)
+
+[45/175] Processing: "Every Year After"
+  Cleaned: "Every Year After" | Year: N/A
+  Matched: Yes -> "Every Year After" (TMDB ID: 260592, Air: 2026-06-10)
+
+[46/175] Processing: "Fallout"
+  Cleaned: "Fallout" | Year: N/A
+  Matched: Yes -> "Fallout" (TMDB ID: 106379, Air: 2024-04-10)
+
+[47/175] Processing: "Finding Her Edge 2026"
+  Cleaned: "Finding Her Edge" | Year: 2026
+  Matched: Yes -> "Finding Her Edge" (TMDB ID: 281401, Air: 2026-01-22)
+
+[48/175] Processing: "Five Days at Memorial"
+  Cleaned: "Five Days at Memorial" | Year: N/A
+  Matched: Yes -> "Five Days at Memorial" (TMDB ID: 108664, Air: 2022-08-11)
+
+[49/175] Processing: "Friends"
+  Cleaned: "Friends" | Year: N/A
+  Matched: Yes -> "Friends" (TMDB ID: 1668, Air: 1994-09-22)
+
+[50/175] Processing: "From"
+  Cleaned: "From" | Year: N/A
+  Matched: Yes -> "FROM" (TMDB ID: 124364, Air: 2022-02-20)
+
+--- Progress: 50/175 | Matched: 49 | Not Found: 1 | Errors: 0 | Remaining: 125 ---
+
+[51/175] Processing: "Game Of Thrones"
+  Cleaned: "Game Of Thrones" | Year: N/A
+  Matched: Yes -> "Game of Thrones" (TMDB ID: 1399, Air: 2011-04-17)
+
+[52/175] Processing: "Gen V"
+  Cleaned: "Gen V" | Year: N/A
+  Matched: Yes -> "Gen V" (TMDB ID: 205715, Air: 2023-09-28)
+
+[54/175] Processing: "Good Omens"
+  Cleaned: "Good Omens" | Year: N/A
+  Matched: Yes -> "Good Omens" (TMDB ID: 71915, Air: 2019-05-31)
+
+[53/175] Processing: "Girls"
+  Cleaned: "Girls" | Year: N/A
+  Matched: Yes -> "Girls" (TMDB ID: 42282, Air: 2012-04-15)
+
+[55/175] Processing: "Gossip Girl"
+  Cleaned: "Gossip Girl" | Year: N/A
+  Matched: Yes -> "Gossip Girl" (TMDB ID: 1395, Air: 2007-09-19)
+
+[56/175] Processing: "Gotham"
+  Cleaned: "Gotham" | Year: N/A
+  Matched: Yes -> "Gotham" (TMDB ID: 60708, Air: 2014-09-22)
+
+[58/175] Processing: "Hannibal"
+  Cleaned: "Hannibal" | Year: N/A
+  Matched: Yes -> "Hannibal" (TMDB ID: 40008, Air: 2013-04-04)
+
+[57/175] Processing: "Grey's Anatomy"
+  Cleaned: "Grey s Anatomy" | Year: N/A
+  Matched: Yes -> "Grey's Anatomy" (TMDB ID: 1416, Air: 2005-03-27)
+
+[59/175] Processing: "High Potential"
+  Cleaned: "High Potential" | Year: N/A
+  Matched: Yes -> "High Potential" (TMDB ID: 226637, Air: 2024-09-17)
+
+[60/175] Processing: "Hijack"
+  Cleaned: "Hijack" | Year: N/A
+  Matched: Yes -> "Hijack" (TMDB ID: 198102, Air: 2023-06-28)
+
+[62/175] Processing: "House Of The Dragon S?"
+  Cleaned: "House Of The Dragon S?" | Year: N/A
+  Matched: No (Not Found)
+
+[61/175] Processing: "House Of The Dragon"
+  Cleaned: "House Of The Dragon" | Year: N/A
+  Matched: Yes -> "House of the Dragon" (TMDB ID: 94997, Air: 2022-08-21)
+
+[63/175] Processing: "House of Cards"
+  Cleaned: "House of Cards" | Year: N/A
+  Matched: Yes -> "House of Cards" (TMDB ID: 1425, Air: 2013-02-01)
+
+[65/175] Processing: "I Am Not Okay With This"
+  Cleaned: "I Am Not Okay With This" | Year: N/A
+  Matched: Yes -> "I Am Not Okay with This" (TMDB ID: 90260, Air: 2020-02-26)
+
+[64/175] Processing: "How I Met Your Mother"
+  Cleaned: "How I Met Your Mother" | Year: N/A
+  Matched: Yes -> "How I Met Your Mother" (TMDB ID: 1100, Air: 2005-09-19)
+
+[66/175] Processing: "I Will Find You"
+  Cleaned: "I Will Find You" | Year: N/A
+  Matched: Yes -> "I Will Find You" (TMDB ID: 278178, Air: 2026-06-18)
+
+[67/175] Processing: "IT Welcome To Derry"
+  Cleaned: "IT Welcome To Derry" | Year: N/A
+  Matched: Yes -> "IT: Welcome to Derry" (TMDB ID: 200875, Air: 2025-10-26)
+
+[69/175] Processing: "Iron Fist"
+  Cleaned: "Iron Fist" | Year: N/A
+  Matched: Yes -> "Marvel's Iron Fist" (TMDB ID: 62127, Air: 2017-03-17)
+
+[68/175] Processing: "Invincible"
+  Cleaned: "Invincible" | Year: N/A
+  Matched: Yes -> "INVINCIBLE" (TMDB ID: 95557, Air: 2021-03-25)
+
+[70/175] Processing: "Jessica Jones"
+  Cleaned: "Jessica Jones" | Year: N/A
+  Matched: Yes -> "Marvel's Jessica Jones" (TMDB ID: 38472, Air: 2015-11-20)
+
+[72/175] Processing: "La Casa De Papel"
+  Cleaned: "La Casa De Papel" | Year: N/A
+  Matched: Yes -> "Money Heist" (TMDB ID: 71446, Air: 2017-05-02)
+
+[71/175] Processing: "Karma"
+  Cleaned: "Karma" | Year: N/A
+  Matched: Yes -> "Karma" (TMDB ID: 51705, Air: 2009-10-07)
+
+[73/175] Processing: "Legion"
+  Cleaned: "Legion" | Year: N/A
+  Matched: Yes -> "Legion" (TMDB ID: 67195, Air: 2017-02-08)
+
+[74/175] Processing: "Limitless"
+  Cleaned: "Limitless" | Year: N/A
+  Matched: Yes -> "Limitless" (TMDB ID: 62687, Air: 2015-09-22)
+
+[75/175] Processing: "Long Bright River"
+  Cleaned: "Long Bright River" | Year: N/A
+  Matched: Yes -> "Long Bright River" (TMDB ID: 244628, Air: 2025-03-13)
+
+[76/175] Processing: "Lost"
+  Cleaned: "Lost" | Year: N/A
+  Matched: Yes -> "Lost" (TMDB ID: 4607, Air: 2004-09-22)
+
+[78/175] Processing: "Lucifer"
+  Cleaned: "Lucifer" | Year: N/A
+  Matched: Yes -> "Lucifer" (TMDB ID: 63174, Air: 2016-01-25)
+
+[77/175] Processing: "Love Story"
+  Cleaned: "Love Story" | Year: N/A
+  Matched: Yes -> "Love Story" (TMDB ID: 131142, Air: 2026-02-12)
+
+[80/175] Processing: "MOBLAND"
+  Cleaned: "MOBLAND" | Year: N/A
+  Matched: Yes -> "MobLand" (TMDB ID: 247718, Air: 2025-03-30)
+
+[79/175] Processing: "Lucky"
+  Cleaned: "Lucky" | Year: N/A
+  Matched: Yes -> "Lucky" (TMDB ID: 278624, Air: 2026-07-14)
+
+[81/175] Processing: "Mad Men"
+  Cleaned: "Mad Men" | Year: N/A
+  Matched: Yes -> "Mad Men" (TMDB ID: 1104, Air: 2007-07-19)
+
+[82/175] Processing: "Maxton Hall"
+  Cleaned: "Maxton Hall" | Year: N/A
+  Matched: Yes -> "Maxton Hall ? The World Between Us" (TMDB ID: 250670, Air: 2024-05-09)
+
+[83/175] Processing: "Mindhunter"
+  Cleaned: "Mindhunter" | Year: N/A
+  Matched: Yes -> "MINDHUNTER" (TMDB ID: 67744, Air: 2017-10-13)
+
+[84/175] Processing: "Modern Family"
+  Cleaned: "Modern Family" | Year: N/A
+  Matched: Yes -> "Modern Family" (TMDB ID: 1421, Air: 2009-09-23)
+
+[86/175] Processing: "Mr Robot"
+  Cleaned: "Mr Robot" | Year: N/A
+  Matched: Yes -> "Mr. Robot" (TMDB ID: 62560, Air: 2015-06-24)
+
+[85/175] Processing: "Mouse"
+  Cleaned: "Mouse" | Year: N/A
+  Matched: Yes -> "Mouse" (TMDB ID: 117378, Air: 2021-03-03)
+
+[88/175] Processing: "Narcos"
+  Cleaned: "Narcos" | Year: N/A
+  Matched: Yes -> "Narcos" (TMDB ID: 63351, Air: 2015-08-28)
+
+[87/175] Processing: "My Lady Jane"
+  Cleaned: "My Lady Jane" | Year: N/A
+  Matched: Yes -> "My Lady Jane" (TMDB ID: 203413, Air: 2024-06-27)
+
+[89/175] Processing: "Off Campus"
+  Cleaned: "Off Campus" | Year: N/A
+  Matched: Yes -> "Off Campus" (TMDB ID: 273240, Air: 2026-05-13)
+
+[90/175] Processing: "Outer Banks"
+  Cleaned: "Outer Banks" | Year: N/A
+  Matched: Yes -> "Outer Banks" (TMDB ID: 100757, Air: 2020-04-15)
+
+[92/175] Processing: "Ozark"
+  Cleaned: "Ozark" | Year: N/A
+  Matched: Yes -> "Ozark" (TMDB ID: 69740, Air: 2017-07-21)
+
+[93/175] Processing: "Peaky Blinders"
+  Cleaned: "Peaky Blinders" | Year: N/A
+  Matched: Yes -> "Peaky Blinders" (TMDB ID: 60574, Air: 2013-09-12)
+
+[91/175] Processing: "Outlander"
+  Cleaned: "Outlander" | Year: N/A
+  Matched: Yes -> "Outlander" (TMDB ID: 56570, Air: 2014-08-09)
+
+[94/175] Processing: "Pluribus"
+  Cleaned: "Pluribus" | Year: N/A
+  Matched: Yes -> "Pluribus" (TMDB ID: 225171, Air: 2025-11-06)
+
+[96/175] Processing: "Prison Break"
+  Cleaned: "Prison Break" | Year: N/A
+  Matched: Yes -> "Prison Break" (TMDB ID: 2288, Air: 2005-08-29)
+
+[97/175] Processing: "Prodigal Son"
+  Cleaned: "Prodigal Son" | Year: N/A
+  Matched: Yes -> "Prodigal Son" (TMDB ID: 91875, Air: 2019-09-23)
+
+[98/175] Processing: "Project UFO"
+  Cleaned: "Project UFO" | Year: N/A
+  Matched: Yes -> "Project UFO" (TMDB ID: 252591, Air: 2025-04-16)
+
+[99/175] Processing: "Raising Voices"
+  Cleaned: "Raising Voices" | Year: N/A
+  Matched: Yes -> "Raising Voices" (TMDB ID: 242876, Air: 2024-05-31)
+
+[100/175] Processing: "Reacher"
+  Cleaned: "Reacher" | Year: N/A
+  Matched: Yes -> "Reacher" (TMDB ID: 108978, Air: 2022-02-03)
+
+--- Progress: 100/175 | Matched: 97 | Not Found: 2 | Errors: 0 | Remaining: 75 ---
+
+[95/175] Processing: "Pretty Little Liars"
+  Cleaned: "Pretty Little Liars" | Year: N/A
+  Matched: Yes -> "Pretty Little Liars" (TMDB ID: 31917, Air: 2010-06-08)
+
+[101/175] Processing: "Rivals"
+  Cleaned: "Rivals" | Year: N/A
+  Matched: Yes -> "Rivals" (TMDB ID: 208921, Air: 2024-10-18)
+
+[102/175] Processing: "SILO S?"
+  Cleaned: "SILO S?" | Year: N/A
+  Matched: No (Not Found)
+
+[103/175] Processing: "SOMETHING VERY BAD"
+  Cleaned: "SOMETHING VERY BAD" | Year: N/A
+  Matched: Yes -> "Something Very Bad Is Going to Happen" (TMDB ID: 259265, Air: 2026-03-26)
+
+[104/175] Processing: "Scarpetta"
+  Cleaned: "Scarpetta" | Year: N/A
+  Matched: Yes -> "Scarpetta" (TMDB ID: 240740, Air: 2026-03-11)
+
+[106/175] Processing: "Selena"
+  Cleaned: "Selena" | Year: N/A
+  Matched: Yes -> "Selena" (TMDB ID: 48514, Air: 2006-09-10)
+
+[105/175] Processing: "See"
+  Cleaned: "See" | Year: N/A
+  Matched: Yes -> "See" (TMDB ID: 80752, Air: 2019-11-01)
+
+[107/175] Processing: "Severance"
+  Cleaned: "Severance" | Year: N/A
+  Matched: Yes -> "Severance" (TMDB ID: 95396, Air: 2022-02-17)
+
+[108/175] Processing: "Shameless"
+  Cleaned: "Shameless" | Year: N/A
+  Matched: Yes -> "Shameless" (TMDB ID: 34307, Air: 2011-01-09)
+
+[110/175] Processing: "Silo"
+  Cleaned: "Silo" | Year: N/A
+  Matched: Yes -> "Silo" (TMDB ID: 125988, Air: 2023-05-04)
+
+[109/175] Processing: "Sherlock"
+  Cleaned: "Sherlock" | Year: N/A
+  Matched: Yes -> "Sherlock" (TMDB ID: 19885, Air: 2010-07-25)
+
+[111/175] Processing: "Sons Of Anarchy"
+  Cleaned: "Sons Of Anarchy" | Year: N/A
+  Matched: Yes -> "Sons of Anarchy" (TMDB ID: 1409, Air: 2008-09-03)
+
+[112/175] Processing: "Spartacus"
+  Cleaned: "Spartacus" | Year: N/A
+  Matched: Yes -> "Spartacus" (TMDB ID: 46296, Air: 2010-01-22)
+
+[114/175] Processing: "Squid Game"
+  Cleaned: "Squid Game" | Year: N/A
+  Matched: Yes -> "Squid Game" (TMDB ID: 93405, Air: 2021-09-17)
+
+[115/175] Processing: "Steal"
+  Cleaned: "Steal" | Year: N/A
+  Matched: Yes -> "Steal" (TMDB ID: 254071, Air: 2026-01-21)
+
+[116/175] Processing: "Stranger Things"
+  Cleaned: "Stranger Things" | Year: N/A
+  Matched: Yes -> "Stranger Things" (TMDB ID: 66732, Air: 2016-07-15)
+
+[113/175] Processing: "Spider Noir"
+  Cleaned: "Spider Noir" | Year: N/A
+  Matched: Yes -> "Spider-Noir" (TMDB ID: 220102, Air: 2026-05-25)
+
+[117/175] Processing: "Succession"
+  Cleaned: "Succession" | Year: N/A
+  Matched: Yes -> "Succession" (TMDB ID: 76331, Air: 2018-06-03)
+
+[118/175] Processing: "Super natural supernatural"
+  Cleaned: "Super natural supernatural" | Year: N/A
+  Matched: Yes -> "Super/Natural" (TMDB ID: 157202, Air: 2022-09-21)
+
+[119/175] Processing: "Task"
+  Cleaned: "Task" | Year: N/A
+  Matched: Yes -> "Task" (TMDB ID: 228305, Air: 2025-09-07)
+
+[120/175] Processing: "Teacup"
+  Cleaned: "Teacup" | Year: N/A
+  Matched: Yes -> "Teacup" (TMDB ID: 247721, Air: 2024-10-10)
+
+[121/175] Processing: "Teen Wolf"
+  Cleaned: "Teen Wolf" | Year: N/A
+  Matched: Yes -> "Teen Wolf" (TMDB ID: 34524, Air: 2011-06-05)
+
+[123/175] Processing: "Tell Me Lies"
+  Cleaned: "Tell Me Lies" | Year: N/A
+  Matched: Yes -> "Tell Me Lies" (TMDB ID: 130464, Air: 2022-09-07)
+
+[122/175] Processing: "Tehran"
+  Cleaned: "Tehran" | Year: N/A
+  Matched: Yes -> "Tehran" (TMDB ID: 103913, Air: 2020-06-22)
+
+[124/175] Processing: "The 100 The Hundred"
+  Cleaned: "The 100 The Hundred" | Year: N/A
+  Matched: Yes -> "The Second Hundred Years" (TMDB ID: 13203, Air: 1967-09-06)
+
+[125/175] Processing: "The Bear"
+  Cleaned: "The Bear" | Year: N/A
+  Matched: Yes -> "The Bear" (TMDB ID: 136315, Air: 2022-06-23)
+
+[126/175] Processing: "The Big Bang Theory"
+  Cleaned: "The Big Bang Theory" | Year: N/A
+  Matched: Yes -> "The Big Bang Theory" (TMDB ID: 1418, Air: 2007-09-24)
+
+[127/175] Processing: "The Bondsman"
+  Cleaned: "The Bondsman" | Year: N/A
+  Matched: Yes -> "The Bondsman" (TMDB ID: 229711, Air: 2025-04-03)
+
+[128/175] Processing: "The Boys"
+  Cleaned: "The Boys" | Year: N/A
+  Matched: Yes -> "The Boys" (TMDB ID: 76479, Air: 2019-07-25)
+
+[129/175] Processing: "The Boys 5"
+  Cleaned: "The Boys 5" | Year: N/A
+  Matched: Yes -> "The Good Guys" (TMDB ID: 32085, Air: 2010-05-19)
+
+[130/175] Processing: "The Defenders"
+  Cleaned: "The Defenders" | Year: N/A
+  Matched: Yes -> "The Defenders" (TMDB ID: 11515, Air: 1961-09-16)
+
+[131/175] Processing: "The Eternaut"
+  Cleaned: "The Eternaut" | Year: N/A
+  Matched: Yes -> "The Eternaut" (TMDB ID: 226362, Air: 2025-04-30)
+
+[132/175] Processing: "The Good Doctor"
+  Cleaned: "The Good Doctor" | Year: N/A
+  Matched: Yes -> "The Good Doctor" (TMDB ID: 71712, Air: 2017-09-25)
+
+[133/175] Processing: "The Haunting of Hill House"
+  Cleaned: "The Haunting of Hill House" | Year: N/A
+  Matched: Yes -> "The Haunting of Hill House" (TMDB ID: 72844, Air: 2018-10-12)
+
+[134/175] Processing: "The Last Kingdom"
+  Cleaned: "The Last Kingdom" | Year: N/A
+  Matched: Yes -> "The Last Kingdom" (TMDB ID: 63333, Air: 2015-10-10)
+
+[135/175] Processing: "The Last Of Us"
+  Cleaned: "The Last Of Us" | Year: N/A
+  Matched: Yes -> "The Last of Us" (TMDB ID: 100088, Air: 2023-01-15)
+
+[136/175] Processing: "The Leftovers"
+  Cleaned: "The Leftovers" | Year: N/A
+  Matched: Yes -> "The Leftovers" (TMDB ID: 54344, Air: 2014-06-29)
+
+[137/175] Processing: "The Leopard"
+  Cleaned: "The Leopard" | Year: N/A
+  Matched: Yes -> "The Leopard" (TMDB ID: 225399, Air: 2025-03-05)
+
+[138/175] Processing: "The Man In The High Castle"
+  Cleaned: "The Man In The High Castle" | Year: N/A
+  Matched: Yes -> "The Man in the High Castle" (TMDB ID: 62017, Air: 2015-01-15)
+
+[139/175] Processing: "The Mentalist"
+  Cleaned: "The Mentalist" | Year: N/A
+  Matched: Yes -> "The Mentalist" (TMDB ID: 5920, Air: 2008-09-23)
+
+[140/175] Processing: "The Newsroom"
+  Cleaned: "The Newsroom" | Year: N/A
+  Matched: Yes -> "The Newsroom" (TMDB ID: 15621, Air: 2012-06-24)
+
+[141/175] Processing: "The Night Agent"
+  Cleaned: "The Night Agent" | Year: N/A
+  Matched: Yes -> "The Night Agent" (TMDB ID: 129552, Air: 2023-03-23)
+
+[142/175] Processing: "The Night Of"
+  Cleaned: "The Night Of" | Year: N/A
+  Matched: Yes -> "The Night Of" (TMDB ID: 66276, Air: 2016-07-10)
+
+[144/175] Processing: "The Originals"
+  Cleaned: "The Originals" | Year: N/A
+  Matched: Yes -> "The Originals" (TMDB ID: 46896, Air: 2013-10-03)
+
+[143/175] Processing: "The Office"
+  Cleaned: "The Office" | Year: N/A
+  Matched: Yes -> "The Office" (TMDB ID: 2316, Air: 2005-03-24)
+
+[145/175] Processing: "The Penguin"
+  Cleaned: "The Penguin" | Year: N/A
+  Matched: Yes -> "The Penguin" (TMDB ID: 194764, Air: 2024-09-19)
+
+[146/175] Processing: "The Pitt"
+  Cleaned: "The Pitt" | Year: N/A
+  Matched: Yes -> "The Pitt" (TMDB ID: 250307, Air: 2025-01-09)
+
+[147/175] Processing: "The Punisher"
+  Cleaned: "The Punisher" | Year: N/A
+  Matched: Yes -> "The Punisher" (TMDB ID: 278177, Air: N/A)
+
+[148/175] Processing: "The Punisher One Last Kill"
+  Cleaned: "The Punisher One Last Kill" | Year: N/A
+  Matched: Yes -> "The Punisher: One Last Kill" (TMDB ID: 329162, Air: 2026-05-12)
+
+[149/175] Processing: "The Queen's Gambit"
+  Cleaned: "The Queen s Gambit" | Year: N/A
+  Matched: Yes -> "The Queen's Gambit" (TMDB ID: 87739, Air: 2020-10-23)
+
+[150/175] Processing: "The Secret Circle"
+  Cleaned: "The Secret Circle" | Year: N/A
+  Matched: Yes -> "The Secret Circle" (TMDB ID: 37664, Air: 2011-09-15)
+
+--- Progress: 150/175 | Matched: 147 | Not Found: 3 | Errors: 0 | Remaining: 25 ---
+
+[151/175] Processing: "The Sopranos"
+  Cleaned: "The Sopranos" | Year: N/A
+  Matched: Yes -> "The Sopranos" (TMDB ID: 1398, Air: 1999-01-10)
+
+[152/175] Processing: "The Summer I Turned Pretty"
+  Cleaned: "The Summer I Turned Pretty" | Year: N/A
+  Matched: Yes -> "The Summer I Turned Pretty" (TMDB ID: 194766, Air: 2022-06-16)
+
+[153/175] Processing: "The Vampire Diaries"
+  Cleaned: "The Vampire Diaries" | Year: N/A
+  Matched: Yes -> "The Vampire Diaries" (TMDB ID: 18165, Air: 2009-09-10)
+
+[154/175] Processing: "The Walking Dead"
+  Cleaned: "The Walking Dead" | Year: N/A
+  Matched: Yes -> "The Walking Dead" (TMDB ID: 1402, Air: 2010-10-31)
+
+[155/175] Processing: "The Wire"
+  Cleaned: "The Wire" | Year: N/A
+  Matched: Yes -> "The Wire" (TMDB ID: 1438, Air: 2002-06-02)
+
+[156/175] Processing: "The Witcher"
+  Cleaned: "The Witcher" | Year: N/A
+  Matched: Yes -> "The Witcher" (TMDB ID: 71912, Air: 2019-12-20)
+
+[157/175] Processing: "The day Of The Jackal"
+  Cleaned: "The day Of The Jackal" | Year: N/A
+  Matched: Yes -> "The Day of the Jackal" (TMDB ID: 222766, Air: 2024-11-07)
+
+[158/175] Processing: "Three Body Problem 3 Body Problem"
+  Cleaned: "Three Body Problem 3 Body Problem" | Year: N/A
+  Matched: Yes -> "The Three-Body Problem" (TMDB ID: 97113, Air: 2022-12-10)
+
+[159/175] Processing: "True Detective"
+  Cleaned: "True Detective" | Year: N/A
+  Matched: Yes -> "True Detective" (TMDB ID: 46648, Air: 2014-01-12)
+
+[160/175] Processing: "Unbelievable"
+  Cleaned: "Unbelievable" | Year: N/A
+  Matched: Yes -> "Unbelievable" (TMDB ID: 91275, Air: 2019-09-13)
+
+[161/175] Processing: "Under The Dome"
+  Cleaned: "Under The Dome" | Year: N/A
+  Matched: Yes -> "Under the Dome" (TMDB ID: 46331, Air: 2013-06-24)
+
+[163/175] Processing: "Until I Kill You"
+  Cleaned: "Until I Kill You" | Year: N/A
+  Matched: Yes -> "Until I Kill You" (TMDB ID: 227496, Air: 2024-04-07)
+
+[162/175] Processing: "Undercover High School"
+  Cleaned: "Undercover High School" | Year: N/A
+  Matched: Yes -> "Undercover High School" (TMDB ID: 248244, Air: 2025-02-21)
+
+[165/175] Processing: "Vikings Valhalla"
+  Cleaned: "Vikings Valhalla" | Year: N/A
+  Matched: Yes -> "Vikings: Valhalla" (TMDB ID: 116135, Air: 2022-02-25)
+
+[164/175] Processing: "Vikings"
+  Cleaned: "Vikings" | Year: N/A
+  Matched: Yes -> "Vikings" (TMDB ID: 44217, Air: 2013-03-03)
+
+[166/175] Processing: "Vladimir"
+  Cleaned: "Vladimir" | Year: N/A
+  Matched: Yes -> "Vladimir" (TMDB ID: 285739, Air: 2026-03-05)
+
+[167/175] Processing: "Wednesday"
+  Cleaned: "Wednesday" | Year: N/A
+  Matched: Yes -> "Wednesday" (TMDB ID: 119051, Air: 2022-11-23)
+
+[168/175] Processing: "West World"
+  Cleaned: "West World" | Year: N/A
+  Matched: Yes -> "Parallel World" (TMDB ID: 229201, Air: 2023-09-07)
+
+[169/175] Processing: "When They See Us"
+  Cleaned: "When They See Us" | Year: N/A
+  Matched: Yes -> "When They See Us" (TMDB ID: 81355, Air: 2019-05-31)
+
+[170/175] Processing: "XO Kitty"
+  Cleaned: "XO Kitty" | Year: N/A
+  Matched: Yes -> "XO, Kitty" (TMDB ID: 195670, Air: 2023-05-18)
+
+[172/175] Processing: "Young Royals"
+  Cleaned: "Young Royals" | Year: N/A
+  Matched: Yes -> "Young Royals" (TMDB ID: 125910, Air: 2021-07-01)
+
+[171/175] Processing: "You"
+  Cleaned: "You" | Year: N/A
+  Matched: Yes -> "You" (TMDB ID: 78191, Air: 2018-09-09)
+
+[173/175] Processing: "Young Sheldon"
+  Cleaned: "Young Sheldon" | Year: N/A
+  Matched: Yes -> "Young Sheldon" (TMDB ID: 71728, Air: 2017-09-25)
+
+[174/175] Processing: "Young Sherlock"
+  Cleaned: "Young Sherlock" | Year: N/A
+  Matched: Yes -> "Young Sherlock" (TMDB ID: 255661, Air: 2026-03-04)
+
+[175/175] Processing: "Zero Day"
+  Cleaned: "Zero Day" | Year: N/A
+  Matched: Yes -> "Zero Day" (TMDB ID: 216082, Air: 2025-02-20)
+
+--- Progress: 175/175 | Matched: 172 | Not Found: 3 | Errors: 0 | Remaining: 0 ---
+
+============================================================
+  TV SERIES TMDB UPDATE COMPLETE
+============================================================
+  Total processed         : 175
+  Successfully matched    : 172
+  Not found               : 3
+  Errors/Skipped          : 0
+  Already linked          : 0
+  Total execution time    : 34.5 seconds
+============================================================
+

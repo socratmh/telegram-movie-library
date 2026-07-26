@@ -1,27 +1,30 @@
 import { useState, useCallback, useEffect } from 'react';
 import './index.css';
-import { fetchLibrary } from './api/client';
+import { fetchLibrary, fetchTVLibrary } from './api/client';
 import { useMovies } from './hooks/useMovies';
+import { useSeries } from './hooks/useSeries';
 import Layout from './components/Layout';
 import LibraryGrid from './components/LibraryGrid';
-import StatsPanel from './components/StatsPanel';
 import SearchBar from './components/SearchBar';
 import GenreFilter from './components/GenreFilter';
 import MovieGrid from './components/MovieGrid';
+import SeriesGrid from './components/SeriesGrid';
 import Pagination from './components/Pagination';
 import MovieDetail from './components/MovieDetail';
+import SeriesDetail from './components/SeriesDetail';
 import AdminDashboard from './components/AdminDashboard';
 import AdminLogin from './components/AdminLogin';
 import Hero from './components/Hero';
 import TelegramBanner from './components/TelegramBanner';
 import OnboardingModal from './components/OnboardingModal';
 import { isAuthenticated, logout, setupStorageListener } from './api/adminAuth';
+import { translateLibraryName } from './utils/translator';
 
 
 function App() {
-  // Slug-based "routing" via state + URL hash
   const [selectedSlug, setSelectedSlug] = useState(null);
   const [libraryInfo, setLibraryInfo] = useState(null);
+  const [tvLibraryInfo, setTvLibraryInfo] = useState(null);
   const [loadingInfo, setLoadingInfo] = useState(false);
 
   // Localization state
@@ -61,19 +64,36 @@ function App() {
   useEffect(() => {
     if (!selectedSlug || selectedSlug === 'admin' || selectedSlug === 'admin/login') {
       setLibraryInfo(null);
+      setTvLibraryInfo(null);
       setLoadingInfo(false);
       return;
     }
+
     setLoadingInfo(true);
-    fetchLibrary(selectedSlug)
-      .then((data) => {
-        setLibraryInfo(data);
-        setLoadingInfo(false);
-      })
-      .catch(() => {
-        setLibraryInfo(null);
-        setLoadingInfo(false);
-      });
+    if (selectedSlug.startsWith('tv/')) {
+      const tvSlug = selectedSlug.replace('tv/', '');
+      fetchTVLibrary(tvSlug)
+        .then((data) => {
+          setTvLibraryInfo(data);
+          setLibraryInfo(null);
+          setLoadingInfo(false);
+        })
+        .catch(() => {
+          setTvLibraryInfo(null);
+          setLoadingInfo(false);
+        });
+    } else {
+      fetchLibrary(selectedSlug)
+        .then((data) => {
+          setLibraryInfo(data);
+          setTvLibraryInfo(null);
+          setLoadingInfo(false);
+        })
+        .catch(() => {
+          setLibraryInfo(null);
+          setLoadingInfo(false);
+        });
+    }
   }, [selectedSlug]);
 
   // Sync URL hash or pathname
@@ -163,6 +183,27 @@ function App() {
     );
   }
 
+  // TV Series Library View
+  if (selectedSlug.startsWith('tv/')) {
+    if (loadingInfo || !tvLibraryInfo) {
+      return (
+        <Layout onBackToLibraries={handleBackToLibraries} lang={lang} onToggleLang={handleToggleLang}>
+          <div className="loading-spinner"><div className="spinner" /></div>
+        </Layout>
+      );
+    }
+    return (
+      <SeriesView
+        libraryId={tvLibraryInfo.id}
+        libraryName={tvLibraryInfo.name}
+        telegramChannel={tvLibraryInfo.telegram_channel}
+        onBackToLibraries={handleBackToLibraries}
+        lang={lang}
+        onToggleLang={handleToggleLang}
+      />
+    );
+  }
+
   // Loading library metadata
   if (loadingInfo || !libraryInfo || libraryInfo.slug !== selectedSlug) {
     return (
@@ -174,7 +215,7 @@ function App() {
     );
   }
 
-  // Library movie view
+  // Movie Library View
   return (
     <LibraryView
       libraryId={libraryId}
@@ -204,9 +245,6 @@ function LibraryView({ libraryId, libraryName, telegramChannel, onBackToLibrarie
     genres,
     sortBy,
     setSortBy,
-    sortOrder,
-    setSortOrder,
-    stats,
   } = useMovies(libraryId);
 
   const [selectedMovieId, setSelectedMovieId] = useState(null);
@@ -223,7 +261,7 @@ function LibraryView({ libraryId, libraryName, telegramChannel, onBackToLibrarie
           <span className="arrow">{isAr ? '←' : '←'}</span>
           <span className="text">{isAr ? 'العودة للمكتبات' : 'Back to Libraries'}</span>
         </button>
-        <h1 className="library-title">{libraryName}</h1>
+        <h1 className="library-title">{translateLibraryName(libraryName, lang)}</h1>
       </div>
       <SearchBar
         search={search}
@@ -249,6 +287,73 @@ function LibraryView({ libraryId, libraryName, telegramChannel, onBackToLibrarie
       />
       {selectedMovieId !== null && (
         <MovieDetail movieId={selectedMovieId} onClose={closeDetail} lang={lang} />
+      )}
+    </Layout>
+  );
+}
+
+
+function SeriesView({ libraryId, libraryName, telegramChannel, onBackToLibraries, lang, onToggleLang }) {
+  const {
+    series,
+    total,
+    page,
+    setPage,
+    totalPages,
+    loading,
+    error,
+    search,
+    setSearch,
+    genre,
+    setGenre,
+    genres,
+    sortBy,
+    setSortBy,
+  } = useSeries(libraryId);
+
+  const [selectedSeriesId, setSelectedSeriesId] = useState(null);
+  const closeDetail = useCallback(() => setSelectedSeriesId(null), []);
+
+  const isAr = lang === 'ar';
+
+  return (
+    <Layout libraryName={null} onBackToLibraries={onBackToLibraries} lang={lang} onToggleLang={onToggleLang}>
+      {telegramChannel && <TelegramBanner telegramChannel={telegramChannel} lang={lang} />}
+      <div className="library-view-header">
+        <button className="library-back-btn" onClick={onBackToLibraries}>
+          <span className="arrow">{isAr ? '←' : '←'}</span>
+          <span className="text">{isAr ? 'العودة للمكتبات' : 'Back to Libraries'}</span>
+        </button>
+        <h1 className="library-title series-section-title">
+          <span className="series-title-icon">📺</span>
+          {translateLibraryName(libraryName, lang) || (isAr ? 'المسلسلات' : 'TV Series')}
+        </h1>
+      </div>
+      <SearchBar
+        search={search}
+        onSearchChange={setSearch}
+        sortBy={sortBy}
+        onSortByChange={setSortBy}
+        placeholder={isAr ? 'ابحث عن مسلسلات…' : 'Search series…'}
+        lang={lang}
+      />
+      <GenreFilter genres={genres} activeGenre={genre} onToggle={setGenre} lang={lang} />
+      <SeriesGrid
+        series={series}
+        loading={loading}
+        error={error}
+        onSeriesClick={setSelectedSeriesId}
+        lang={lang}
+      />
+      <Pagination
+        page={page}
+        totalPages={totalPages}
+        total={total}
+        onPageChange={setPage}
+        lang={lang}
+      />
+      {selectedSeriesId !== null && (
+        <SeriesDetail seriesId={selectedSeriesId} onClose={closeDetail} lang={lang} />
       )}
     </Layout>
   );

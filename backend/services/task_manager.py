@@ -31,6 +31,8 @@ class TaskType(str, Enum):
     SCAN = "scan"
     TMDB_UPDATE = "tmdb_update"
     MIGRATION = "migration"
+    TV_SCAN = "tv_scan"
+    TV_TMDB_UPDATE = "tv_tmdb_update"
 
 
 @dataclass
@@ -165,6 +167,56 @@ class TaskManager:
         )
 
         self._run_script(task, cmd, {})
+        return task
+
+    def launch_tv_scan(
+        self,
+        library_id: int,
+        telegram_channel: str,
+        description: str = "",
+    ) -> TaskInfo:
+        """Launch main_tv.py scraper for a specific TV library."""
+        task_id = self._make_id("tv-scan")
+        log_path = _LOG_DIR / f"{task_id}.log"
+
+        env_override = {
+            "LIBRARY_ID": str(library_id),
+            "TELEGRAM_CHANNEL": telegram_channel,
+        }
+
+        task = TaskInfo(
+            id=task_id,
+            task_type=TaskType.TV_SCAN,
+            library_id=library_id,
+            log_file=str(log_path),
+            description=description or f"TV scan library {library_id}: {telegram_channel}",
+        )
+
+        self._run_script(task, [_PYTHON, str(_PROJECT_ROOT / "main_tv.py")], env_override)
+        return task
+
+    def launch_tv_tmdb_update(
+        self,
+        library_id: int,
+        description: str = "",
+    ) -> TaskInfo:
+        """Launch update_tmdb_tv.py for a specific TV library."""
+        task_id = self._make_id("tv-tmdb")
+        log_path = _LOG_DIR / f"{task_id}.log"
+
+        env_override = {
+            "LIBRARY_ID": str(library_id),
+        }
+
+        task = TaskInfo(
+            id=task_id,
+            task_type=TaskType.TV_TMDB_UPDATE,
+            library_id=library_id,
+            log_file=str(log_path),
+            description=description or f"TV TMDB update library {library_id}",
+        )
+
+        self._run_script(task, [_PYTHON, str(_PROJECT_ROOT / "update_tmdb_tv.py")], env_override)
         return task
 
     def get_task(self, task_id: str) -> TaskInfo | None:

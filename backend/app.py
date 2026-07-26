@@ -6,9 +6,12 @@ from starlette.middleware.base import BaseHTTPMiddleware
 
 from backend.config import get_database_path, get_database_url, get_app_env
 from backend.database import MovieQueries
+from backend.tv_database import SeriesQueries
 from backend.routers import admin, auth_router, libraries, movies, stats
+from backend.routers import series as series_router
 from backend.services.task_manager import TaskManager
 from database.models import get_db_url
+import database.tv_models  # noqa: F401 — ensure TV tables are created
 
 import logging
 import traceback
@@ -94,6 +97,7 @@ app.add_middleware(
 db_url = get_db_url(get_database_url(), get_database_path())
 print(f"[APP] Environment: {get_app_env()} | DB engine: {'PostgreSQL' if get_database_url() else 'SQLite'}")
 app.state.queries = MovieQueries(db_url)
+app.state.series_queries = SeriesQueries(db_url)
 app.state.tasks = TaskManager()
 
 # ------------------------------------------------------------------
@@ -104,6 +108,7 @@ app.include_router(movies.router)
 app.include_router(stats.router)
 app.include_router(auth_router.router)
 app.include_router(admin.router)
+app.include_router(series_router.router)
 
 
 @app.get("/", tags=["health"])

@@ -1,5 +1,6 @@
-export default function SearchBar({ search, onSearchChange, sortBy, onSortByChange, lang = 'en' }) {
+export default function SearchBar({ search, onSearchChange, sortBy, onSortByChange, placeholder, lang = 'en' }) {
   const isAr = lang === 'ar';
+  const defaultPlaceholder = isAr ? 'ابحث عن الأفلام…' : 'Search movies…';
   return (
     <div className="controls-bar" id="search-bar">
       <div className="search-input-wrapper">
@@ -8,7 +9,7 @@ export default function SearchBar({ search, onSearchChange, sortBy, onSortByChan
           id="search-input"
           className="search-input"
           type="text"
-          placeholder={isAr ? 'ابحث عن الأفلام…' : 'Search movies…'}
+          placeholder={placeholder || defaultPlaceholder}
           value={search}
           onChange={(e) => onSearchChange(e.target.value)}
           autoComplete="off"
@@ -30,4 +31,3 @@ export default function SearchBar({ search, onSearchChange, sortBy, onSortByChan
     </div>
   );
 }
-

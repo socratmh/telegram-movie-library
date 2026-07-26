@@ -1,16 +1,16 @@
 # Graph Report - Movis_with_Telegram  (2026-07-23)
 
 ## Corpus Check
-- 72 files · ~31,551 words
+- 74 files · ~32,093 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 496 nodes · 895 edges · 45 communities (33 shown, 12 thin omitted)
+- 503 nodes · 873 edges · 52 communities (37 shown, 15 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 26 edges (avg confidence: 0.78)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `d9e240f2`
+- Built from commit: `97498169`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -48,6 +48,9 @@
 - [[_COMMUNITY_Any|Any]]
 - [[_COMMUNITY_Path|Path]]
 - [[_COMMUNITY_TelegramClient|TelegramClient]]
+- [[_COMMUNITY_MovieGrid.jsx|MovieGrid.jsx]]
+- [[_COMMUNITY_GenreFilter.jsx|GenreFilter.jsx]]
+- [[_COMMUNITY_Hero.jsx|Hero.jsx]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `MovieQueries` - 24 edges
@@ -76,7 +79,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (45 total, 12 thin omitted)
+## Communities (52 total, 15 thin omitted)
 
 ### Community 0 - "MovieQueries"
 Cohesion: 0.10
@@ -84,11 +87,11 @@ Nodes (34): admin_delete_library(), Delete a library and all associated movies/m
 
 ### Community 1 - "movies.py"
 Cohesion: 0.07
-Nodes (44): global_exception_handler(), Health-check / welcome endpoint., root(), SecurityHeadersMiddleware, MovieQueries, Read-only query layer that powers the FastAPI endpoints.      Uses SQLAlchemy., GenreListResponse, LibraryListResponse (+36 more)
+Nodes (57): GenreListResponse, LibraryCreateRequest, LibraryDetailResponse, LibraryListResponse, LibraryResponse, LibraryUpdateRequest, MigrationRequest, MovieDetailResponse (+49 more)
 
 ### Community 2 - "App.jsx"
-Cohesion: 0.07
-Nodes (53): decodeTokenPayload(), getAccessToken(), getAuthHeaders(), getAuthHeadersAsync(), getRefreshToken(), getUsername(), isAuthenticated(), isTokenExpired() (+45 more)
+Cohesion: 0.10
+Nodes (41): decodeTokenPayload(), getAccessToken(), getAuthHeaders(), getAuthHeadersAsync(), getRefreshToken(), getUsername(), isAuthenticated(), isTokenExpired() (+33 more)
 
 ### Community 3 - "process_movie"
 Cohesion: 0.21
@@ -131,8 +134,8 @@ Cohesion: 0.14
 Nodes (12): Any, task_manager.py — In-memory background task manager.  Spawns CLI scripts (main.p, Launch update_tmdb.py for a specific library., Launch migrate_channel_links.py for a specific library., Manages background subprocess tasks with log capture., Launch main.py scraper for a specific library., TaskInfo, TaskManager (+4 more)
 
 ### Community 20 - "migrate_channel_links.py"
-Cohesion: 0.14
-Nodes (31): LibraryCreateRequest, LibraryDetailResponse, LibraryUpdateRequest, MigrationRequest, TaskListResponse, TaskLogsResponse, TaskResponse, admin_cancel_task() (+23 more)
+Cohesion: 0.31
+Nodes (4): App(), OnboardingModal(), formatTelegramUrl(), TelegramBanner()
 
 ### Community 22 - "_parse_genres"
 Cohesion: 0.10
@@ -159,22 +162,22 @@ Cohesion: 0.22
 Nodes (9): get_app_env(), get_database_path(), get_database_url(), get_telegram_channel_id(), Path, Return the current application environment (development | production)., Resolve the database path from the environment.      Keeps the backend indepen, Get the database URL from the environment for SQLAlchemy.      Only returns th (+1 more)
 
 ### Community 42 - "Any"
-Cohesion: 0.19
-Nodes (11): Any, Session, main(), build_poster_url(), _choose_best_match(), get_movie_details(), _normalize_title(), Search TMDB by movie title and return the best matching result.      Returned (+3 more)
+Cohesion: 0.08
+Nodes (29): Any, global_exception_handler(), Health-check / welcome endpoint., root(), SecurityHeadersMiddleware, MovieQueries, Read-only query layer that powers the FastAPI endpoints.      Uses SQLAlchemy., StatsResponse (+21 more)
 
 ## Knowledge Gaps
 - **79 isolated node(s):** `Settings`, `$schema`, `plugins`, `react/rules-of-hooks`, `react/only-export-components` (+74 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **12 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **15 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `MovieQueries` connect `movies.py` to `Any`?**
-  _High betweenness centrality (0.043) - this node is a cross-community bridge._
-- **Why does `TaskManager` connect `TaskManager` to `migrate_channel_links.py`?**
-  _High betweenness centrality (0.031) - this node is a cross-community bridge._
-- **Why does `Movie` connect `MovieQueries` to `migrate_channel_links.py`?**
+- **Why does `MovieQueries` connect `Any` to `movies.py`?**
+  _High betweenness centrality (0.042) - this node is a cross-community bridge._
+- **Why does `TaskManager` connect `TaskManager` to `movies.py`?**
+  _High betweenness centrality (0.030) - this node is a cross-community bridge._
+- **Why does `Movie` connect `MovieQueries` to `movies.py`?**
   _High betweenness centrality (0.020) - this node is a cross-community bridge._
 - **Are the 9 inferred relationships involving `Movie` (e.g. with `admin_delete_library()` and `admin_list_libraries()`) actually correct?**
   _`Movie` has 9 INFERRED edges - model-reasoned connections that need verification._

@@ -183,3 +183,83 @@ export function adminFetchTaskLogs(taskId) {
 export function adminCancelTask(taskId) {
   return mutate(`${ADMIN}/tasks/${taskId}/cancel`, 'POST');
 }
+
+// ---------------------------------------------------------------------------
+// TV Series API helpers (public)
+// ---------------------------------------------------------------------------
+
+/** All active TV libraries with series counts. */
+export function fetchTVLibraries() {
+  return request(`${BASE}/tv-libraries`);
+}
+
+/** Single TV library by slug. */
+export function fetchTVLibrary(slug) {
+  return request(`${BASE}/tv-libraries/${slug}`);
+}
+
+/** Paginated TV series list. */
+export function fetchSeries({ page = 1, pageSize = 20, search, genre, sortBy, sortOrder, libraryId } = {}) {
+  return request(`${BASE}/series`, {
+    page,
+    page_size: pageSize,
+    search: search || null,
+    genre: genre || null,
+    sort_by: sortBy || null,
+    sort_order: sortOrder || null,
+    library_id: libraryId || null,
+  });
+}
+
+/** Single TV series detail. */
+export function fetchSeriesDetail(id, { language } = {}) {
+  return request(`${BASE}/series/${id}`, { language: language || null });
+}
+
+/** All unique genres for TV series. */
+export function fetchSeriesGenres({ libraryId } = {}) {
+  return request(`${BASE}/series-genres`, {
+    library_id: libraryId || null,
+  });
+}
+
+/** TV series statistics. */
+export function fetchSeriesStats({ libraryId } = {}) {
+  return request(`${BASE}/series-stats`, {
+    library_id: libraryId || null,
+  });
+}
+
+// ---------------------------------------------------------------------------
+// TV Series Admin API helpers
+// ---------------------------------------------------------------------------
+
+/** Admin: list ALL TV libraries with detailed stats. */
+export function adminFetchTVLibraries() {
+  return request(`${ADMIN}/tv-libraries`);
+}
+
+/** Admin: create TV library. */
+export function adminCreateTVLibrary(data) {
+  return mutate(`${ADMIN}/tv-libraries`, 'POST', data);
+}
+
+/** Admin: update TV library. */
+export function adminUpdateTVLibrary(id, data) {
+  return mutate(`${ADMIN}/tv-libraries/${id}`, 'PUT', data);
+}
+
+/** Admin: delete TV library. */
+export function adminDeleteTVLibrary(id) {
+  return mutate(`${ADMIN}/tv-libraries/${id}`, 'DELETE');
+}
+
+/** Admin: launch scan for TV library. */
+export function adminScanTVLibrary(id) {
+  return mutate(`${ADMIN}/tv-libraries/${id}/scan`, 'POST');
+}
+
+/** Admin: launch TMDB update for TV library. */
+export function adminUpdateTVTmdb(id) {
+  return mutate(`${ADMIN}/tv-libraries/${id}/update-tmdb`, 'POST');
+}

@@ -10,7 +10,14 @@ import {
   adminFetchTasks,
   adminFetchTaskLogs,
   adminCancelTask,
+  adminFetchTVLibraries,
+  adminCreateTVLibrary,
+  adminUpdateTVLibrary,
+  adminDeleteTVLibrary,
+  adminScanTVLibrary,
+  adminUpdateTVTmdb,
 } from '../api/client';
+import { translateLibraryName } from '../utils/translator';
 
 // ---------------------------------------------------------------------------
 // Sub-components
@@ -54,7 +61,80 @@ function LibraryForm({ library, onSave, onCancel }) {
   return (
     <div className="admin-modal-overlay" onClick={onCancel}>
       <div className="admin-modal" onClick={(e) => e.stopPropagation()}>
-        <h3>{isEdit ? 'Edit Library' : 'Create Library'}</h3>
+        <h3>{isEdit ? 'Edit Movie Library' : 'Create Movie Library'}</h3>
+        <form onSubmit={handleSubmit} className="admin-form">
+          <label>
+            <span>Name</span>
+            <input name="name" value={form.name} onChange={handleChange} required />
+          </label>
+          <label>
+            <span>Slug</span>
+            <input name="slug" value={form.slug} onChange={handleChange} required />
+          </label>
+          <label>
+            <span>Telegram Channel</span>
+            <input name="telegram_channel" value={form.telegram_channel} onChange={handleChange} required placeholder="@channel or https://t.me/+invite" />
+          </label>
+          <label>
+            <span>Channel ID (numeric, optional)</span>
+            <input name="telegram_channel_id" value={form.telegram_channel_id} onChange={handleChange} placeholder="e.g. 1234567890" />
+          </label>
+          <label className="admin-checkbox-label">
+            <input type="checkbox" name="is_active" checked={form.is_active} onChange={handleChange} />
+            <span>Active</span>
+          </label>
+          <div className="admin-form-actions">
+            <button type="submit" className="admin-btn admin-btn-primary" disabled={saving}>
+              {saving ? 'Saving...' : (isEdit ? 'Update' : 'Create')}
+            </button>
+            <button type="button" className="admin-btn admin-btn-secondary" onClick={onCancel}>Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+}
+
+
+function TVLibraryForm({ library, onSave, onCancel }) {
+  const isEdit = !!library;
+  const [form, setForm] = useState({
+    name: library?.name || '',
+    slug: library?.slug || '',
+    telegram_channel: library?.telegram_channel || '',
+    telegram_channel_id: library?.telegram_channel_id || '',
+    is_active: library?.is_active ?? true,
+  });
+  const [saving, setSaving] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setForm((f) => ({ ...f, [name]: type === 'checkbox' ? checked : value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSaving(true);
+    try {
+      const payload = { ...form };
+      if (!payload.telegram_channel_id) payload.telegram_channel_id = null;
+      if (isEdit) {
+        await adminUpdateTVLibrary(library.id, payload);
+      } else {
+        await adminCreateTVLibrary(payload);
+      }
+      onSave();
+    } catch (err) {
+      alert('Error: ' + err.message);
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  return (
+    <div className="admin-modal-overlay" onClick={onCancel}>
+      <div className="admin-modal" onClick={(e) => e.stopPropagation()}>
+        <h3>{isEdit ? 'Edit TV Series Library' : 'Create TV Series Library'}</h3>
         <form onSubmit={handleSubmit} className="admin-form">
           <label>
             <span>Name</span>
@@ -160,7 +240,6 @@ function TaskLogViewer({ taskId, onClose }) {
     try {
       const data = await adminFetchTaskLogs(taskId);
       setLogs(data.logs || '(no output yet)');
-      // Auto-scroll
       if (logRef.current) {
         logRef.current.scrollTop = logRef.current.scrollHeight;
       }
@@ -209,24 +288,28 @@ function TaskLogViewer({ taskId, onClose }) {
 
 export default function AdminDashboard({ onBack, onLogout, lang = 'en' }) {
   const [libraries, setLibraries] = useState([]);
+  const [tvLibraries, setTvLibraries] = useState([]);
   const [tasks, setTasks] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [editLib, setEditLib] = useState(null);      // null | 'new' | library object
-  const [migrateLib, setMigrateLib] = useState(null); // null | library object
-  const [viewLogs, setViewLogs] = useState(null);     // null | task_id
+  const [editLib, setEditLib] = useState(null);        // null | 'new' | library object
+  const [editTVLib, setEditTVLib] = useState(null);    // null | 'new' | library object
+  const [migrateLib, setMigrateLib] = useState(null);   // null | library object
+  const [viewLogs, setViewLogs] = useState(null);       // null | task_id
   const [activeTab, setActiveTab] = useState('libraries');
 
   const refreshData = useCallback(async () => {
     try {
-      const [libs, taskData] = await Promise.all([
+      const [libs, tvLibs, taskData] = await Promise.all([
         adminFetchLibraries(),
+        adminFetchTVLibraries(),
         adminFetchTasks(),
       ]);
       setLibraries(Array.isArray(libs) ? libs : []);
+      setTvLibraries(Array.isArray(tvLibs) ? tvLibs : []);
       setTasks(taskData?.tasks || []);
     } catch (err) {
       console.error('Admin refresh error:', err);
-      if (err.message.includes('401') || err.message.includes('Unauthorized')) {
+      if (err.message?.includes('401') || err.message?.includes('Unauthorized')) {
         if (onLogout) onLogout();
       }
     } finally {
@@ -241,9 +324,19 @@ export default function AdminDashboard({ onBack, onLogout, lang = 'en' }) {
   }, [refreshData]);
 
   const handleDeleteLib = async (lib) => {
-    if (!confirm(`Delete library "${lib.name}" and all its ${lib.movie_count} movies? This cannot be undone.`)) return;
+    if (!confirm(`Delete movie library "${lib.name}" and all its ${lib.movie_count} movies? This cannot be undone.`)) return;
     try {
       await adminDeleteLibrary(lib.id);
+      refreshData();
+    } catch (err) {
+      alert('Error: ' + err.message);
+    }
+  };
+
+  const handleDeleteTVLib = async (lib) => {
+    if (!confirm(`Delete TV library "${lib.name}" and all its ${lib.series_count} TV series? This cannot be undone.`)) return;
+    try {
+      await adminDeleteTVLibrary(lib.id);
       refreshData();
     } catch (err) {
       alert('Error: ' + err.message);
@@ -260,9 +353,29 @@ export default function AdminDashboard({ onBack, onLogout, lang = 'en' }) {
     }
   };
 
+  const handleTVScan = async (lib) => {
+    try {
+      await adminScanTVLibrary(lib.id);
+      setActiveTab('tasks');
+      refreshData();
+    } catch (err) {
+      alert('Error: ' + err.message);
+    }
+  };
+
   const handleTmdb = async (lib) => {
     try {
       await adminUpdateTmdb(lib.id);
+      setActiveTab('tasks');
+      refreshData();
+    } catch (err) {
+      alert('Error: ' + err.message);
+    }
+  };
+
+  const handleTVTmdb = async (lib) => {
+    try {
+      await adminUpdateTVTmdb(lib.id);
       setActiveTab('tasks');
       refreshData();
     } catch (err) {
@@ -326,7 +439,12 @@ export default function AdminDashboard({ onBack, onLogout, lang = 'en' }) {
       {/* Tabs */}
       <div className="admin-tabs">
         <button className={`admin-tab ${activeTab === 'libraries' ? 'active' : ''}`} onClick={() => setActiveTab('libraries')}>
-          📚 Libraries
+          📚 Movie Libraries
+        </button>
+        <button className={`admin-tab ${activeTab === 'tv-libraries' ? 'active' : ''}`} onClick={() => setActiveTab('tv-libraries')}>
+          📺 TV Libraries {tvLibraries.length > 0 && (
+            <span className="admin-badge admin-badge-info">{tvLibraries.length}</span>
+          )}
         </button>
         <button className={`admin-tab ${activeTab === 'tasks' ? 'active' : ''}`} onClick={() => setActiveTab('tasks')}>
           ⚙️ Tasks {tasks.filter(t => t.status === 'running').length > 0 && (
@@ -335,12 +453,12 @@ export default function AdminDashboard({ onBack, onLogout, lang = 'en' }) {
         </button>
       </div>
 
-      {/* Libraries Tab */}
+      {/* Movie Libraries Tab */}
       {activeTab === 'libraries' && (
         <div className="admin-section">
           <div className="admin-section-header">
-            <h2>Libraries</h2>
-            <button className="admin-btn admin-btn-primary" onClick={() => setEditLib('new')}>+ New Library</button>
+            <h2>Movie Libraries</h2>
+            <button className="admin-btn admin-btn-primary" onClick={() => setEditLib('new')}>+ New Movie Library</button>
           </div>
 
           <div className="admin-table-wrap">
@@ -362,7 +480,7 @@ export default function AdminDashboard({ onBack, onLogout, lang = 'en' }) {
                 {libraries.map((lib) => (
                   <tr key={lib.id}>
                     <td className="admin-cell-id">{lib.id}</td>
-                    <td className="admin-cell-name">{lib.name}</td>
+                    <td className="admin-cell-name">{translateLibraryName(lib.name, lang)}</td>
                     <td><code>{lib.slug}</code></td>
                     <td className="admin-cell-channel" title={lib.telegram_channel}>
                       {lib.telegram_channel?.length > 30 ? lib.telegram_channel.slice(0, 30) + '…' : lib.telegram_channel}
@@ -388,7 +506,65 @@ export default function AdminDashboard({ onBack, onLogout, lang = 'en' }) {
                   </tr>
                 ))}
                 {libraries.length === 0 && (
-                  <tr><td colSpan="9" className="admin-empty">No libraries found. Create one to get started.</td></tr>
+                  <tr><td colSpan="9" className="admin-empty">No movie libraries found. Create one to get started.</td></tr>
+                )}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
+
+      {/* TV Series Libraries Tab */}
+      {activeTab === 'tv-libraries' && (
+        <div className="admin-section">
+          <div className="admin-section-header">
+            <h2>TV Series Libraries</h2>
+            <button className="admin-btn admin-btn-primary" onClick={() => setEditTVLib('new')}>+ New TV Library</button>
+          </div>
+
+          <div className="admin-table-wrap">
+            <table className="admin-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Slug</th>
+                  <th>Channel</th>
+                  <th>Series</th>
+                  <th>TMDB</th>
+                  <th>Active</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                {tvLibraries.map((lib) => (
+                  <tr key={lib.id}>
+                    <td className="admin-cell-id">{lib.id}</td>
+                    <td className="admin-cell-name">{translateLibraryName(lib.name, lang)}</td>
+                    <td><code>{lib.slug}</code></td>
+                    <td className="admin-cell-channel" title={lib.telegram_channel}>
+                      {lib.telegram_channel?.length > 30 ? lib.telegram_channel.slice(0, 30) + '…' : lib.telegram_channel}
+                    </td>
+                    <td className="admin-cell-num">{lib.series_count}</td>
+                    <td className="admin-cell-num">
+                      <span className="admin-tmdb-stat">
+                        {lib.series_with_tmdb}
+                        <span className="admin-tmdb-pct">
+                          ({lib.series_count > 0 ? Math.round(lib.series_with_tmdb / lib.series_count * 100) : 0}%)
+                        </span>
+                      </span>
+                    </td>
+                    <td>{lib.is_active ? '✅' : '❌'}</td>
+                    <td className="admin-cell-actions">
+                      <button className="admin-btn admin-btn-sm admin-btn-secondary" onClick={() => setEditTVLib(lib)} title="Edit">✏️</button>
+                      <button className="admin-btn admin-btn-sm admin-btn-primary" onClick={() => handleTVScan(lib)} title="Scan channel">📡</button>
+                      <button className="admin-btn admin-btn-sm admin-btn-accent" onClick={() => handleTVTmdb(lib)} title="TMDB update">🎬</button>
+                      <button className="admin-btn admin-btn-sm admin-btn-danger" onClick={() => handleDeleteTVLib(lib)} title="Delete">🗑️</button>
+                    </td>
+                  </tr>
+                ))}
+                {tvLibraries.length === 0 && (
+                  <tr><td colSpan="8" className="admin-empty">No TV series libraries found. Create one to get started.</td></tr>
                 )}
               </tbody>
             </table>
@@ -456,6 +632,13 @@ export default function AdminDashboard({ onBack, onLogout, lang = 'en' }) {
           library={editLib === 'new' ? null : editLib}
           onSave={() => { setEditLib(null); refreshData(); }}
           onCancel={() => setEditLib(null)}
+        />
+      )}
+      {editTVLib && (
+        <TVLibraryForm
+          library={editTVLib === 'new' ? null : editTVLib}
+          onSave={() => { setEditTVLib(null); refreshData(); }}
+          onCancel={() => setEditTVLib(null)}
         />
       )}
       {migrateLib && (

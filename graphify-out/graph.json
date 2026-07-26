@@ -4,14 +4,114 @@
   "graph": {},
   "nodes": [
     {
+      "label": "App.jsx",
+      "file_type": "code",
+      "source_file": "frontend/src/App.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "frontend_src_app",
+      "community": 20,
+      "norm_label": "app.jsx"
+    },
+    {
+      "label": "App()",
+      "file_type": "code",
+      "source_file": "frontend/src/App.jsx",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "frontend_src_app_app",
+      "community": 20,
+      "norm_label": "app()"
+    },
+    {
+      "label": "LibraryView()",
+      "file_type": "code",
+      "source_file": "frontend/src/App.jsx",
+      "source_location": "L191",
+      "_origin": "ast",
+      "id": "frontend_src_app_libraryview",
+      "community": 20,
+      "norm_label": "libraryview()"
+    },
+    {
+      "label": "OnboardingModal.jsx",
+      "file_type": "code",
+      "source_file": "frontend/src/components/OnboardingModal.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "frontend_src_components_onboardingmodal",
+      "community": 20,
+      "norm_label": "onboardingmodal.jsx"
+    },
+    {
+      "label": "TelegramIcon()",
+      "file_type": "code",
+      "source_file": "frontend/src/components/OnboardingModal.jsx",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "frontend_src_components_onboardingmodal_telegramicon",
+      "community": 20,
+      "norm_label": "telegramicon()"
+    },
+    {
+      "label": "OnboardingModal()",
+      "file_type": "code",
+      "source_file": "frontend/src/components/OnboardingModal.jsx",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "frontend_src_components_onboardingmodal_onboardingmodal",
+      "community": 20,
+      "norm_label": "onboardingmodal()"
+    },
+    {
+      "label": "TelegramBanner.jsx",
+      "file_type": "code",
+      "source_file": "frontend/src/components/TelegramBanner.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "frontend_src_components_telegrambanner",
+      "community": 20,
+      "norm_label": "telegrambanner.jsx"
+    },
+    {
+      "label": "TelegramIcon()",
+      "file_type": "code",
+      "source_file": "frontend/src/components/TelegramBanner.jsx",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "frontend_src_components_telegrambanner_telegramicon",
+      "community": 20,
+      "norm_label": "telegramicon()"
+    },
+    {
+      "label": "formatTelegramUrl()",
+      "file_type": "code",
+      "source_file": "frontend/src/components/TelegramBanner.jsx",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "frontend_src_components_telegrambanner_formattelegramurl",
+      "community": 20,
+      "norm_label": "formattelegramurl()"
+    },
+    {
+      "label": "TelegramBanner()",
+      "file_type": "code",
+      "source_file": "frontend/src/components/TelegramBanner.jsx",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "frontend_src_components_telegrambanner_telegrambanner",
+      "community": 20,
+      "norm_label": "telegrambanner()"
+    },
+    {
       "label": "config.py",
       "file_type": "code",
       "source_file": "config.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "config",
       "community": 14,
-      "norm_label": "config.py"
+      "norm_label": "config.py",
+      "id": "config"
     },
     {
       "label": "Settings",
@@ -19,9 +119,9 @@
       "source_file": "config.py",
       "source_location": "L15",
       "_origin": "ast",
-      "id": "config_settings",
       "community": 14,
-      "norm_label": "settings"
+      "norm_label": "settings",
+      "id": "config_settings"
     },
     {
       "label": "_required_env()",
@@ -29,9 +129,9 @@
       "source_file": "config.py",
       "source_location": "L29",
       "_origin": "ast",
-      "id": "config_required_env",
       "community": 14,
-      "norm_label": "_required_env()"
+      "norm_label": "_required_env()",
+      "id": "config_required_env"
     },
     {
       "label": "_int_env()",
@@ -39,9 +139,9 @@
       "source_file": "config.py",
       "source_location": "L36",
       "_origin": "ast",
-      "id": "config_int_env",
       "community": 14,
-      "norm_label": "_int_env()"
+      "norm_label": "_int_env()",
+      "id": "config_int_env"
     },
     {
       "label": "_path_env()",
@@ -49,9 +149,9 @@
       "source_file": "config.py",
       "source_location": "L47",
       "_origin": "ast",
-      "id": "config_path_env",
       "community": 14,
-      "norm_label": "_path_env()"
+      "norm_label": "_path_env()",
+      "id": "config_path_env"
     },
     {
       "label": "Path",
@@ -59,9 +159,9 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "path",
       "community": 14,
-      "norm_label": "path"
+      "norm_label": "path",
+      "id": "path"
     },
     {
       "label": "_get_app_env()",
@@ -69,9 +169,9 @@
       "source_file": "config.py",
       "source_location": "L55",
       "_origin": "ast",
-      "id": "config_get_app_env",
       "community": 14,
-      "norm_label": "_get_app_env()"
+      "norm_label": "_get_app_env()",
+      "id": "config_get_app_env"
     },
     {
       "label": "export_session_string.py",
@@ -79,9 +179,9 @@
       "source_file": "export_session_string.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "export_session_string",
       "community": 14,
-      "norm_label": "export_session_string.py"
+      "norm_label": "export_session_string.py",
+      "id": "export_session_string"
     },
     {
       "label": "main()",
@@ -89,9 +189,9 @@
       "source_file": "export_session_string.py",
       "source_location": "L15",
       "_origin": "ast",
-      "id": "export_session_string_main",
       "community": 14,
-      "norm_label": "main()"
+      "norm_label": "main()",
+      "id": "export_session_string_main"
     },
     {
       "label": "export_session_string.py \u2014 Helper script to export your local Telethon session a",
@@ -99,9 +199,9 @@
       "source_file": "export_session_string.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "export_session_string_rationale_1",
       "community": 14,
-      "norm_label": "export_session_string.py \u2014 helper script to export your local telethon session a"
+      "norm_label": "export_session_string.py \u2014 helper script to export your local telethon session a",
+      "id": "export_session_string_rationale_1"
     },
     {
       "label": "telegram_client.py",
@@ -109,9 +209,9 @@
       "source_file": "scraper/telegram_client.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "scraper_telegram_client",
       "community": 14,
-      "norm_label": "telegram_client.py"
+      "norm_label": "telegram_client.py",
+      "id": "scraper_telegram_client"
     },
     {
       "label": "get_telegram_client()",
@@ -119,9 +219,9 @@
       "source_file": "scraper/telegram_client.py",
       "source_location": "L12",
       "_origin": "ast",
-      "id": "scraper_telegram_client_get_telegram_client",
       "community": 14,
-      "norm_label": "get_telegram_client()"
+      "norm_label": "get_telegram_client()",
+      "id": "scraper_telegram_client_get_telegram_client"
     },
     {
       "label": "TelegramClient",
@@ -129,9 +229,9 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "telegramclient",
       "community": 14,
-      "norm_label": "telegramclient"
+      "norm_label": "telegramclient",
+      "id": "telegramclient"
     },
     {
       "label": "Create, authenticate, and cleanly disconnect a Telethon client.",
@@ -139,9 +239,9 @@
       "source_file": "scraper/telegram_client.py",
       "source_location": "L13",
       "_origin": "ast",
-      "id": "scraper_telegram_client_rationale_13",
       "community": 14,
-      "norm_label": "create, authenticate, and cleanly disconnect a telethon client."
+      "norm_label": "create, authenticate, and cleanly disconnect a telethon client.",
+      "id": "scraper_telegram_client_rationale_13"
     },
     {
       "label": "tmdb_service.py",
@@ -249,7 +349,7 @@
       "source_file": "backend/database.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 42,
       "norm_label": "database.py",
       "id": "backend_database"
     },
@@ -259,7 +359,7 @@
       "source_file": "backend/database.py",
       "source_location": "L23",
       "_origin": "ast",
-      "community": 1,
+      "community": 42,
       "norm_label": "moviequeries",
       "id": "backend_database_moviequeries"
     },
@@ -269,7 +369,7 @@
       "source_file": "backend/database.py",
       "source_location": "L31",
       "_origin": "ast",
-      "community": 1,
+      "community": 42,
       "norm_label": ".__init__()",
       "id": "backend_database_moviequeries_init"
     },
@@ -359,7 +459,7 @@
       "source_file": "backend/database.py",
       "source_location": "L24",
       "_origin": "ast",
-      "community": 1,
+      "community": 42,
       "norm_label": "read-only query layer that powers the fastapi endpoints.      uses sqlalchemy.",
       "id": "backend_database_rationale_24"
     },
@@ -369,7 +469,7 @@
       "source_file": "backend/app.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 42,
       "norm_label": "app.py",
       "id": "backend_app"
     },
@@ -379,7 +479,7 @@
       "source_file": "backend/app.py",
       "source_location": "L27",
       "_origin": "ast",
-      "community": 1,
+      "community": 42,
       "norm_label": "global_exception_handler()",
       "id": "backend_app_global_exception_handler"
     },
@@ -389,7 +489,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 1,
+      "community": 42,
       "norm_label": "request",
       "id": "request"
     },
@@ -399,7 +499,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 1,
+      "community": 42,
       "norm_label": "exception",
       "id": "exception"
     },
@@ -409,7 +509,7 @@
       "source_file": "backend/app.py",
       "source_location": "L38",
       "_origin": "ast",
-      "community": 1,
+      "community": 42,
       "norm_label": "securityheadersmiddleware",
       "id": "backend_app_securityheadersmiddleware"
     },
@@ -419,7 +519,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 1,
+      "community": 42,
       "norm_label": "basehttpmiddleware",
       "id": "basehttpmiddleware"
     },
@@ -429,7 +529,7 @@
       "source_file": "backend/app.py",
       "source_location": "L39",
       "_origin": "ast",
-      "community": 1,
+      "community": 42,
       "norm_label": ".dispatch()",
       "id": "backend_app_securityheadersmiddleware_dispatch"
     },
@@ -439,7 +539,7 @@
       "source_file": "backend/app.py",
       "source_location": "L110",
       "_origin": "ast",
-      "community": 1,
+      "community": 42,
       "norm_label": "root()",
       "id": "backend_app_root"
     },
@@ -449,7 +549,7 @@
       "source_file": "backend/app.py",
       "source_location": "L111",
       "_origin": "ast",
-      "community": 1,
+      "community": 42,
       "norm_label": "health-check / welcome endpoint.",
       "id": "backend_app_rationale_111"
     },
@@ -1099,7 +1199,7 @@
       "source_file": "backend/models.py",
       "source_location": "L133",
       "_origin": "ast",
-      "community": 1,
+      "community": 42,
       "norm_label": "statsresponse",
       "id": "backend_models_statsresponse"
     },
@@ -1129,7 +1229,7 @@
       "source_file": "backend/models.py",
       "source_location": "L163",
       "_origin": "ast",
-      "community": 20,
+      "community": 1,
       "norm_label": "librarycreaterequest",
       "id": "backend_models_librarycreaterequest"
     },
@@ -1139,7 +1239,7 @@
       "source_file": "backend/models.py",
       "source_location": "L171",
       "_origin": "ast",
-      "community": 20,
+      "community": 1,
       "norm_label": "libraryupdaterequest",
       "id": "backend_models_libraryupdaterequest"
     },
@@ -1149,7 +1249,7 @@
       "source_file": "backend/models.py",
       "source_location": "L179",
       "_origin": "ast",
-      "community": 20,
+      "community": 1,
       "norm_label": "librarydetailresponse",
       "id": "backend_models_librarydetailresponse"
     },
@@ -1179,7 +1279,7 @@
       "source_file": "backend/models.py",
       "source_location": "L206",
       "_origin": "ast",
-      "community": 20,
+      "community": 1,
       "norm_label": "migrationrequest",
       "id": "backend_models_migrationrequest"
     },
@@ -1189,7 +1289,7 @@
       "source_file": "backend/models.py",
       "source_location": "L212",
       "_origin": "ast",
-      "community": 20,
+      "community": 1,
       "norm_label": "taskresponse",
       "id": "backend_models_taskresponse"
     },
@@ -1199,7 +1299,7 @@
       "source_file": "backend/models.py",
       "source_location": "L224",
       "_origin": "ast",
-      "community": 20,
+      "community": 1,
       "norm_label": "tasklistresponse",
       "id": "backend_models_tasklistresponse"
     },
@@ -1209,7 +1309,7 @@
       "source_file": "backend/models.py",
       "source_location": "L228",
       "_origin": "ast",
-      "community": 20,
+      "community": 1,
       "norm_label": "tasklogsresponse",
       "id": "backend_models_tasklogsresponse"
     },
@@ -1259,7 +1359,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 20,
+      "community": 1,
       "norm_label": "admin.py",
       "id": "backend_routers_admin"
     },
@@ -1269,7 +1369,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L32",
       "_origin": "ast",
-      "community": 20,
+      "community": 1,
       "norm_label": "_get_tasks()",
       "id": "backend_routers_admin_get_tasks"
     },
@@ -1279,7 +1379,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 20,
+      "community": 1,
       "norm_label": "request",
       "id": "backend_routers_admin_py_request"
     },
@@ -1289,7 +1389,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L36",
       "_origin": "ast",
-      "community": 20,
+      "community": 1,
       "norm_label": "_get_session_factory()",
       "id": "backend_routers_admin_get_session_factory"
     },
@@ -1299,7 +1399,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L45",
       "_origin": "ast",
-      "community": 20,
+      "community": 1,
       "norm_label": "admin_list_libraries()",
       "id": "backend_routers_admin_admin_list_libraries"
     },
@@ -1309,7 +1409,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L86",
       "_origin": "ast",
-      "community": 20,
+      "community": 1,
       "norm_label": "admin_create_library()",
       "id": "backend_routers_admin_admin_create_library"
     },
@@ -1319,7 +1419,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L111",
       "_origin": "ast",
-      "community": 20,
+      "community": 1,
       "norm_label": "admin_update_library()",
       "id": "backend_routers_admin_admin_update_library"
     },
@@ -1339,7 +1439,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L196",
       "_origin": "ast",
-      "community": 20,
+      "community": 1,
       "norm_label": "admin_scan_library()",
       "id": "backend_routers_admin_admin_scan_library"
     },
@@ -1349,7 +1449,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L213",
       "_origin": "ast",
-      "community": 20,
+      "community": 1,
       "norm_label": "admin_update_tmdb()",
       "id": "backend_routers_admin_admin_update_tmdb"
     },
@@ -1359,7 +1459,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L229",
       "_origin": "ast",
-      "community": 20,
+      "community": 1,
       "norm_label": "admin_migrate_library()",
       "id": "backend_routers_admin_admin_migrate_library"
     },
@@ -1369,7 +1469,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L255",
       "_origin": "ast",
-      "community": 20,
+      "community": 1,
       "norm_label": "admin_list_tasks()",
       "id": "backend_routers_admin_admin_list_tasks"
     },
@@ -1379,7 +1479,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L264",
       "_origin": "ast",
-      "community": 20,
+      "community": 1,
       "norm_label": "admin_get_task()",
       "id": "backend_routers_admin_admin_get_task"
     },
@@ -1389,7 +1489,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L274",
       "_origin": "ast",
-      "community": 20,
+      "community": 1,
       "norm_label": "admin_get_task_logs()",
       "id": "backend_routers_admin_admin_get_task_logs"
     },
@@ -1399,7 +1499,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L285",
       "_origin": "ast",
-      "community": 20,
+      "community": 1,
       "norm_label": "admin_cancel_task()",
       "id": "backend_routers_admin_admin_cancel_task"
     },
@@ -1409,7 +1509,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 20,
+      "community": 1,
       "norm_label": "admin api router \u2014 library crud, task management, and background operations.",
       "id": "backend_routers_admin_rationale_1"
     },
@@ -1419,7 +1519,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L46",
       "_origin": "ast",
-      "community": 20,
+      "community": 1,
       "norm_label": "list all libraries with detailed stats (including inactive).",
       "id": "backend_routers_admin_rationale_46"
     },
@@ -1429,7 +1529,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L87",
       "_origin": "ast",
-      "community": 20,
+      "community": 1,
       "norm_label": "create a new library.",
       "id": "backend_routers_admin_rationale_87"
     },
@@ -1439,7 +1539,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L112",
       "_origin": "ast",
-      "community": 20,
+      "community": 1,
       "norm_label": "update library details.",
       "id": "backend_routers_admin_rationale_112"
     },
@@ -1459,7 +1559,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L197",
       "_origin": "ast",
-      "community": 20,
+      "community": 1,
       "norm_label": "launch scraper for a library's telegram channel.",
       "id": "backend_routers_admin_rationale_197"
     },
@@ -1469,7 +1569,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L214",
       "_origin": "ast",
-      "community": 20,
+      "community": 1,
       "norm_label": "launch tmdb updater for a library.",
       "id": "backend_routers_admin_rationale_214"
     },
@@ -1479,7 +1579,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L230",
       "_origin": "ast",
-      "community": 20,
+      "community": 1,
       "norm_label": "launch channel migration for a library.",
       "id": "backend_routers_admin_rationale_230"
     },
@@ -1489,7 +1589,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L256",
       "_origin": "ast",
-      "community": 20,
+      "community": 1,
       "norm_label": "list all background tasks.",
       "id": "backend_routers_admin_rationale_256"
     },
@@ -1499,7 +1599,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L265",
       "_origin": "ast",
-      "community": 20,
+      "community": 1,
       "norm_label": "get status of a specific task.",
       "id": "backend_routers_admin_rationale_265"
     },
@@ -1509,7 +1609,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L275",
       "_origin": "ast",
-      "community": 20,
+      "community": 1,
       "norm_label": "get log output for a task.",
       "id": "backend_routers_admin_rationale_275"
     },
@@ -1519,7 +1619,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L286",
       "_origin": "ast",
-      "community": 20,
+      "community": 1,
       "norm_label": "cancel a running task.",
       "id": "backend_routers_admin_rationale_286"
     },
@@ -1669,7 +1769,7 @@
       "source_file": "backend/routers/libraries.py",
       "source_location": "L11",
       "_origin": "ast",
-      "community": 1,
+      "community": 42,
       "norm_label": "_get_queries()",
       "id": "backend_routers_libraries_get_queries"
     },
@@ -1679,7 +1779,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 1,
+      "community": 42,
       "norm_label": "request",
       "id": "backend_routers_libraries_py_request"
     },
@@ -1739,7 +1839,7 @@
       "source_file": "backend/routers/movies.py",
       "source_location": "L15",
       "_origin": "ast",
-      "community": 1,
+      "community": 42,
       "norm_label": "_get_queries()",
       "id": "backend_routers_movies_get_queries"
     },
@@ -1749,7 +1849,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 1,
+      "community": 42,
       "norm_label": "request",
       "id": "backend_routers_movies_py_request"
     },
@@ -1819,7 +1919,7 @@
       "source_file": "backend/routers/stats.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 42,
       "norm_label": "stats.py",
       "id": "backend_routers_stats"
     },
@@ -1829,7 +1929,7 @@
       "source_file": "backend/routers/stats.py",
       "source_location": "L11",
       "_origin": "ast",
-      "community": 1,
+      "community": 42,
       "norm_label": "_get_queries()",
       "id": "backend_routers_stats_get_queries"
     },
@@ -1839,7 +1939,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 1,
+      "community": 42,
       "norm_label": "request",
       "id": "backend_routers_stats_py_request"
     },
@@ -1849,7 +1949,7 @@
       "source_file": "backend/routers/stats.py",
       "source_location": "L16",
       "_origin": "ast",
-      "community": 1,
+      "community": 42,
       "norm_label": "library_stats()",
       "id": "backend_routers_stats_library_stats"
     },
@@ -1859,7 +1959,7 @@
       "source_file": "backend/routers/stats.py",
       "source_location": "L20",
       "_origin": "ast",
-      "community": 1,
+      "community": 42,
       "norm_label": "return aggregate library statistics and genre breakdown.",
       "id": "backend_routers_stats_rationale_20"
     },
@@ -2404,36 +2504,6 @@
       "id": "frontend_package_devdependencies_vite"
     },
     {
-      "label": "App.jsx",
-      "file_type": "code",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 2,
-      "norm_label": "app.jsx",
-      "id": "frontend_src_app"
-    },
-    {
-      "label": "App()",
-      "file_type": "code",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L19",
-      "_origin": "ast",
-      "community": 2,
-      "norm_label": "app()",
-      "id": "frontend_src_app_app"
-    },
-    {
-      "label": "LibraryView()",
-      "file_type": "code",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L188",
-      "_origin": "ast",
-      "community": 2,
-      "norm_label": "libraryview()",
-      "id": "frontend_src_app_libraryview"
-    },
-    {
       "label": "adminAuth.js",
       "file_type": "code",
       "source_file": "frontend/src/api/adminAuth.js",
@@ -2849,7 +2919,7 @@
       "source_file": "frontend/src/components/GenreFilter.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 2,
+      "community": 46,
       "norm_label": "genrefilter.jsx",
       "id": "frontend_src_components_genrefilter"
     },
@@ -2859,7 +2929,7 @@
       "source_file": "frontend/src/components/GenreFilter.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 2,
+      "community": 46,
       "norm_label": "genre_map",
       "id": "frontend_src_components_genrefilter_genre_map"
     },
@@ -2869,7 +2939,7 @@
       "source_file": "frontend/src/components/GenreFilter.jsx",
       "source_location": "L23",
       "_origin": "ast",
-      "community": 2,
+      "community": 46,
       "norm_label": "genrefilter()",
       "id": "frontend_src_components_genrefilter_genrefilter"
     },
@@ -2879,7 +2949,7 @@
       "source_file": "frontend/src/components/Hero.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 2,
+      "community": 47,
       "norm_label": "hero.jsx",
       "id": "frontend_src_components_hero"
     },
@@ -2889,7 +2959,7 @@
       "source_file": "frontend/src/components/Hero.jsx",
       "source_location": "L3",
       "_origin": "ast",
-      "community": 2,
+      "community": 47,
       "norm_label": "hero_movies",
       "id": "frontend_src_components_hero_hero_movies"
     },
@@ -2899,7 +2969,7 @@
       "source_file": "frontend/src/components/Hero.jsx",
       "source_location": "L91",
       "_origin": "ast",
-      "community": 2,
+      "community": 47,
       "norm_label": "hero()",
       "id": "frontend_src_components_hero_hero"
     },
@@ -2909,7 +2979,7 @@
       "source_file": "frontend/src/components/Layout.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 2,
+      "community": 48,
       "norm_label": "layout.jsx",
       "id": "frontend_src_components_layout"
     },
@@ -2919,7 +2989,7 @@
       "source_file": "frontend/src/components/Layout.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 2,
+      "community": 48,
       "norm_label": "layout()",
       "id": "frontend_src_components_layout_layout"
     },
@@ -2949,7 +3019,7 @@
       "source_file": "frontend/src/components/MovieCard.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 2,
+      "community": 45,
       "norm_label": "moviecard.jsx",
       "id": "frontend_src_components_moviecard"
     },
@@ -2959,7 +3029,7 @@
       "source_file": "frontend/src/components/MovieCard.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 2,
+      "community": 45,
       "norm_label": "moviecard()",
       "id": "frontend_src_components_moviecard_moviecard"
     },
@@ -2999,7 +3069,7 @@
       "source_file": "frontend/src/components/MovieGrid.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 2,
+      "community": 45,
       "norm_label": "moviegrid.jsx",
       "id": "frontend_src_components_moviegrid"
     },
@@ -3009,7 +3079,7 @@
       "source_file": "frontend/src/components/MovieGrid.jsx",
       "source_location": "L3",
       "_origin": "ast",
-      "community": 2,
+      "community": 45,
       "norm_label": "moviegrid()",
       "id": "frontend_src_components_moviegrid_moviegrid"
     },
@@ -3019,7 +3089,7 @@
       "source_file": "frontend/src/components/Pagination.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 2,
+      "community": 49,
       "norm_label": "pagination.jsx",
       "id": "frontend_src_components_pagination"
     },
@@ -3029,7 +3099,7 @@
       "source_file": "frontend/src/components/Pagination.jsx",
       "source_location": "L3",
       "_origin": "ast",
-      "community": 2,
+      "community": 49,
       "norm_label": "pagination()",
       "id": "frontend_src_components_pagination_pagination"
     },
@@ -3039,7 +3109,7 @@
       "source_file": "frontend/src/components/SearchBar.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 2,
+      "community": 50,
       "norm_label": "searchbar.jsx",
       "id": "frontend_src_components_searchbar"
     },
@@ -3049,7 +3119,7 @@
       "source_file": "frontend/src/components/SearchBar.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 2,
+      "community": 50,
       "norm_label": "searchbar()",
       "id": "frontend_src_components_searchbar_searchbar"
     },
@@ -3059,7 +3129,7 @@
       "source_file": "frontend/src/components/StatsPanel.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 2,
+      "community": 51,
       "norm_label": "statspanel.jsx",
       "id": "frontend_src_components_statspanel"
     },
@@ -3069,7 +3139,7 @@
       "source_file": "frontend/src/components/StatsPanel.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 2,
+      "community": 51,
       "norm_label": "statspanel()",
       "id": "frontend_src_components_statspanel_statspanel"
     },
@@ -3099,7 +3169,7 @@
       "source_file": "frontend/src/main.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 2,
+      "community": 20,
       "norm_label": "main.jsx",
       "id": "frontend_src_main"
     },
@@ -4968,12 +5038,192 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "frontend/src/App.jsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "frontend_src_app",
+      "target": "frontend_src_app_app",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/App.jsx",
+      "source_location": "L191",
+      "weight": 1.0,
+      "source": "frontend_src_app",
+      "target": "frontend_src_app_libraryview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/App.jsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "frontend_src_app",
+      "target": "frontend_src_components_onboardingmodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/App.jsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "frontend_src_app",
+      "target": "frontend_src_components_onboardingmodal_onboardingmodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/App.jsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "frontend_src_app",
+      "target": "frontend_src_components_telegrambanner",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/App.jsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "frontend_src_app",
+      "target": "frontend_src_components_telegrambanner_telegrambanner",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/main.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "frontend_src_main",
+      "target": "frontend_src_app"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/main.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "frontend_src_main",
+      "target": "frontend_src_app_app"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/OnboardingModal.jsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "frontend_src_components_onboardingmodal",
+      "target": "frontend_src_components_onboardingmodal_onboardingmodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/OnboardingModal.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "frontend_src_components_onboardingmodal",
+      "target": "frontend_src_components_onboardingmodal_telegramicon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/OnboardingModal.jsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "frontend_src_components_onboardingmodal",
+      "target": "frontend_src_components_telegrambanner",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/OnboardingModal.jsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "frontend_src_components_onboardingmodal",
+      "target": "frontend_src_components_telegrambanner_formattelegramurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/components/OnboardingModal.jsx",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "frontend_src_components_onboardingmodal_onboardingmodal",
+      "target": "frontend_src_components_telegrambanner_formattelegramurl"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/TelegramBanner.jsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "frontend_src_components_telegrambanner",
+      "target": "frontend_src_components_telegrambanner_formattelegramurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/TelegramBanner.jsx",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "frontend_src_components_telegrambanner",
+      "target": "frontend_src_components_telegrambanner_telegrambanner",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/TelegramBanner.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "frontend_src_components_telegrambanner",
+      "target": "frontend_src_components_telegrambanner_telegramicon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/TelegramBanner.jsx",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "frontend_src_components_telegrambanner_telegrambanner",
+      "target": "frontend_src_components_telegrambanner_formattelegramurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "config.py",
       "source_location": "L55",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "config",
-      "target": "config_get_app_env",
-      "confidence_score": 1.0
+      "target": "config_get_app_env"
     },
     {
       "relation": "contains",
@@ -4981,9 +5231,9 @@
       "source_file": "config.py",
       "source_location": "L36",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "config",
-      "target": "config_int_env",
-      "confidence_score": 1.0
+      "target": "config_int_env"
     },
     {
       "relation": "contains",
@@ -4991,9 +5241,9 @@
       "source_file": "config.py",
       "source_location": "L47",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "config",
-      "target": "config_path_env",
-      "confidence_score": 1.0
+      "target": "config_path_env"
     },
     {
       "relation": "contains",
@@ -5001,9 +5251,9 @@
       "source_file": "config.py",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "config",
-      "target": "config_required_env",
-      "confidence_score": 1.0
+      "target": "config_required_env"
     },
     {
       "relation": "contains",
@@ -5011,9 +5261,9 @@
       "source_file": "config.py",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "config",
-      "target": "config_settings",
-      "confidence_score": 1.0
+      "target": "config_settings"
     },
     {
       "relation": "imports_from",
@@ -5022,9 +5272,9 @@
       "source_file": "export_session_string.py",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "export_session_string",
-      "target": "config",
-      "confidence_score": 1.0
+      "target": "config"
     },
     {
       "relation": "imports_from",
@@ -5066,9 +5316,9 @@
       "source_file": "scraper/telegram_client.py",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scraper_telegram_client",
-      "target": "config",
-      "confidence_score": 1.0
+      "target": "config"
     },
     {
       "relation": "imports_from",
@@ -5099,9 +5349,9 @@
       "source_file": "config.py",
       "source_location": "L47",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "config_path_env",
-      "target": "path",
-      "confidence_score": 1.0
+      "target": "path"
     },
     {
       "relation": "references",
@@ -5120,9 +5370,9 @@
       "source_file": "export_session_string.py",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "export_session_string",
-      "target": "export_session_string_main",
-      "confidence_score": 1.0
+      "target": "export_session_string_main"
     },
     {
       "relation": "rationale_for",
@@ -5130,9 +5380,9 @@
       "source_file": "export_session_string.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "export_session_string_rationale_1",
-      "target": "export_session_string",
-      "confidence_score": 1.0
+      "target": "export_session_string"
     },
     {
       "relation": "calls",
@@ -5162,9 +5412,9 @@
       "source_file": "scraper/telegram_client.py",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scraper_telegram_client",
-      "target": "scraper_telegram_client_get_telegram_client",
-      "confidence_score": 1.0
+      "target": "scraper_telegram_client_get_telegram_client"
     },
     {
       "relation": "imports",
@@ -5195,9 +5445,9 @@
       "source_file": "scraper/telegram_client.py",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scraper_telegram_client_get_telegram_client",
-      "target": "telegramclient",
-      "confidence_score": 1.0
+      "target": "telegramclient"
     },
     {
       "relation": "rationale_for",
@@ -5205,9 +5455,9 @@
       "source_file": "scraper/telegram_client.py",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scraper_telegram_client_rationale_13",
-      "target": "scraper_telegram_client_get_telegram_client",
-      "confidence_score": 1.0
+      "target": "scraper_telegram_client_get_telegram_client"
     },
     {
       "relation": "imports_from",
@@ -10243,433 +10493,6 @@
       "target": "frontend_package_devdependencies_vitejs_plugin_react"
     },
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app",
-      "target": "frontend_src_api_adminauth"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app",
-      "target": "frontend_src_api_adminauth_isauthenticated"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app",
-      "target": "frontend_src_api_adminauth_logout"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app",
-      "target": "frontend_src_api_adminauth_setupstoragelistener"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app",
-      "target": "frontend_src_api_client"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app",
-      "target": "frontend_src_api_client_fetchlibrary"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L19",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app",
-      "target": "frontend_src_app_app"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L188",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app",
-      "target": "frontend_src_app_libraryview"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app",
-      "target": "frontend_src_components_admindashboard"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app",
-      "target": "frontend_src_components_admindashboard_admindashboard"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app",
-      "target": "frontend_src_components_adminlogin"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app",
-      "target": "frontend_src_components_adminlogin_adminlogin"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app",
-      "target": "frontend_src_components_genrefilter"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app",
-      "target": "frontend_src_components_genrefilter_genrefilter"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app",
-      "target": "frontend_src_components_hero"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app",
-      "target": "frontend_src_components_hero_hero"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app",
-      "target": "frontend_src_components_layout"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app",
-      "target": "frontend_src_components_layout_layout"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app",
-      "target": "frontend_src_components_librarygrid"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app",
-      "target": "frontend_src_components_librarygrid_librarygrid"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app",
-      "target": "frontend_src_components_moviedetail"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app",
-      "target": "frontend_src_components_moviedetail_moviedetail"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app",
-      "target": "frontend_src_components_moviegrid"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app",
-      "target": "frontend_src_components_moviegrid_moviegrid"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app",
-      "target": "frontend_src_components_pagination"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app",
-      "target": "frontend_src_components_pagination_pagination"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app",
-      "target": "frontend_src_components_searchbar"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app",
-      "target": "frontend_src_components_searchbar_searchbar"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app",
-      "target": "frontend_src_components_statspanel"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app",
-      "target": "frontend_src_components_statspanel_statspanel"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app",
-      "target": "frontend_src_hooks_usemovies"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app",
-      "target": "frontend_src_hooks_usemovies_usemovies"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/main.jsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_main",
-      "target": "frontend_src_app"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L132",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app_app",
-      "target": "frontend_src_api_adminauth_isauthenticated"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L141",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app_app",
-      "target": "frontend_src_api_adminauth_logout"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L42",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app_app",
-      "target": "frontend_src_api_adminauth_setupstoragelistener"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L66",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app_app",
-      "target": "frontend_src_api_client_fetchlibrary"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/main.jsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_main",
-      "target": "frontend_src_app_app"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L207",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app_libraryview",
-      "target": "frontend_src_hooks_usemovies_usemovies"
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/api/adminAuth.js",
@@ -14388,5 +14211,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "d9e240f2e0afdeebd6ca13241db50a5f0531c0dc"
+  "built_at_commit": "97498169f575dad40a24adc8123fa30ba958844c"
 }

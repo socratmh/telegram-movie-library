@@ -2751,6 +2751,127 @@ html[dir="rtl"] .onboarding-modal-close {
 }
 
 
+/* =========================================================
+   TV Series — Additional Styles
+   ========================================================= */
 
+/* Series entry card on library grid */
+.series-entry-card {
+  position: relative;
+}
 
+.series-backdrop {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 70%, #533483 100%);
+}
+
+.series-backdrop-gradient {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 70%, rgba(83, 52, 131, 0.4), transparent 60%),
+              radial-gradient(circle at 70% 30%, rgba(15, 52, 96, 0.5), transparent 60%);
+  animation: seriesGlow 6s ease-in-out infinite alternate;
+}
+
+@keyframes seriesGlow {
+  0% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+/* Series badge on cards */
+.series-badge {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: rgba(83, 52, 131, 0.85);
+  backdrop-filter: blur(4px);
+  border-radius: var(--radius-sm);
+  padding: 0.2rem 0.4rem;
+  font-size: 0.7rem;
+  z-index: 2;
+}
+
+[dir="rtl"] .series-badge {
+  right: auto;
+  left: 0.5rem;
+}
+
+/* Series card accent */
+.series-card:hover {
+  border-color: rgba(83, 52, 131, 0.5);
+  box-shadow: 0 0 20px rgba(83, 52, 131, 0.15);
+}
+
+/* Series section title */
+.series-section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.series-title-icon {
+  font-size: 1.6rem;
+}
+
+/* Series channel button */
+.series-channel-btn {
+  background: linear-gradient(135deg, #533483 0%, #0f3460 100%) !important;
+  border: 1px solid rgba(83, 52, 131, 0.4) !important;
+}
+
+.series-channel-btn:hover {
+  background: linear-gradient(135deg, #6b44a8 0%, #164b8a 100%) !important;
+  box-shadow: 0 4px 20px rgba(83, 52, 131, 0.3);
+}
+
+/* Series status badge */
+.series-status-badge {
+  background: rgba(83, 52, 131, 0.2);
+  color: #b794f4;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Empty state */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.empty-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.empty-state p {
+  font-size: 1.1rem;
+}
+
+/* Admin stat cards */
+.admin-stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--bg-glass-border);
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 1rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.admin-stat-card strong {
+  color: var(--text-primary);
+  margin-left: 0.3rem;
+}
+
+/* Admin badge info variant */
+.admin-badge-info {
+  background: rgba(83, 52, 131, 0.2);
+  color: #b794f4;
+}
 

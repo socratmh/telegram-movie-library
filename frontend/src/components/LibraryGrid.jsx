@@ -1,16 +1,21 @@
 import { useState, useEffect } from 'react';
-import { fetchLibraries } from '../api/client';
+import { fetchLibraries, fetchTVLibraries } from '../api/client';
+import { translateLibraryName } from '../utils/translator';
 
-export default function LibraryGrid({ onSelectLibrary, lang = 'en' }) {
+export default function LibraryGrid({ onSelectLibrary, onSelectTVLibrary, lang = 'en' }) {
   const [libraries, setLibraries] = useState([]);
+  const [tvLibraries, setTvLibraries] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   const isAr = lang === 'ar';
 
   useEffect(() => {
-    fetchLibraries()
-      .then((data) => setLibraries(data.libraries))
+    Promise.all([fetchLibraries(), fetchTVLibraries()])
+      .then(([movieRes, tvRes]) => {
+        setLibraries(movieRes.libraries || []);
+        setTvLibraries(tvRes.libraries || []);
+      })
       .catch((err) => setError(err.message))
       .finally(() => setLoading(false));
   }, []);
@@ -29,10 +34,11 @@ export default function LibraryGrid({ onSelectLibrary, lang = 'en' }) {
 
   return (
     <div className="library-landing">
+      {/* Movie Libraries Section */}
       <div className="library-hero">
         <h1 className="library-hero-title">{isAr ? 'مكتبات الأفلام' : 'Movie Libraries'}</h1>
         <p className="library-hero-sub">
-          {isAr ? 'اختر مكتبة لتصفح مجموعتها' : 'Choose a library to browse its collection'}
+          {isAr ? 'اختر مكتبة أفلام لتصفح مجموعتها' : 'Choose a movie library to browse its collection'}
         </p>
       </div>
       <div className="library-grid">
@@ -43,7 +49,6 @@ export default function LibraryGrid({ onSelectLibrary, lang = 'en' }) {
             id={`library-card-${lib.slug}`}
             onClick={() => onSelectLibrary(lib.slug)}
           >
-            {/* Cinematic Backdrop Collage */}
             {lib.posters && lib.posters.length > 0 ? (
               <div className="library-card-backdrop">
                 {lib.posters.map((poster, i) => (
@@ -62,7 +67,7 @@ export default function LibraryGrid({ onSelectLibrary, lang = 'en' }) {
             <div className="library-card-overlay" />
 
             <div className="library-card-icon">📚</div>
-            <h2 className="library-card-name">{lib.name}</h2>
+            <h2 className="library-card-name">{translateLibraryName(lib.name, lang)}</h2>
             {lib.telegram_channel && (
               <div className="library-card-channel" title={lib.telegram_channel}>
                 📡 {isAr ? 'قناة تيليجرام' : 'Telegram Channel'}
@@ -72,7 +77,58 @@ export default function LibraryGrid({ onSelectLibrary, lang = 'en' }) {
           </button>
         ))}
       </div>
+
+      {/* TV Series Libraries Section */}
+      <div className="library-hero" style={{ marginTop: '4rem' }}>
+        <h1 className="library-hero-title">{isAr ? 'مكتبات المسلسلات' : 'TV Series Libraries'}</h1>
+        <p className="library-hero-sub">
+          {isAr ? 'اختر مكتبة مسلسلات لتصفح مجموعتها' : 'Choose a TV series library to browse its collection'}
+        </p>
+      </div>
+      <div className="library-grid">
+        {tvLibraries.map((lib) => (
+          <button
+            key={lib.id}
+            className="library-card series-entry-card"
+            id={`tv-library-card-${lib.slug}`}
+            onClick={() => (onSelectTVLibrary ? onSelectTVLibrary(lib.slug) : onSelectLibrary(`tv/${lib.slug}`))}
+          >
+            {lib.posters && lib.posters.length > 0 ? (
+              <div className="library-card-backdrop">
+                {lib.posters.map((poster, i) => (
+                  <img
+                    key={i}
+                    src={poster}
+                    className={`backdrop-poster-tile tile-${i}`}
+                    alt=""
+                    loading="lazy"
+                  />
+                ))}
+              </div>
+            ) : (
+              <div className="library-card-backdrop series-backdrop">
+                <div className="series-backdrop-gradient" />
+              </div>
+            )}
+            <div className="library-card-overlay" />
+
+            <div className="library-card-icon">📺</div>
+            <h2 className="library-card-name">{translateLibraryName(lib.name, lang)}</h2>
+            {lib.telegram_channel && (
+              <div className="library-card-channel" title={lib.telegram_channel}>
+                📡 {isAr ? 'قناة تيليجرام' : 'Telegram Channel'}
+              </div>
+            )}
+            <div className="library-card-arrow">{isAr ? '←' : '→'}</div>
+          </button>
+        ))}
+
+        {tvLibraries.length === 0 && (
+          <div className="empty-state" style={{ gridColumn: '1 / -1', padding: '2rem' }}>
+            <p>{isAr ? 'لا توجد مكتبات مسلسلات حالياً' : 'No TV series libraries found'}</p>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
-

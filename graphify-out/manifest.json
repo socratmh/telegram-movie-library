@@ -65,8 +65,8 @@
     "semantic_hash": "b5b007552814ae57f55825f41c591c09"
   },
   "frontend/src/App.jsx": {
-    "mtime": 1784579210.8800414,
-    "ast_hash": "fc062ef63d3a1a8535563e5d39551baf",
+    "mtime": 1784810251.022448,
+    "ast_hash": "acb88f7a5a0142b20db232fdb39d2435",
     "semantic_hash": ""
   },
   "frontend/src/api/client.js": {
@@ -377,6 +377,16 @@
   "export_session_string.py": {
     "mtime": 1784800264.428717,
     "ast_hash": "3aaff06ff9bba9e86b67eb6814c359e2",
+    "semantic_hash": ""
+  },
+  "frontend/src/components/OnboardingModal.jsx": {
+    "mtime": 1784810222.4041617,
+    "ast_hash": "133bae33309be4b9a64d96815aec911e",
+    "semantic_hash": ""
+  },
+  "frontend/src/components/TelegramBanner.jsx": {
+    "mtime": 1784810215.0407214,
+    "ast_hash": "e80fc56c23964b5f04575c83153be04c",
     "semantic_hash": ""
   }
 }
