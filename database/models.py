@@ -104,4 +104,20 @@ def init_db(url: str):
 
     engine = create_engine(url, **engine_kwargs)
     Base.metadata.create_all(engine)
+    
+    # Auto-migrate missing columns to prevent 500 errors on Render or local
+    from sqlalchemy import text
+    with engine.begin() as conn:
+        for table in ["libraries", "tv_libraries"]:
+            # Add name_en
+            try:
+                conn.execute(text(f"ALTER TABLE {table} ADD COLUMN name_en VARCHAR"))
+            except Exception:
+                pass
+            # Add is_active
+            try:
+                conn.execute(text(f"ALTER TABLE {table} ADD COLUMN is_active BOOLEAN DEFAULT true"))
+            except Exception:
+                pass
+
     return sessionmaker(bind=engine)
