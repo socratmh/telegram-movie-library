@@ -145,6 +145,7 @@ class StatsResponse(BaseModel):
 class LibraryResponse(BaseModel):
     id: int
     name: str
+    name_en: str | None = None
     slug: str
     telegram_channel: str | None = None
     movie_count: int = 0
@@ -162,6 +163,7 @@ class LibraryListResponse(BaseModel):
 
 class LibraryCreateRequest(BaseModel):
     name: str
+    name_en: str | None = None
     slug: str
     telegram_channel: str
     telegram_channel_id: str | None = None
@@ -170,6 +172,7 @@ class LibraryCreateRequest(BaseModel):
 
 class LibraryUpdateRequest(BaseModel):
     name: str | None = None
+    name_en: str | None = None
     slug: str | None = None
     telegram_channel: str | None = None
     telegram_channel_id: str | None = None
@@ -179,6 +182,7 @@ class LibraryUpdateRequest(BaseModel):
 class LibraryDetailResponse(BaseModel):
     id: int
     name: str
+    name_en: str | None = None
     slug: str
     telegram_channel: str
     telegram_channel_id: str | None = None

@@ -66,6 +66,7 @@ class MovieQueries:
                 result.append({
                     "id": lib.id,
                     "name": lib.name,
+                    "name_en": lib.name_en,
                     "slug": lib.slug,
                     "telegram_channel": lib.telegram_channel,
                     "movie_count": movie_count,
@@ -96,6 +97,7 @@ class MovieQueries:
             return {
                 "id": lib.id,
                 "name": lib.name,
+                "name_en": lib.name_en,
                 "slug": lib.slug,
                 "telegram_channel": lib.telegram_channel,
                 "movie_count": movie_count,

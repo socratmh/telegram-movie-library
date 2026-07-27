@@ -5,8 +5,8 @@
     "semantic_hash": "634ffeddb62e7c3294ba39fcc475fa5d"
   },
   "backend/app.py": {
-    "mtime": 1785101515.065192,
-    "ast_hash": "3520213abb7813532bbfe5bfead2a935",
+    "mtime": 1785179508.9437652,
+    "ast_hash": "c643e808dfca4103ae3b17b7d9556990",
     "semantic_hash": ""
   },
   "backend/config.py": {
@@ -65,13 +65,13 @@
     "semantic_hash": "b5b007552814ae57f55825f41c591c09"
   },
   "frontend/src/App.jsx": {
-    "mtime": 1785090702.372496,
-    "ast_hash": "0659a2c1aff0a3cdd78dbd93242d18c1",
+    "mtime": 1785179600.4796233,
+    "ast_hash": "5fc0b207c78554d17553be6419f8539e",
     "semantic_hash": ""
   },
   "frontend/src/api/client.js": {
-    "mtime": 1785178222.004285,
-    "ast_hash": "4dc38ed8994abbac08e9b7f72cc26814",
+    "mtime": 1785179536.94962,
+    "ast_hash": "001492c07aeea4fffa077fa447c3f8ff",
     "semantic_hash": ""
   },
   "frontend/src/components/GenreFilter.jsx": {
@@ -255,8 +255,8 @@
     "semantic_hash": ""
   },
   "requirements.txt": {
-    "mtime": 1785102532.989191,
-    "ast_hash": "01a3f479650767e865a38d2311a4560b",
+    "mtime": 1785179385.3821115,
+    "ast_hash": "f3e777faddfe94c5033c2b2dde5d6ba5",
     "semantic_hash": ""
   },
   "frontend/public/favicon.svg": {
@@ -300,8 +300,8 @@
     "semantic_hash": ""
   },
   "frontend/src/components/AdminDashboard.jsx": {
-    "mtime": 1785098443.5447142,
-    "ast_hash": "ce074edab1e30d0a589ebcb1b9be1f67",
+    "mtime": 1785179814.8613648,
+    "ast_hash": "7bbb27f6eafc436dff16a5e01a7fe6b5",
     "semantic_hash": ""
   },
   "scraper/__init__.py": {
@@ -482,6 +482,26 @@
   "uploads/fdb42b861966426aae784f1b50c9bb7e.jpg": {
     "mtime": 1785099140.804946,
     "ast_hash": "916a4341bb0f5d1aa25fc63f0c8b7d83",
+    "semantic_hash": ""
+  },
+  "backend/routers/analytics.py": {
+    "mtime": 1785179468.3340592,
+    "ast_hash": "2da6a9ceb8fbf0fb9dd0efe36992ce71",
+    "semantic_hash": ""
+  },
+  "database/analytics_models.py": {
+    "mtime": 1785179367.9612541,
+    "ast_hash": "56b635e9c622267c3e9b7d027898ffdb",
+    "semantic_hash": ""
+  },
+  "frontend/src/components/AdminAnalytics.jsx": {
+    "mtime": 1785179762.3319178,
+    "ast_hash": "cabfe02c07eebe2d0bcf48f27ce1aa12",
+    "semantic_hash": ""
+  },
+  "frontend/src/hooks/useTracking.js": {
+    "mtime": 1785179553.9612017,
+    "ast_hash": "4f2f07d2f6622dc43259cde49c937034",
     "semantic_hash": ""
   }
 }

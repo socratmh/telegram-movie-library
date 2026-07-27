@@ -3271,4 +3271,75 @@ html[dir="rtl"] .onboarding-modal-close {
   color: var(--text-secondary);
   font-size: 0.85rem;
 }
+
+/* =====================================================================
+   FLOATING BACK BUTTON
+   ===================================================================== */
+.floating-back-btn {
+  position: fixed;
+  bottom: 2rem;
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  background: rgba(20, 20, 25, 0.85);
+  backdrop-filter: blur(12px);
+  color: var(--text-primary);
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  transition: all var(--transition-normal);
+}
+
+.floating-back-btn:hover {
+  background: rgba(40, 40, 50, 0.95);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.floating-back-btn:active {
+  transform: translateY(0);
+}
+
+.floating-back-btn.ltr {
+  right: 2rem;
+}
+
+.floating-back-btn.rtl {
+  left: 2rem;
+  flex-direction: row-reverse;
+}
+
+.floating-back-icon {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.floating-back-text {
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .floating-back-btn {
+    bottom: 1.5rem;
+    padding: 0.6rem 1rem;
+  }
+  .floating-back-btn.ltr {
+    right: 1.5rem;
+  }
+  .floating-back-btn.rtl {
+    left: 1.5rem;
+  }
+  .floating-back-text {
+    display: none;
+  }
+  .floating-back-icon {
+    font-size: 1.2rem;
+  }
+}
+
 

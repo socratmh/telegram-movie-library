@@ -29,6 +29,7 @@ def _parse_genres(value: Any) -> list[str]:
 class TVLibraryResponse(BaseModel):
     id: int
     name: str
+    name_en: str | None = None
     slug: str
     telegram_channel: str | None = None
     series_count: int = 0
@@ -41,6 +42,7 @@ class TVLibraryListResponse(BaseModel):
 
 class TVLibraryCreateRequest(BaseModel):
     name: str
+    name_en: str | None = None
     slug: str
     telegram_channel: str
     telegram_channel_id: str | None = None
@@ -49,6 +51,7 @@ class TVLibraryCreateRequest(BaseModel):
 
 class TVLibraryUpdateRequest(BaseModel):
     name: str | None = None
+    name_en: str | None = None
     slug: str | None = None
     telegram_channel: str | None = None
     telegram_channel_id: str | None = None
@@ -58,6 +61,7 @@ class TVLibraryUpdateRequest(BaseModel):
 class TVLibraryDetailResponse(BaseModel):
     id: int
     name: str
+    name_en: str | None = None
     slug: str
     telegram_channel: str
     telegram_channel_id: str | None = None

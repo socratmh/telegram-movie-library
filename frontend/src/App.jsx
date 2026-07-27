@@ -17,6 +17,7 @@ import AdminLogin from './components/AdminLogin';
 import Hero from './components/Hero';
 import TelegramBanner from './components/TelegramBanner';
 import OnboardingModal from './components/OnboardingModal';
+import FloatingBackButton from './components/FloatingBackButton';
 import { isAuthenticated, logout, setupStorageListener } from './api/adminAuth';
 import { translateLibraryName } from './utils/translator';
 import useTracking from './hooks/useTracking';
@@ -197,7 +198,7 @@ function App() {
     return (
       <SeriesView
         libraryId={tvLibraryInfo.id}
-        libraryName={tvLibraryInfo.name}
+        libraryName={lang === 'en' && tvLibraryInfo?.name_en ? tvLibraryInfo.name_en : tvLibraryInfo?.name}
         telegramChannel={tvLibraryInfo.telegram_channel}
         onBackToLibraries={handleBackToLibraries}
         lang={lang}
@@ -221,7 +222,7 @@ function App() {
   return (
     <LibraryView
       libraryId={libraryId}
-      libraryName={libraryInfo?.name}
+      libraryName={lang === 'en' && libraryInfo?.name_en ? libraryInfo.name_en : libraryInfo?.name}
       telegramChannel={libraryInfo?.telegram_channel}
       onBackToLibraries={handleBackToLibraries}
       lang={lang}
@@ -263,7 +264,7 @@ function LibraryView({ libraryId, libraryName, telegramChannel, onBackToLibrarie
           <span className="arrow">{isAr ? '←' : '←'}</span>
           <span className="text">{isAr ? 'العودة للمكتبات' : 'Back to Libraries'}</span>
         </button>
-        <h1 className="library-title">{translateLibraryName(libraryName, lang)}</h1>
+        <h1 className="library-title">{libraryName}</h1>
       </div>
       <SearchBar
         search={search}
@@ -290,6 +291,7 @@ function LibraryView({ libraryId, libraryName, telegramChannel, onBackToLibrarie
       {selectedMovieId !== null && (
         <MovieDetail movieId={selectedMovieId} onClose={closeDetail} lang={lang} />
       )}
+      <FloatingBackButton onClick={selectedMovieId !== null ? closeDetail : onBackToLibraries} lang={lang} />
     </Layout>
   );
 }
@@ -328,7 +330,7 @@ function SeriesView({ libraryId, libraryName, telegramChannel, onBackToLibraries
         </button>
         <h1 className="library-title series-section-title">
           <span className="series-title-icon">📺</span>
-          {translateLibraryName(libraryName, lang) || (isAr ? 'المسلسلات' : 'TV Series')}
+          {libraryName || (isAr ? 'المسلسلات' : 'TV Series')}
         </h1>
       </div>
       <SearchBar
@@ -357,6 +359,7 @@ function SeriesView({ libraryId, libraryName, telegramChannel, onBackToLibraries
       {selectedSeriesId !== null && (
         <SeriesDetail seriesId={selectedSeriesId} onClose={closeDetail} lang={lang} />
       )}
+      <FloatingBackButton onClick={selectedSeriesId !== null ? closeDetail : onBackToLibraries} lang={lang} />
     </Layout>
   );
 }

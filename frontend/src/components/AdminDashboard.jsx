@@ -35,6 +35,7 @@ function LibraryForm({ library, onSave, onCancel }) {
   const isEdit = !!library;
   const [form, setForm] = useState({
     name: library?.name || '',
+    name_en: library?.name_en || '',
     slug: library?.slug || '',
     telegram_channel: library?.telegram_channel || '',
     telegram_channel_id: library?.telegram_channel_id || '',
@@ -72,8 +73,12 @@ function LibraryForm({ library, onSave, onCancel }) {
         <h3>{isEdit ? 'Edit Movie Library' : 'Create Movie Library'}</h3>
         <form onSubmit={handleSubmit} className="admin-form">
           <label>
-            <span>Name</span>
+            <span>Arabic Name</span>
             <input name="name" value={form.name} onChange={handleChange} required />
+          </label>
+          <label>
+            <span>English Name (Optional)</span>
+            <input name="name_en" value={form.name_en} onChange={handleChange} />
           </label>
           <label>
             <span>Slug</span>
@@ -108,6 +113,7 @@ function TVLibraryForm({ library, onSave, onCancel }) {
   const isEdit = !!library;
   const [form, setForm] = useState({
     name: library?.name || '',
+    name_en: library?.name_en || '',
     slug: library?.slug || '',
     telegram_channel: library?.telegram_channel || '',
     telegram_channel_id: library?.telegram_channel_id || '',
@@ -145,8 +151,12 @@ function TVLibraryForm({ library, onSave, onCancel }) {
         <h3>{isEdit ? 'Edit TV Series Library' : 'Create TV Series Library'}</h3>
         <form onSubmit={handleSubmit} className="admin-form">
           <label>
-            <span>Name</span>
+            <span>Arabic Name</span>
             <input name="name" value={form.name} onChange={handleChange} required />
+          </label>
+          <label>
+            <span>English Name (Optional)</span>
+            <input name="name_en" value={form.name_en} onChange={handleChange} />
           </label>
           <label>
             <span>Slug</span>

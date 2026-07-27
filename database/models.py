@@ -13,6 +13,7 @@ class Library(Base):
 
     id = Column(Integer, primary_key=True)
     name = Column(String, nullable=False, unique=True)
+    name_en = Column(String, nullable=True)
     slug = Column(String, nullable=False, unique=True)
     telegram_channel = Column(String, nullable=False, unique=True)
     is_active = Column(Boolean)

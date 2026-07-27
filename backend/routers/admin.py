@@ -83,6 +83,7 @@ def admin_list_libraries(request: Request):
             result.append(LibraryDetailResponse(
                 id=lib.id,
                 name=lib.name,
+                name_en=lib.name_en,
                 slug=lib.slug,
                 telegram_channel=lib.telegram_channel,
                 telegram_channel_id=lib.telegram_channel_id,
@@ -102,6 +103,7 @@ def admin_create_library(body: LibraryCreateRequest, request: Request):
     with SessionLocal() as session:
         lib = Library(
             name=body.name,
+            name_en=body.name_en,
             slug=body.slug,
             telegram_channel=body.telegram_channel,
             telegram_channel_id=body.telegram_channel_id,
@@ -113,6 +115,7 @@ def admin_create_library(body: LibraryCreateRequest, request: Request):
         return LibraryDetailResponse(
             id=lib.id,
             name=lib.name,
+            name_en=lib.name_en,
             slug=lib.slug,
             telegram_channel=lib.telegram_channel,
             telegram_channel_id=lib.telegram_channel_id,
@@ -133,6 +136,8 @@ def admin_update_library(library_id: int, body: LibraryUpdateRequest, request: R
 
         if body.name is not None:
             lib.name = body.name
+        if body.name_en is not None:
+            lib.name_en = body.name_en
         if body.slug is not None:
             lib.slug = body.slug
         if body.telegram_channel is not None:
@@ -163,6 +168,7 @@ def admin_update_library(library_id: int, body: LibraryUpdateRequest, request: R
         return LibraryDetailResponse(
             id=lib.id,
             name=lib.name,
+            name_en=lib.name_en,
             slug=lib.slug,
             telegram_channel=lib.telegram_channel,
             telegram_channel_id=lib.telegram_channel_id,
@@ -359,6 +365,7 @@ def admin_list_tv_libraries(request: Request):
             result.append(TVLibraryDetailResponse(
                 id=lib.id,
                 name=lib.name,
+                name_en=lib.name_en,
                 slug=lib.slug,
                 telegram_channel=lib.telegram_channel,
                 telegram_channel_id=lib.telegram_channel_id,
@@ -377,6 +384,7 @@ def admin_create_tv_library(body: TVLibraryCreateRequest, request: Request):
     with SessionLocal() as session:
         lib = TVLibrary(
             name=body.name,
+            name_en=body.name_en,
             slug=body.slug,
             telegram_channel=body.telegram_channel,
             telegram_channel_id=body.telegram_channel_id,
@@ -388,6 +396,7 @@ def admin_create_tv_library(body: TVLibraryCreateRequest, request: Request):
         return TVLibraryDetailResponse(
             id=lib.id,
             name=lib.name,
+            name_en=lib.name_en,
             slug=lib.slug,
             telegram_channel=lib.telegram_channel,
             telegram_channel_id=lib.telegram_channel_id,
@@ -408,6 +417,8 @@ def admin_update_tv_library(library_id: int, body: TVLibraryUpdateRequest, reque
 
         if body.name is not None:
             lib.name = body.name
+        if body.name_en is not None:
+            lib.name_en = body.name_en
         if body.slug is not None:
             lib.slug = body.slug
         if body.telegram_channel is not None:
@@ -433,6 +444,7 @@ def admin_update_tv_library(library_id: int, body: TVLibraryUpdateRequest, reque
         return TVLibraryDetailResponse(
             id=lib.id,
             name=lib.name,
+            name_en=lib.name_en,
             slug=lib.slug,
             telegram_channel=lib.telegram_channel,
             telegram_channel_id=lib.telegram_channel_id,

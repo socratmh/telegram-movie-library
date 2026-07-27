@@ -68,7 +68,9 @@ export default function LibraryGrid({ onSelectLibrary, onSelectTVLibrary, lang =
             <div className="library-card-overlay" />
 
             <div className="library-card-icon">📚</div>
-            <h2 className="library-card-name">{translateLibraryName(lib.name, lang)}</h2>
+            <h2 className="library-card-name">
+              {lang === 'en' && lib.name_en ? lib.name_en : lib.name}
+            </h2>
             {lib.telegram_channel && (
               <div className="library-card-channel" title={lib.telegram_channel}>
                 📡 {isAr ? 'قناة تيليجرام' : 'Telegram Channel'}
@@ -114,7 +116,9 @@ export default function LibraryGrid({ onSelectLibrary, onSelectTVLibrary, lang =
             <div className="library-card-overlay" />
 
             <div className="library-card-icon">📺</div>
-            <h2 className="library-card-name">{translateLibraryName(lib.name, lang)}</h2>
+            <h2 className="library-card-name">
+              {lang === 'en' && lib.name_en ? lib.name_en : lib.name}
+            </h2>
             {lib.telegram_channel && (
               <div className="library-card-channel" title={lib.telegram_channel}>
                 📡 {isAr ? 'قناة تيليجرام' : 'Telegram Channel'}
