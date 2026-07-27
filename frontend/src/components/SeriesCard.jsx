@@ -1,3 +1,5 @@
+import { formatImageUrl } from '../api/client';
+
 export default function SeriesCard({ series, onClick, lang = 'en' }) {
   const isAr = lang === 'ar';
   const rating = series.vote_average != null ? series.vote_average.toFixed(1) : null;
@@ -15,7 +17,7 @@ export default function SeriesCard({ series, onClick, lang = 'en' }) {
       {series.poster_url ? (
         <img
           className="movie-card-poster"
-          src={series.poster_url}
+          src={formatImageUrl(series.poster_url)}
           alt={series.title}
           loading="lazy"
         />

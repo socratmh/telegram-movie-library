@@ -330,7 +330,7 @@ export function formatImageUrl(url) {
                     host.startsWith('10.');
     const backendBase = isLocal
       ? `http://${host}:8000`
-      : (import.meta.env.VITE_API_URL || '');
+      : (import.meta.env.VITE_API_URL || 'https://telegram-movie-library.onrender.com');
     return `${backendBase}${cleanPath}`;
   }
   return url;

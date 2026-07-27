@@ -1,3 +1,5 @@
+import { formatImageUrl } from '../api/client';
+
 export default function MovieCard({ movie, onClick, lang = 'en' }) {
   const year = movie.release_date ? movie.release_date.slice(0, 4) : null;
   const rating = movie.vote_average != null ? movie.vote_average.toFixed(1) : null;
@@ -15,7 +17,7 @@ export default function MovieCard({ movie, onClick, lang = 'en' }) {
       {movie.poster_url ? (
         <img
           className="movie-card-poster"
-          src={movie.poster_url}
+          src={formatImageUrl(movie.poster_url)}
           alt={movie.title}
           loading="lazy"
         />
