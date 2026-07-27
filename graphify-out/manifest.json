@@ -5,8 +5,8 @@
     "semantic_hash": "634ffeddb62e7c3294ba39fcc475fa5d"
   },
   "backend/app.py": {
-    "mtime": 1785179508.9437652,
-    "ast_hash": "c643e808dfca4103ae3b17b7d9556990",
+    "mtime": 1785187055.7890778,
+    "ast_hash": "9c5d89e447fc6abfd3b14e7bfea63a98",
     "semantic_hash": ""
   },
   "backend/config.py": {
@@ -50,8 +50,8 @@
     "semantic_hash": ""
   },
   "database/models.py": {
-    "mtime": 1785183450.6412108,
-    "ast_hash": "f5fbf8fc7e9fe03417d734fb310b8238",
+    "mtime": 1785187837.4817493,
+    "ast_hash": "d425677f192c50014a456e54f1e35a73",
     "semantic_hash": ""
   },
   "frontend/.oxlintrc.json": {
@@ -70,8 +70,8 @@
     "semantic_hash": ""
   },
   "frontend/src/api/client.js": {
-    "mtime": 1785179536.94962,
-    "ast_hash": "001492c07aeea4fffa077fa447c3f8ff",
+    "mtime": 1785187068.8984487,
+    "ast_hash": "3eddc1d189a83c5edefd38a7e6e233a4",
     "semantic_hash": ""
   },
   "frontend/src/components/GenreFilter.jsx": {
