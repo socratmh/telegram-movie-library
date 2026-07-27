@@ -58,7 +58,9 @@
   "56": "GenreFilter.jsx",
   "57": "SearchBar.jsx",
   "58": "Request",
+  "59": "LibraryUpdateRequest",
   "60": "Session",
+  "61": "Session",
   "62": "TVLibraryCreateRequest",
   "63": "TVLibraryUpdateRequest"
 }

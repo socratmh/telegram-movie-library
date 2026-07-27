@@ -502,6 +502,20 @@ export default function AdminDashboard({ onBack, onLogout, lang = 'en' }) {
     }
   };
 
+  const handleToggleActive = async (lib, isTV = false) => {
+    try {
+      const nextActive = !lib.is_active;
+      if (isTV) {
+        await adminUpdateTVLibrary(lib.id, { is_active: nextActive });
+      } else {
+        await adminUpdateLibrary(lib.id, { is_active: nextActive });
+      }
+      refreshData();
+    } catch (err) {
+      alert('Error: ' + err.message);
+    }
+  };
+
   const handleScan = async (lib) => {
     try {
       await adminScanLibrary(lib.id);
@@ -662,7 +676,15 @@ export default function AdminDashboard({ onBack, onLogout, lang = 'en' }) {
                       </span>
                     </td>
                     <td className="admin-cell-num">{lib.total_messages}</td>
-                    <td>{lib.is_active ? '✅' : '❌'}</td>
+                    <td>
+                      <button
+                        className={`admin-toggle-btn ${lib.is_active ? 'enabled' : 'disabled'}`}
+                        onClick={() => handleToggleActive(lib, false)}
+                        title={lib.is_active ? 'Click to Disable' : 'Click to Enable'}
+                      >
+                        {lib.is_active ? '🟢 Enabled' : '🔴 Disabled'}
+                      </button>
+                    </td>
                     <td className="admin-cell-actions">
                       <button className="admin-btn admin-btn-sm admin-btn-secondary" onClick={() => setEditLib(lib)} title="Edit">✏️</button>
                       <button className="admin-btn admin-btn-sm admin-btn-primary" onClick={() => handleScan(lib)} title="Scan channel">📡</button>
@@ -721,7 +743,15 @@ export default function AdminDashboard({ onBack, onLogout, lang = 'en' }) {
                         </span>
                       </span>
                     </td>
-                    <td>{lib.is_active ? '✅' : '❌'}</td>
+                    <td>
+                      <button
+                        className={`admin-toggle-btn ${lib.is_active ? 'enabled' : 'disabled'}`}
+                        onClick={() => handleToggleActive(lib, true)}
+                        title={lib.is_active ? 'Click to Disable' : 'Click to Enable'}
+                      >
+                        {lib.is_active ? '🟢 Enabled' : '🔴 Disabled'}
+                      </button>
+                    </td>
                     <td className="admin-cell-actions">
                       <button className="admin-btn admin-btn-sm admin-btn-secondary" onClick={() => setEditTVLib(lib)} title="Edit">✏️</button>
                       <button className="admin-btn admin-btn-sm admin-btn-primary" onClick={() => handleTVScan(lib)} title="Scan channel">📡</button>

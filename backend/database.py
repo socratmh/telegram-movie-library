@@ -45,7 +45,7 @@ class MovieQueries:
     def get_libraries(self) -> list[dict[str, Any]]:
         with self._get_session() as session:
             libs = session.execute(
-                select(Library).where(Library.is_active == True).order_by(Library.id)
+                select(Library).order_by(Library.id)
             ).scalars().all()
 
             result = []
@@ -69,6 +69,7 @@ class MovieQueries:
                     "name_en": lib.name_en,
                     "slug": lib.slug,
                     "telegram_channel": lib.telegram_channel,
+                    "is_active": lib.is_active if lib.is_active is not None else True,
                     "movie_count": movie_count,
                     "posters": posters,
                 })
@@ -100,6 +101,7 @@ class MovieQueries:
                 "name_en": lib.name_en,
                 "slug": lib.slug,
                 "telegram_channel": lib.telegram_channel,
+                "is_active": lib.is_active if lib.is_active is not None else True,
                 "movie_count": movie_count,
                 "posters": posters,
             }
@@ -123,6 +125,17 @@ class MovieQueries:
         sort_order_col = sort_column.desc()
 
         with self._get_session() as session:
+            if library_id is not None:
+                lib = session.scalar(select(Library).where(Library.id == library_id))
+                if lib and lib.is_active == False:
+                    return {
+                        "items": [],
+                        "total": 0,
+                        "page": page,
+                        "page_size": page_size,
+                        "total_pages": 0,
+                    }
+
             # Base query
             query = select(Movie, TMDBMovie).outerjoin(TMDBMovie, Movie.tmdb_movie_id == TMDBMovie.id)
 

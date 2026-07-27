@@ -32,6 +32,7 @@ class TVLibraryResponse(BaseModel):
     name_en: str | None = None
     slug: str
     telegram_channel: str | None = None
+    is_active: bool = True
     series_count: int = 0
     posters: list[str] = []
 

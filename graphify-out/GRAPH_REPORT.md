@@ -1,16 +1,16 @@
 # Graph Report - Movis_with_Telegram  (2026-07-27)
 
 ## Corpus Check
-- 95 files · ~52,795 words
+- 97 files · ~53,108 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 762 nodes · 1441 edges · 62 communities (44 shown, 18 thin omitted)
-- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 49 edges (avg confidence: 0.74)
+- 766 nodes · 1443 edges · 64 communities (45 shown, 19 thin omitted)
+- Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 70 edges (avg confidence: 0.76)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `e8cccce5`
+- Built from commit: `dceb1aa4`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -58,54 +58,56 @@
 - [[_COMMUNITY_config.py|config.py]]
 - [[_COMMUNITY_GenreFilter.jsx|GenreFilter.jsx]]
 - [[_COMMUNITY_Request|Request]]
+- [[_COMMUNITY_LibraryUpdateRequest|LibraryUpdateRequest]]
+- [[_COMMUNITY_Session|Session]]
 - [[_COMMUNITY_Session|Session]]
 - [[_COMMUNITY_TVLibraryCreateRequest|TVLibraryCreateRequest]]
 - [[_COMMUNITY_TVLibraryUpdateRequest|TVLibraryUpdateRequest]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `request()` - 24 edges
-2. `SeriesQueries` - 24 edges
-3. `MovieQueries` - 22 edges
-4. `mutate()` - 17 edges
-5. `MovieDatabase` - 17 edges
-6. `_get_session_factory()` - 16 edges
-7. `AdminDashboard()` - 15 edges
-8. `TVLibrary` - 15 edges
-9. `TVSeries` - 15 edges
-10. `TaskManager` - 15 edges
+1. `SeriesQueries` - 24 edges
+2. `Movie` - 24 edges
+3. `request()` - 24 edges
+4. `MovieQueries` - 22 edges
+5. `Library` - 19 edges
+6. `mutate()` - 17 edges
+7. `MovieDatabase` - 17 edges
+8. `_get_session_factory()` - 16 edges
+9. `init_db()` - 15 edges
+10. `TVLibrary` - 15 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `admin_list_libraries()` --indirect_call--> `Movie`  [INFERRED]
+  backend/routers/admin.py → database/models.py
+- `admin_update_library()` --indirect_call--> `Movie`  [INFERRED]
+  backend/routers/admin.py → database/models.py
+- `admin_delete_library()` --indirect_call--> `Movie`  [INFERRED]
+  backend/routers/admin.py → database/models.py
+- `admin_delete_library()` --indirect_call--> `TelegramMessage`  [INFERRED]
+  backend/routers/admin.py → database/models.py
 - `admin_delete_tv_library()` --indirect_call--> `TVSeries`  [INFERRED]
   backend/routers/admin.py → database/tv_models.py
-- `TrackRequest` --uses--> `SiteVisit`  [INFERRED]
-  backend/routers/analytics.py → database/analytics_models.py
-- `AnalyticsSummary` --uses--> `SiteVisit`  [INFERRED]
-  backend/routers/analytics.py → database/analytics_models.py
-- `VisitorRecord` --uses--> `SiteVisit`  [INFERRED]
-  backend/routers/analytics.py → database/analytics_models.py
-- `VisitorListResponse` --uses--> `SiteVisit`  [INFERRED]
-  backend/routers/analytics.py → database/analytics_models.py
 
 ## Import Cycles
 - None detected.
 
-## Communities (62 total, 18 thin omitted)
+## Communities (64 total, 19 thin omitted)
 
 ### Community 0 - "MovieQueries"
 Cohesion: 0.06
-Nodes (46): Base, _path_env(), Settings, get_db_url(), init_db(), Library, Movie, Helper to determine the database URL (+38 more)
+Nodes (30): admin_upload_image(), Upload a custom image/poster file and return the access URL., _path_env(), Settings, main(), export_session_string.py — Helper script to export your local Telethon session a, fix_message_id_constraint.py — One-time schema migration.  Removes the old UNIQU, Return a console-safe version of *text* (handles Windows cp1252). (+22 more)
 
 ### Community 1 - "movies.py"
 Cohesion: 0.05
-Nodes (53): Any, global_exception_handler(), Request, Health-check / welcome endpoint., root(), SecurityHeadersMiddleware, MovieQueries, Read-only query layer that powers the FastAPI endpoints.      Uses SQLAlchemy. (+45 more)
+Nodes (62): global_exception_handler(), Request, Health-check / welcome endpoint., root(), SecurityHeadersMiddleware, MovieQueries, Any, Session (+54 more)
 
 ### Community 2 - "App.jsx"
 Cohesion: 0.06
-Nodes (64): adminCancelTask(), adminCreateFeaturedTVSeries(), adminCreateLibrary(), adminCreateTVLibrary(), adminDeleteFeaturedTVSeries(), adminDeleteLibrary(), adminDeleteTVLibrary(), adminFetchAnalyticsBreakdown() (+56 more)
+Nodes (55): adminCancelTask(), adminCreateFeaturedTVSeries(), adminCreateLibrary(), adminCreateTVLibrary(), adminDeleteFeaturedTVSeries(), adminDeleteLibrary(), adminDeleteTVLibrary(), adminFetchAnalyticsBreakdown() (+47 more)
 
 ### Community 3 - "process_movie"
-Cohesion: 0.10
-Nodes (24): Lock, main(), build_poster_url(), _choose_best_match(), get_movie_details(), _normalize_title(), Search TMDB by movie title and return the best matching result.      Returned, Fetch detailed TMDB metadata for a movie.      Returned keys:     - poster_pa (+16 more)
+Cohesion: 0.14
+Nodes (13): MovieDatabase, Session, SQLAlchemy repository for storing scraped Telegram movie records., Return the set of all Telegram message IDs already stored., clean_title_and_extract_year(), main(), process_movie(), Any (+5 more)
 
 ### Community 4 - "package.json"
 Cohesion: 0.13
@@ -124,8 +126,8 @@ Cohesion: 0.33
 Nodes (5): plugins, rules, react/only-export-components, react/rules-of-hooks, $schema
 
 ### Community 14 - "config.py"
-Cohesion: 0.16
-Nodes (13): Message, _clean_title(), extract_movie_title(), _extract_quality(), _is_valid_title(), parse_movie_message(), ParsedMovie, Extract a likely movie title and supported video quality from a Telegram message (+5 more)
+Cohesion: 0.19
+Nodes (15): Any, main(), build_poster_url(), _choose_best_match(), get_movie_details(), _normalize_title(), Search TMDB by movie title and return the best matching result.      Returned, Fetch detailed TMDB metadata for a movie.      Returned keys:     - poster_pa (+7 more)
 
 ### Community 15 - "_parse_genres"
 Cohesion: 0.20
@@ -146,6 +148,10 @@ Nodes (14): task_manager.py — In-memory background task manager.  Spawns CLI s
 ### Community 20 - "migrate_channel_links.py"
 Cohesion: 0.43
 Nodes (3): OnboardingModal(), formatTelegramUrl(), TelegramBanner()
+
+### Community 21 - "config.py"
+Cohesion: 0.16
+Nodes (4): App(), AdminDashboard(), FloatingBackButton(), LibraryGrid()
 
 ### Community 22 - "_parse_genres"
 Cohesion: 0.10
@@ -172,28 +178,28 @@ Cohesion: 0.22
 Nodes (9): get_app_env(), get_database_path(), get_database_url(), get_telegram_channel_id(), Path, Return the current application environment (development | production)., Resolve the database path from the environment.      Keeps the backend indepen, Get the database URL from the environment for SQLAlchemy.      Only returns th (+1 more)
 
 ### Community 40 - "Request"
-Cohesion: 0.05
-Nodes (69): admin_cancel_task(), admin_create_featured_tv(), admin_create_library(), admin_create_tv_library(), admin_delete_featured_tv(), admin_delete_library(), admin_delete_tv_library(), admin_get_task() (+61 more)
+Cohesion: 0.07
+Nodes (66): LibraryCreateRequest, LibraryDetailResponse, LibraryUpdateRequest, MigrationRequest, TaskListResponse, TaskLogsResponse, TaskResponse, admin_cancel_task() (+58 more)
 
 ### Community 42 - "Any"
 Cohesion: 0.24
 Nodes (12): build_match_indexes(), _build_telegram_url(), main(), match_message(), MatchResult, migrate_tv(), MigrationStats, migrate_tv_channel_links.py — Migrate TV series Telegram links to a new channel. (+4 more)
 
 ### Community 45 - "analytics.py"
-Cohesion: 0.19
-Nodes (23): analytics_breakdown(), analytics_charts(), analytics_summary(), analytics_visitors(), AnalyticsSummary, BreakdownItem, BreakdownResponse, ChartPoint (+15 more)
+Cohesion: 0.08
+Nodes (39): MovieListItem, _parse_genres(), Any, Accept a JSON string or a plain list and always return ``list[str]``., Body for launching a channel scan., Body for launching a TMDB update., ScanRequest, TelegramMessageResponse (+31 more)
 
 ### Community 46 - "GenreFilter.jsx"
-Cohesion: 0.09
-Nodes (32): _get_queries(), get_series(), get_tv_library(), list_featured_tv(), list_series(), list_series_genres(), list_tv_libraries(), Request (+24 more)
+Cohesion: 0.08
+Nodes (34): _get_queries(), get_series(), get_tv_library(), list_featured_tv(), list_series(), list_series_genres(), list_tv_libraries(), Request (+26 more)
 
 ### Community 50 - "SearchBar.jsx"
 Cohesion: 0.17
 Nodes (14): Return a console-safe version of *text* (handles Windows cp1252)., run(), _safe(), _clean_title(), _is_valid_title(), parse_series_message(), ParsedSeries, Extract a TV series title and Telegram channel link from a message.      Expecte (+6 more)
 
 ### Community 52 - "process_series"
-Cohesion: 0.11
-Nodes (18): Session, Link a TV series to its TMDB entry., SQLAlchemy repository for storing scraped TV series records., Return set of series titles stored for current library., Find or create a TV series by title. Returns the series ID., Bulk-save series records. Returns count of newly created entries., Return series in current library that don't have TMDB data., Save TMDB TV metadata. Returns the tmdb_tv_series row ID. (+10 more)
+Cohesion: 0.09
+Nodes (19): Lock, Session, Link a TV series to its TMDB entry., SQLAlchemy repository for storing scraped TV series records., Return set of series titles stored for current library., Find or create a TV series by title. Returns the series ID., Bulk-save series records. Returns count of newly created entries., Return series in current library that don't have TMDB data. (+11 more)
 
 ### Community 53 - "adminAuth.js"
 Cohesion: 0.26
@@ -206,22 +212,22 @@ Nodes (3): AR_TO_EN_WORDS, DIRECTORY_MAP, EN_TO_AR_WORDS
 ## Knowledge Gaps
 - **84 isolated node(s):** `GENRE_MAP`, `GENRE_MAP`, `STATUS_MAP`, `GENRE_MAP`, `DIRECTORY_MAP` (+79 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **18 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **19 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `TVSeries` connect `GenreFilter.jsx` to `Request`, `MovieQueries`, `process_series`?**
+- **Why does `Movie` connect `movies.py` to `Request`, `process_movie`, `GenreFilter.jsx`?**
+  _High betweenness centrality (0.024) - this node is a cross-community bridge._
+- **Why does `TVSeries` connect `GenreFilter.jsx` to `Request`, `process_series`?**
   _High betweenness centrality (0.018) - this node is a cross-community bridge._
-- **What connects `Health-check / welcome endpoint.`, `Analytics router — visitor tracking (public) + admin analytics endpoints.`, `Record a page visit. Public, no auth.` to the rest of the system?**
+- **Are the 15 inferred relationships involving `Movie` (e.g. with `.get_genres()` and `.get_libraries()`) actually correct?**
+  _`Movie` has 15 INFERRED edges - model-reasoned connections that need verification._
+- **What connects `Read-only query layer that powers the FastAPI endpoints.      Uses SQLAlchemy.`, `Accept a JSON string or a plain list and always return ``list[str]``.`, `Body for launching a channel scan.` to the rest of the system?**
   _207 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `MovieQueries` be split into smaller, more focused modules?**
-  _Cohesion score 0.06277665995975855 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.061979648473635525 - nodes in this community are weakly interconnected._
 - **Should `movies.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.05060882800608828 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05042016806722689 - nodes in this community are weakly interconnected._
 - **Should `App.jsx` be split into smaller, more focused modules?**
-  _Cohesion score 0.06183310533515732 - nodes in this community are weakly interconnected._
-- **Should `process_movie` be split into smaller, more focused modules?**
-  _Cohesion score 0.09716599190283401 - nodes in this community are weakly interconnected._
-- **Should `package.json` be split into smaller, more focused modules?**
-  _Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05712050078247261 - nodes in this community are weakly interconnected._

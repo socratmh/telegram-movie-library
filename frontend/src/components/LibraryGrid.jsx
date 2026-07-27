@@ -46,10 +46,15 @@ export default function LibraryGrid({ onSelectLibrary, onSelectTVLibrary, lang =
         {libraries.map((lib) => (
           <button
             key={lib.id}
-            className="library-card"
+            className={`library-card ${lib.is_active === false ? 'is-disabled' : ''}`}
             id={`library-card-${lib.slug}`}
             onClick={() => onSelectLibrary(lib.slug)}
           >
+            {lib.is_active === false && (
+              <div className="library-maintenance-tag">
+                ⚠️ {isAr ? 'صيانة مؤقتة' : 'Under Maintenance'}
+              </div>
+            )}
             {lib.posters && lib.posters.length > 0 ? (
               <div className="library-card-backdrop">
                 {lib.posters.map((poster, i) => (
@@ -92,10 +97,15 @@ export default function LibraryGrid({ onSelectLibrary, onSelectTVLibrary, lang =
         {tvLibraries.map((lib) => (
           <button
             key={lib.id}
-            className="library-card series-entry-card"
+            className={`library-card series-entry-card ${lib.is_active === false ? 'is-disabled' : ''}`}
             id={`tv-library-card-${lib.slug}`}
             onClick={() => (onSelectTVLibrary ? onSelectTVLibrary(lib.slug) : onSelectLibrary(`tv/${lib.slug}`))}
           >
+            {lib.is_active === false && (
+              <div className="library-maintenance-tag">
+                ⚠️ {isAr ? 'صيانة مؤقتة' : 'Under Maintenance'}
+              </div>
+            )}
             {lib.posters && lib.posters.length > 0 ? (
               <div className="library-card-backdrop">
                 {lib.posters.map((poster, i) => (

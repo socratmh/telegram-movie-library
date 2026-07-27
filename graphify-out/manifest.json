@@ -15,13 +15,13 @@
     "semantic_hash": ""
   },
   "backend/database.py": {
-    "mtime": 1784586644.573489,
-    "ast_hash": "d52acf102f5fd7a9ebcb709f84e8bb74",
+    "mtime": 1785184100.1170044,
+    "ast_hash": "2c10572bcc1fb57025c49a9699ae478b",
     "semantic_hash": ""
   },
   "backend/models.py": {
-    "mtime": 1784579210.86505,
-    "ast_hash": "d32948a7ddfe333fcbd1a6ff72a124ff",
+    "mtime": 1785184801.2646718,
+    "ast_hash": "6a1e273e73a528fb74895e906930dbc3",
     "semantic_hash": ""
   },
   "backend/routers/__init__.py": {
@@ -50,8 +50,8 @@
     "semantic_hash": ""
   },
   "database/models.py": {
-    "mtime": 1784583793.345653,
-    "ast_hash": "3613eeaf593d35427f647baa5804931f",
+    "mtime": 1785183450.6412108,
+    "ast_hash": "f5fbf8fc7e9fe03417d734fb310b8238",
     "semantic_hash": ""
   },
   "frontend/.oxlintrc.json": {
@@ -65,8 +65,8 @@
     "semantic_hash": "b5b007552814ae57f55825f41c591c09"
   },
   "frontend/src/App.jsx": {
-    "mtime": 1785179600.4796233,
-    "ast_hash": "5fc0b207c78554d17553be6419f8539e",
+    "mtime": 1785184253.78147,
+    "ast_hash": "d3e153bb145b052d697ce52260e8fb7d",
     "semantic_hash": ""
   },
   "frontend/src/api/client.js": {
@@ -170,8 +170,8 @@
     "semantic_hash": ""
   },
   "frontend/src/components/LibraryGrid.jsx": {
-    "mtime": 1785100503.8648427,
-    "ast_hash": "8763fff06e6e6538041d7fc799b2045d",
+    "mtime": 1785184194.2301805,
+    "ast_hash": "b576fc88a1d708cb10289fba6be8e8f7",
     "semantic_hash": ""
   },
   "scratch/check_libs.py": {
@@ -285,8 +285,8 @@
     "semantic_hash": ""
   },
   "backend/routers/admin.py": {
-    "mtime": 1785093297.4906418,
-    "ast_hash": "7556ac96dd5ef28a964ac3971575977a",
+    "mtime": 1785185490.7934186,
+    "ast_hash": "6b3e10e32524db2e39ed854453e83d92",
     "semantic_hash": ""
   },
   "backend/services/__init__.py": {
@@ -300,8 +300,8 @@
     "semantic_hash": ""
   },
   "frontend/src/components/AdminDashboard.jsx": {
-    "mtime": 1785179814.8613648,
-    "ast_hash": "7bbb27f6eafc436dff16a5e01a7fe6b5",
+    "mtime": 1785184160.0790212,
+    "ast_hash": "b4ca7b2ae1d8579915ed0b9f84ab8a5b",
     "semantic_hash": ""
   },
   "scraper/__init__.py": {
@@ -395,18 +395,18 @@
     "semantic_hash": ""
   },
   "backend/tv_database.py": {
-    "mtime": 1785093235.0599346,
-    "ast_hash": "bc84e909d107d776385153010e984005",
+    "mtime": 1785184115.859761,
+    "ast_hash": "d424a34c9f891f18a48c77d4e1077db2",
     "semantic_hash": ""
   },
   "backend/tv_models.py": {
-    "mtime": 1785093212.383225,
-    "ast_hash": "8e49fb4635ef5eee3c2cc5788fd28096",
+    "mtime": 1785183980.2349138,
+    "ast_hash": "509dd068de06bf44753f5b3c3981929c",
     "semantic_hash": ""
   },
   "database/tv_models.py": {
-    "mtime": 1785093141.8564086,
-    "ast_hash": "524c4e5ac9081bf30bf4351585340a74",
+    "mtime": 1785183461.5878804,
+    "ast_hash": "f628a786a43567eee9bfea7a5a90d3a4",
     "semantic_hash": ""
   },
   "frontend/src/components/SeriesCard.jsx": {
@@ -502,6 +502,16 @@
   "frontend/src/hooks/useTracking.js": {
     "mtime": 1785179553.9612017,
     "ast_hash": "4f2f07d2f6622dc43259cde49c937034",
+    "semantic_hash": ""
+  },
+  "frontend/src/components/FloatingBackButton.jsx": {
+    "mtime": 1785184234.408815,
+    "ast_hash": "e7341381f1ce39dd8e03178c693ee4d7",
+    "semantic_hash": ""
+  },
+  "migrate_name_en.py": {
+    "mtime": 1785183474.1578767,
+    "ast_hash": "a2702de948f5200f29871ce4b221ec29",
     "semantic_hash": ""
   }
 }

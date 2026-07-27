@@ -200,6 +200,7 @@ function App() {
         libraryId={tvLibraryInfo.id}
         libraryName={lang === 'en' && tvLibraryInfo?.name_en ? tvLibraryInfo.name_en : tvLibraryInfo?.name}
         telegramChannel={tvLibraryInfo.telegram_channel}
+        isActive={tvLibraryInfo?.is_active}
         onBackToLibraries={handleBackToLibraries}
         lang={lang}
         onToggleLang={handleToggleLang}
@@ -224,6 +225,7 @@ function App() {
       libraryId={libraryId}
       libraryName={lang === 'en' && libraryInfo?.name_en ? libraryInfo.name_en : libraryInfo?.name}
       telegramChannel={libraryInfo?.telegram_channel}
+      isActive={libraryInfo?.is_active}
       onBackToLibraries={handleBackToLibraries}
       lang={lang}
       onToggleLang={handleToggleLang}
@@ -232,7 +234,7 @@ function App() {
 }
 
 
-function LibraryView({ libraryId, libraryName, telegramChannel, onBackToLibraries, lang, onToggleLang }) {
+function LibraryView({ libraryId, libraryName, telegramChannel, isActive, onBackToLibraries, lang, onToggleLang }) {
   const {
     movies,
     total,
@@ -257,8 +259,8 @@ function LibraryView({ libraryId, libraryName, telegramChannel, onBackToLibrarie
 
   return (
     <Layout libraryName={null} onBackToLibraries={onBackToLibraries} lang={lang} onToggleLang={onToggleLang}>
-      <TelegramBanner telegramChannel={telegramChannel} lang={lang} />
-      <OnboardingModal libraryId={libraryId} telegramChannel={telegramChannel} lang={lang} />
+      {isActive !== false && <TelegramBanner telegramChannel={telegramChannel} lang={lang} />}
+      {isActive !== false && <OnboardingModal libraryId={libraryId} telegramChannel={telegramChannel} lang={lang} />}
       <div className="library-view-header">
         <button className="library-back-btn" onClick={onBackToLibraries}>
           <span className="arrow">{isAr ? '←' : '←'}</span>
@@ -266,30 +268,49 @@ function LibraryView({ libraryId, libraryName, telegramChannel, onBackToLibrarie
         </button>
         <h1 className="library-title">{libraryName}</h1>
       </div>
-      <SearchBar
-        search={search}
-        onSearchChange={setSearch}
-        sortBy={sortBy}
-        onSortByChange={setSortBy}
-        lang={lang}
-      />
-      <GenreFilter genres={genres} activeGenre={genre} onToggle={setGenre} lang={lang} />
-      <MovieGrid
-        movies={movies}
-        loading={loading}
-        error={error}
-        onMovieClick={setSelectedMovieId}
-        lang={lang}
-      />
-      <Pagination
-        page={page}
-        totalPages={totalPages}
-        total={total}
-        onPageChange={setPage}
-        lang={lang}
-      />
-      {selectedMovieId !== null && (
-        <MovieDetail movieId={selectedMovieId} onClose={closeDetail} lang={lang} />
+
+      {isActive === false ? (
+        <div className="library-maintenance-notice">
+          <div className="maintenance-notice-icon">⚠️</div>
+          <h2>{isAr ? 'المكتبة غير متاحة حالياً' : 'Library Temporarily Unavailable'}</h2>
+          <p>
+            {isAr
+              ? 'هذه المكتبة غير متاحة حالياً بينما نقوم بتحديث قناة تيليجرام. يرجى تجربة مكتبة أخرى.'
+              : 'This library is temporarily unavailable while we update the Telegram channel. Please try another library.'}
+          </p>
+          <button className="library-back-btn" onClick={onBackToLibraries} style={{ marginTop: '1rem', display: 'inline-flex' }}>
+            <span className="arrow">{isAr ? '←' : '←'}</span>
+            <span className="text">{isAr ? 'العودة للمكتبات الرئيسية' : 'Back to Libraries'}</span>
+          </button>
+        </div>
+      ) : (
+        <>
+          <SearchBar
+            search={search}
+            onSearchChange={setSearch}
+            sortBy={sortBy}
+            onSortByChange={setSortBy}
+            lang={lang}
+          />
+          <GenreFilter genres={genres} activeGenre={genre} onToggle={setGenre} lang={lang} />
+          <MovieGrid
+            movies={movies}
+            loading={loading}
+            error={error}
+            onMovieClick={setSelectedMovieId}
+            lang={lang}
+          />
+          <Pagination
+            page={page}
+            totalPages={totalPages}
+            total={total}
+            onPageChange={setPage}
+            lang={lang}
+          />
+          {selectedMovieId !== null && (
+            <MovieDetail movieId={selectedMovieId} onClose={closeDetail} lang={lang} />
+          )}
+        </>
       )}
       <FloatingBackButton onClick={selectedMovieId !== null ? closeDetail : onBackToLibraries} lang={lang} />
     </Layout>
@@ -297,7 +318,7 @@ function LibraryView({ libraryId, libraryName, telegramChannel, onBackToLibrarie
 }
 
 
-function SeriesView({ libraryId, libraryName, telegramChannel, onBackToLibraries, lang, onToggleLang }) {
+function SeriesView({ libraryId, libraryName, telegramChannel, isActive, onBackToLibraries, lang, onToggleLang }) {
   const {
     series,
     total,
@@ -322,7 +343,7 @@ function SeriesView({ libraryId, libraryName, telegramChannel, onBackToLibraries
 
   return (
     <Layout libraryName={null} onBackToLibraries={onBackToLibraries} lang={lang} onToggleLang={onToggleLang}>
-      {telegramChannel && <TelegramBanner telegramChannel={telegramChannel} lang={lang} />}
+      {isActive !== false && telegramChannel && <TelegramBanner telegramChannel={telegramChannel} lang={lang} />}
       <div className="library-view-header">
         <button className="library-back-btn" onClick={onBackToLibraries}>
           <span className="arrow">{isAr ? '←' : '←'}</span>
@@ -333,31 +354,50 @@ function SeriesView({ libraryId, libraryName, telegramChannel, onBackToLibraries
           {libraryName || (isAr ? 'المسلسلات' : 'TV Series')}
         </h1>
       </div>
-      <SearchBar
-        search={search}
-        onSearchChange={setSearch}
-        sortBy={sortBy}
-        onSortByChange={setSortBy}
-        placeholder={isAr ? 'ابحث عن مسلسلات…' : 'Search series…'}
-        lang={lang}
-      />
-      <GenreFilter genres={genres} activeGenre={genre} onToggle={setGenre} lang={lang} />
-      <SeriesGrid
-        series={series}
-        loading={loading}
-        error={error}
-        onSeriesClick={setSelectedSeriesId}
-        lang={lang}
-      />
-      <Pagination
-        page={page}
-        totalPages={totalPages}
-        total={total}
-        onPageChange={setPage}
-        lang={lang}
-      />
-      {selectedSeriesId !== null && (
-        <SeriesDetail seriesId={selectedSeriesId} onClose={closeDetail} lang={lang} />
+
+      {isActive === false ? (
+        <div className="library-maintenance-notice">
+          <div className="maintenance-notice-icon">⚠️</div>
+          <h2>{isAr ? 'المكتبة غير متاحة حالياً' : 'Library Temporarily Unavailable'}</h2>
+          <p>
+            {isAr
+              ? 'هذه المكتبة غير متاحة حالياً بينما نقوم بتحديث قناة تيليجرام. يرجى تجربة مكتبة أخرى.'
+              : 'This library is temporarily unavailable while we update the Telegram channel. Please try another library.'}
+          </p>
+          <button className="library-back-btn" onClick={onBackToLibraries} style={{ marginTop: '1rem', display: 'inline-flex' }}>
+            <span className="arrow">{isAr ? '←' : '←'}</span>
+            <span className="text">{isAr ? 'العودة للمكتبات الرئيسية' : 'Back to Libraries'}</span>
+          </button>
+        </div>
+      ) : (
+        <>
+          <SearchBar
+            search={search}
+            onSearchChange={setSearch}
+            sortBy={sortBy}
+            onSortByChange={setSortBy}
+            placeholder={isAr ? 'ابحث عن مسلسلات…' : 'Search series…'}
+            lang={lang}
+          />
+          <GenreFilter genres={genres} activeGenre={genre} onToggle={setGenre} lang={lang} />
+          <SeriesGrid
+            series={series}
+            loading={loading}
+            error={error}
+            onSeriesClick={setSelectedSeriesId}
+            lang={lang}
+          />
+          <Pagination
+            page={page}
+            totalPages={totalPages}
+            total={total}
+            onPageChange={setPage}
+            lang={lang}
+          />
+          {selectedSeriesId !== null && (
+            <SeriesDetail seriesId={selectedSeriesId} onClose={closeDetail} lang={lang} />
+          )}
+        </>
       )}
       <FloatingBackButton onClick={selectedSeriesId !== null ? closeDetail : onBackToLibraries} lang={lang} />
     </Layout>
