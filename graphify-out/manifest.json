@@ -70,8 +70,8 @@
     "semantic_hash": ""
   },
   "frontend/src/api/client.js": {
-    "mtime": 1785098929.3781898,
-    "ast_hash": "41e74b7fade385e341f23cf46fa95491",
+    "mtime": 1785176451.1622381,
+    "ast_hash": "59755f48950312b5ad0e62e33d42b26a",
     "semantic_hash": ""
   },
   "frontend/src/components/GenreFilter.jsx": {
@@ -85,8 +85,8 @@
     "semantic_hash": ""
   },
   "frontend/src/components/MovieCard.jsx": {
-    "mtime": 1785100040.9944973,
-    "ast_hash": "50eec6898be6ed15549ded9f56a74f73",
+    "mtime": 1785176481.13129,
+    "ast_hash": "cc232b0e93fbc6325f249a38cbc3f9d3",
     "semantic_hash": ""
   },
   "frontend/src/components/MovieDetail.jsx": {
@@ -410,8 +410,8 @@
     "semantic_hash": ""
   },
   "frontend/src/components/SeriesCard.jsx": {
-    "mtime": 1785100013.6843817,
-    "ast_hash": "701774b34bda1a90ef2d26efb78f8b08",
+    "mtime": 1785176466.2750523,
+    "ast_hash": "c404aa1ce53982bc1612cdd0f6cafdda",
     "semantic_hash": ""
   },
   "frontend/src/components/SeriesDetail.jsx": {

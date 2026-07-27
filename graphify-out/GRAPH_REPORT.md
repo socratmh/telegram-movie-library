@@ -1,16 +1,16 @@
-# Graph Report - Movis_with_Telegram  (2026-07-26)
+# Graph Report - Movis_with_Telegram  (2026-07-27)
 
 ## Corpus Check
-- 91 files · ~50,598 words
+- 91 files · ~50,611 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 726 nodes · 1351 edges · 59 communities (41 shown, 18 thin omitted)
+- 726 nodes · 1357 edges · 58 communities (41 shown, 17 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 40 edges (avg confidence: 0.79)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `2880eca7`
+- Built from commit: `5d357466`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -48,7 +48,6 @@
 - [[_COMMUNITY_Any|Any]]
 - [[_COMMUNITY_Path|Path]]
 - [[_COMMUNITY_TelegramClient|TelegramClient]]
-- [[_COMMUNITY_MovieGrid.jsx|MovieGrid.jsx]]
 - [[_COMMUNITY_GenreFilter.jsx|GenreFilter.jsx]]
 - [[_COMMUNITY_Hero.jsx|Hero.jsx]]
 - [[_COMMUNITY_SearchBar.jsx|SearchBar.jsx]]
@@ -87,7 +86,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (59 total, 18 thin omitted)
+## Communities (58 total, 17 thin omitted)
 
 ### Community 0 - "MovieQueries"
 Cohesion: 0.11
@@ -99,7 +98,7 @@ Nodes (53): Any, global_exception_handler(), Health-check / welcome endpoint., r
 
 ### Community 2 - "App.jsx"
 Cohesion: 0.06
-Nodes (66): adminCancelTask(), adminCreateFeaturedTVSeries(), adminCreateLibrary(), adminCreateTVLibrary(), adminDeleteFeaturedTVSeries(), adminDeleteLibrary(), adminDeleteTVLibrary(), adminFetchFeaturedTVSeries() (+58 more)
+Nodes (67): adminCancelTask(), adminCreateFeaturedTVSeries(), adminCreateLibrary(), adminCreateTVLibrary(), adminDeleteFeaturedTVSeries(), adminDeleteLibrary(), adminDeleteTVLibrary(), adminFetchFeaturedTVSeries() (+59 more)
 
 ### Community 3 - "process_movie"
 Cohesion: 0.10
@@ -196,7 +195,7 @@ Nodes (14): decodeTokenPayload(), getAccessToken(), getAuthHeaders(), getAuthHea
 ## Knowledge Gaps
 - **84 isolated node(s):** `GENRE_MAP`, `GENRE_MAP`, `STATUS_MAP`, `GENRE_MAP`, `DIRECTORY_MAP` (+79 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **18 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **17 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -210,7 +209,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `movies.py` be split into smaller, more focused modules?**
   _Cohesion score 0.051643192488262914 - nodes in this community are weakly interconnected._
 - **Should `App.jsx` be split into smaller, more focused modules?**
-  _Cohesion score 0.06481481481481481 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06162464985994398 - nodes in this community are weakly interconnected._
 - **Should `process_movie` be split into smaller, more focused modules?**
   _Cohesion score 0.09716599190283401 - nodes in this community are weakly interconnected._
 - **Should `package.json` be split into smaller, more focused modules?**

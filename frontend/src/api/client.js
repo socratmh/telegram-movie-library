@@ -275,7 +275,7 @@ export function adminUpdateTVTmdb(id) {
 
 /** Public: fetch all featured/trending TV series. */
 export function fetchFeaturedTVSeries() {
-  return request('/api/featured-tv');
+  return request(`${BASE}/featured-tv`);
 }
 
 /** Admin: list all featured TV series entries. */
