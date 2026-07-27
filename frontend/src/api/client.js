@@ -14,10 +14,16 @@ const BASE = isLocal
   : (import.meta.env.VITE_API_URL || 'https://telegram-movie-library.onrender.com') + '/api';
 
 async function request(path, params = {}, retry = true) {
-  const url = new URL(path, window.location.origin);
+  let targetUrl;
+  if (path.startsWith('http://') || path.startsWith('https://')) {
+    targetUrl = new URL(path);
+  } else {
+    targetUrl = new URL(path, window.location.origin);
+  }
+
   Object.entries(params).forEach(([key, value]) => {
     if (value !== null && value !== undefined && value !== '') {
-      url.searchParams.set(key, value);
+      targetUrl.searchParams.set(key, value);
     }
   });
 
@@ -26,12 +32,28 @@ async function request(path, params = {}, retry = true) {
     Object.assign(headers, getAuthHeaders());
   }
 
-  const response = await fetch(url, { headers });
+  let response;
+  try {
+    response = await fetch(targetUrl.toString(), { headers });
+  } catch (err) {
+    if (retry) {
+      // Retry once after 2.5s if network failed (e.g. Render server waking up from sleep)
+      await new Promise((r) => setTimeout(r, 2500));
+      try {
+        response = await fetch(targetUrl.toString(), { headers });
+      } catch (retryErr) {
+        throw retryErr;
+      }
+    } else {
+      throw err;
+    }
+  }
+
   if (response.status === 401 && retry && path.includes('/api/admin')) {
     const newToken = await refreshAccessToken();
     if (newToken) {
       headers['Authorization'] = `Bearer ${newToken}`;
-      const retryResponse = await fetch(url, { headers });
+      const retryResponse = await fetch(targetUrl.toString(), { headers });
       if (!retryResponse.ok) {
         throw new Error(`API error ${retryResponse.status}: ${retryResponse.statusText}`);
       }
