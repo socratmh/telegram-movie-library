@@ -9,4 +9,4 @@ passlib[bcrypt]>=1.7.4
 python-jose[cryptography]>=3.3.0
 requests>=2.31.0
 python-multipart
-
+user-agents>=2.2.0

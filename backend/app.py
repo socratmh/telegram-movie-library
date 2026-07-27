@@ -9,9 +9,11 @@ from backend.database import MovieQueries
 from backend.tv_database import SeriesQueries
 from backend.routers import admin, auth_router, libraries, movies, stats
 from backend.routers import series as series_router
+from backend.routers import analytics as analytics_router
 from backend.services.task_manager import TaskManager
 from database.models import get_db_url
 import database.tv_models  # noqa: F401 — ensure TV tables are created
+import database.analytics_models  # noqa: F401 — ensure analytics tables are created
 
 import logging
 import traceback
@@ -114,6 +116,7 @@ app.include_router(stats.router)
 app.include_router(auth_router.router)
 app.include_router(admin.router)
 app.include_router(series_router.router)
+app.include_router(analytics_router.router)
 
 
 @app.get("/", tags=["health"])

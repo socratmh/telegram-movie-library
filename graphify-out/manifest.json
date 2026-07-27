@@ -70,8 +70,8 @@
     "semantic_hash": ""
   },
   "frontend/src/api/client.js": {
-    "mtime": 1785176451.1622381,
-    "ast_hash": "59755f48950312b5ad0e62e33d42b26a",
+    "mtime": 1785178222.004285,
+    "ast_hash": "4dc38ed8994abbac08e9b7f72cc26814",
     "semantic_hash": ""
   },
   "frontend/src/components/GenreFilter.jsx": {

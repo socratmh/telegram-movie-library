@@ -335,3 +335,38 @@ export function formatImageUrl(url) {
   }
   return url;
 }
+
+// ---------------------------------------------------------------------------
+// Visitor Analytics APIs
+// ---------------------------------------------------------------------------
+
+/** Public: send a page visit tracking beacon. */
+export function trackVisit(data) {
+  const trackBase = isLocal ? '/api' : (import.meta.env.VITE_API_URL || 'https://telegram-movie-library.onrender.com') + '/api';
+  return fetch(`${trackBase}/track`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data),
+    keepalive: true,
+  }).catch(() => {});
+}
+
+/** Admin: analytics summary (total, unique, active today/week/month). */
+export function adminFetchAnalyticsSummary() {
+  return request(`${ADMIN}/analytics/summary`);
+}
+
+/** Admin: paginated visitor list. */
+export function adminFetchAnalyticsVisitors({ page = 1, pageSize = 50 } = {}) {
+  return request(`${ADMIN}/analytics/visitors`, { page, page_size: pageSize });
+}
+
+/** Admin: breakdown by country/device/OS/browser/page. */
+export function adminFetchAnalyticsBreakdown() {
+  return request(`${ADMIN}/analytics/breakdown`);
+}
+
+/** Admin: daily + monthly chart data. */
+export function adminFetchAnalyticsCharts() {
+  return request(`${ADMIN}/analytics/charts`);
+}

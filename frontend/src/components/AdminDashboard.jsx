@@ -25,6 +25,7 @@ import {
   formatImageUrl,
 } from '../api/client';
 import { translateLibraryName } from '../utils/translator';
+import AdminAnalytics from './AdminAnalytics';
 
 // ---------------------------------------------------------------------------
 // Sub-components
@@ -604,6 +605,9 @@ export default function AdminDashboard({ onBack, onLogout, lang = 'en' }) {
             <span className="admin-badge admin-badge-running">{tasks.filter(t => t.status === 'running').length}</span>
           )}
         </button>
+        <button className={`admin-tab ${activeTab === 'analytics' ? 'active' : ''}`} onClick={() => setActiveTab('analytics')}>
+          📊 Analytics
+        </button>
       </div>
 
       {/* Movie Libraries Tab */}
@@ -867,6 +871,13 @@ export default function AdminDashboard({ onBack, onLogout, lang = 'en' }) {
           taskId={viewLogs}
           onClose={() => setViewLogs(null)}
         />
+      )}
+
+      {/* Analytics Tab */}
+      {activeTab === 'analytics' && (
+        <div className="admin-section">
+          <AdminAnalytics lang={lang} />
+        </div>
       )}
     </div>
   );

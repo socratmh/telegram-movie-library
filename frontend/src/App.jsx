@@ -19,9 +19,11 @@ import TelegramBanner from './components/TelegramBanner';
 import OnboardingModal from './components/OnboardingModal';
 import { isAuthenticated, logout, setupStorageListener } from './api/adminAuth';
 import { translateLibraryName } from './utils/translator';
+import useTracking from './hooks/useTracking';
 
 
 function App() {
+  useTracking();
   const [selectedSlug, setSelectedSlug] = useState(null);
   const [libraryInfo, setLibraryInfo] = useState(null);
   const [tvLibraryInfo, setTvLibraryInfo] = useState(null);
