@@ -1,12 +1,16 @@
 from __future__ import annotations
 
 import asyncio
+import os
 import time
 
 from config import settings
 from scraper.database import MovieDatabase
 from scraper.scraper import TelegramMovieScraper, ScrapeStats
 from scraper.telegram_client import get_telegram_client
+from database.models import get_db_url, Library, init_db
+
+from sqlalchemy import select
 
 
 def _safe(text: str) -> str:
@@ -14,11 +18,38 @@ def _safe(text: str) -> str:
     return text.encode("ascii", errors="replace").decode("ascii")
 
 
-from database.models import get_db_url
+async def _auto_fill_channel_id(client, channel: str, db_url: str, library_id: int | None) -> None:
+    """Resolve the numeric channel ID from Telethon and persist it on the Library row."""
+    if library_id is None:
+        return
+    try:
+        entity = await client.get_entity(channel)
+        # Telethon Channel/Chat objects expose .id as a positive int
+        numeric_id = str(getattr(entity, "id", ""))
+        if not numeric_id:
+            return
+
+        SessionLocal = init_db(db_url)
+        with SessionLocal() as session:
+            lib = session.execute(
+                select(Library).where(Library.id == library_id)
+            ).scalar_one_or_none()
+            if lib and not lib.telegram_channel_id:
+                lib.telegram_channel_id = numeric_id
+                session.commit()
+                print(f"[AUTO] Saved telegram_channel_id={numeric_id} for library {library_id}")
+            elif lib and lib.telegram_channel_id:
+                print(f"[AUTO] Library {library_id} already has telegram_channel_id={lib.telegram_channel_id}")
+    except Exception as exc:
+        print(f"[AUTO] Could not resolve channel ID: {exc}")
+
 
 async def run() -> None:
     db_url = get_db_url(settings.database_url, settings.database_path)
     database = MovieDatabase(db_url)
+
+    library_id_str = os.environ.get("LIBRARY_ID")
+    library_id = int(library_id_str) if library_id_str else None
 
     # Load all message IDs already in the database for incremental scraping
     known_ids = database.get_known_message_ids()
@@ -30,6 +61,9 @@ async def run() -> None:
 
     async with get_telegram_client() as client:
         scraper = TelegramMovieScraper(client, settings.telegram_channel)
+
+        # Auto-extract and persist numeric channel ID for Telegram deep links
+        await _auto_fill_channel_id(client, settings.telegram_channel, db_url, library_id)
 
         # Fetch ALL messages from the channel (limit=None)
         print(f"Scraping full channel history: {settings.telegram_channel}")
@@ -74,7 +108,7 @@ async def run() -> None:
     print(f"  Time elapsed                    : {elapsed:.1f}s")
     print("=" * 60)
     print()
-    print(f"Database: {settings.database_path}")
+    print(f"Database: {db_url.split('@')[-1] if '@' in db_url else db_url}")
 
 
 if __name__ == "__main__":

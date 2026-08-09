@@ -513,5 +513,10 @@
     "mtime": 1785183474.1578767,
     "ast_hash": "a2702de948f5200f29871ce4b221ec29",
     "semantic_hash": ""
+  },
+  "migrate_supabase.py": {
+    "mtime": 1785188835.813698,
+    "ast_hash": "2df231a63873ea1667c0b3a1488168a8",
+    "semantic_hash": ""
   }
 }

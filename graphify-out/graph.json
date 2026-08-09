@@ -4,14 +4,34 @@
   "graph": {},
   "nodes": [
     {
+      "label": "migrate_supabase.py",
+      "file_type": "code",
+      "source_file": "migrate_supabase.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "migrate_supabase",
+      "community": 71,
+      "norm_label": "migrate_supabase.py"
+    },
+    {
+      "label": "run_migration()",
+      "file_type": "code",
+      "source_file": "migrate_supabase.py",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "migrate_supabase_run_migration",
+      "community": 71,
+      "norm_label": "run_migration()"
+    },
+    {
       "label": "database.py",
       "file_type": "code",
       "source_file": "backend/database.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "backend_database",
       "community": 1,
-      "norm_label": "database.py"
+      "norm_label": "database.py",
+      "id": "backend_database"
     },
     {
       "label": "MovieQueries",
@@ -19,9 +39,9 @@
       "source_file": "backend/database.py",
       "source_location": "L23",
       "_origin": "ast",
-      "id": "backend_database_moviequeries",
       "community": 1,
-      "norm_label": "moviequeries"
+      "norm_label": "moviequeries",
+      "id": "backend_database_moviequeries"
     },
     {
       "label": ".__init__()",
@@ -29,9 +49,9 @@
       "source_file": "backend/database.py",
       "source_location": "L31",
       "_origin": "ast",
-      "id": "backend_database_moviequeries_init",
       "community": 1,
-      "norm_label": ".__init__()"
+      "norm_label": ".__init__()",
+      "id": "backend_database_moviequeries_init"
     },
     {
       "label": "._get_session()",
@@ -39,9 +59,9 @@
       "source_file": "backend/database.py",
       "source_location": "L38",
       "_origin": "ast",
-      "id": "backend_database_moviequeries_get_session",
       "community": 1,
-      "norm_label": "._get_session()"
+      "norm_label": "._get_session()",
+      "id": "backend_database_moviequeries_get_session"
     },
     {
       "label": "Session",
@@ -49,9 +69,9 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "backend_database_py_session",
       "community": 1,
-      "norm_label": "session"
+      "norm_label": "session",
+      "id": "backend_database_py_session"
     },
     {
       "label": ".get_libraries()",
@@ -59,9 +79,9 @@
       "source_file": "backend/database.py",
       "source_location": "L45",
       "_origin": "ast",
-      "id": "backend_database_moviequeries_get_libraries",
       "community": 1,
-      "norm_label": ".get_libraries()"
+      "norm_label": ".get_libraries()",
+      "id": "backend_database_moviequeries_get_libraries"
     },
     {
       "label": "Any",
@@ -69,9 +89,9 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "backend_database_py_any",
       "community": 1,
-      "norm_label": "any"
+      "norm_label": "any",
+      "id": "backend_database_py_any"
     },
     {
       "label": ".get_library_by_slug()",
@@ -79,9 +99,9 @@
       "source_file": "backend/database.py",
       "source_location": "L78",
       "_origin": "ast",
-      "id": "backend_database_moviequeries_get_library_by_slug",
       "community": 1,
-      "norm_label": ".get_library_by_slug()"
+      "norm_label": ".get_library_by_slug()",
+      "id": "backend_database_moviequeries_get_library_by_slug"
     },
     {
       "label": ".get_movies()",
@@ -89,9 +109,9 @@
       "source_file": "backend/database.py",
       "source_location": "L113",
       "_origin": "ast",
-      "id": "backend_database_moviequeries_get_movies",
       "community": 1,
-      "norm_label": ".get_movies()"
+      "norm_label": ".get_movies()",
+      "id": "backend_database_moviequeries_get_movies"
     },
     {
       "label": ".get_movie()",
@@ -99,9 +119,9 @@
       "source_file": "backend/database.py",
       "source_location": "L218",
       "_origin": "ast",
-      "id": "backend_database_moviequeries_get_movie",
       "community": 1,
-      "norm_label": ".get_movie()"
+      "norm_label": ".get_movie()",
+      "id": "backend_database_moviequeries_get_movie"
     },
     {
       "label": ".get_genres()",
@@ -109,9 +129,9 @@
       "source_file": "backend/database.py",
       "source_location": "L314",
       "_origin": "ast",
-      "id": "backend_database_moviequeries_get_genres",
       "community": 1,
-      "norm_label": ".get_genres()"
+      "norm_label": ".get_genres()",
+      "id": "backend_database_moviequeries_get_genres"
     },
     {
       "label": ".get_stats()",
@@ -119,9 +139,9 @@
       "source_file": "backend/database.py",
       "source_location": "L342",
       "_origin": "ast",
-      "id": "backend_database_moviequeries_get_stats",
       "community": 1,
-      "norm_label": ".get_stats()"
+      "norm_label": ".get_stats()",
+      "id": "backend_database_moviequeries_get_stats"
     },
     {
       "label": "Read-only query layer that powers the FastAPI endpoints.      Uses SQLAlchemy.",
@@ -129,9 +149,9 @@
       "source_file": "backend/database.py",
       "source_location": "L24",
       "_origin": "ast",
-      "id": "backend_database_rationale_24",
       "community": 1,
-      "norm_label": "read-only query layer that powers the fastapi endpoints.      uses sqlalchemy."
+      "norm_label": "read-only query layer that powers the fastapi endpoints.      uses sqlalchemy.",
+      "id": "backend_database_rationale_24"
     },
     {
       "label": "models.py",
@@ -139,9 +159,9 @@
       "source_file": "backend/models.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "backend_models",
-      "community": 40,
-      "norm_label": "models.py"
+      "community": 65,
+      "norm_label": "models.py",
+      "id": "backend_models"
     },
     {
       "label": "_parse_genres()",
@@ -149,9 +169,9 @@
       "source_file": "backend/models.py",
       "source_location": "L16",
       "_origin": "ast",
-      "id": "backend_models_parse_genres",
-      "community": 45,
-      "norm_label": "_parse_genres()"
+      "community": 68,
+      "norm_label": "_parse_genres()",
+      "id": "backend_models_parse_genres"
     },
     {
       "label": "Any",
@@ -159,9 +179,9 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "backend_models_py_any",
-      "community": 45,
-      "norm_label": "any"
+      "community": 68,
+      "norm_label": "any",
+      "id": "backend_models_py_any"
     },
     {
       "label": "TmdbMovieResponse",
@@ -169,9 +189,9 @@
       "source_file": "backend/models.py",
       "source_location": "L33",
       "_origin": "ast",
-      "id": "backend_models_tmdbmovieresponse",
-      "community": 45,
-      "norm_label": "tmdbmovieresponse"
+      "community": 68,
+      "norm_label": "tmdbmovieresponse",
+      "id": "backend_models_tmdbmovieresponse"
     },
     {
       "label": "BaseModel",
@@ -179,9 +199,9 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "basemodel",
-      "community": 45,
-      "norm_label": "basemodel"
+      "community": 65,
+      "norm_label": "basemodel",
+      "id": "basemodel"
     },
     {
       "label": ".parse_genres()",
@@ -189,9 +209,9 @@
       "source_file": "backend/models.py",
       "source_location": "L49",
       "_origin": "ast",
-      "id": "backend_models_tmdbmovieresponse_parse_genres",
-      "community": 45,
-      "norm_label": ".parse_genres()"
+      "community": 68,
+      "norm_label": ".parse_genres()",
+      "id": "backend_models_tmdbmovieresponse_parse_genres"
     },
     {
       "label": ".poster_url()",
@@ -199,9 +219,9 @@
       "source_file": "backend/models.py",
       "source_location": "L54",
       "_origin": "ast",
-      "id": "backend_models_tmdbmovieresponse_poster_url",
-      "community": 45,
-      "norm_label": ".poster_url()"
+      "community": 68,
+      "norm_label": ".poster_url()",
+      "id": "backend_models_tmdbmovieresponse_poster_url"
     },
     {
       "label": ".backdrop_url()",
@@ -209,9 +229,9 @@
       "source_file": "backend/models.py",
       "source_location": "L61",
       "_origin": "ast",
-      "id": "backend_models_tmdbmovieresponse_backdrop_url",
-      "community": 45,
-      "norm_label": ".backdrop_url()"
+      "community": 68,
+      "norm_label": ".backdrop_url()",
+      "id": "backend_models_tmdbmovieresponse_backdrop_url"
     },
     {
       "label": "TelegramMessageResponse",
@@ -219,9 +239,9 @@
       "source_file": "backend/models.py",
       "source_location": "L71",
       "_origin": "ast",
-      "id": "backend_models_telegrammessageresponse",
-      "community": 45,
-      "norm_label": "telegrammessageresponse"
+      "community": 65,
+      "norm_label": "telegrammessageresponse",
+      "id": "backend_models_telegrammessageresponse"
     },
     {
       "label": "MovieDetailResponse",
@@ -229,9 +249,9 @@
       "source_file": "backend/models.py",
       "source_location": "L81",
       "_origin": "ast",
-      "id": "backend_models_moviedetailresponse",
-      "community": 1,
-      "norm_label": "moviedetailresponse"
+      "community": 65,
+      "norm_label": "moviedetailresponse",
+      "id": "backend_models_moviedetailresponse"
     },
     {
       "label": "MovieListItem",
@@ -239,9 +259,9 @@
       "source_file": "backend/models.py",
       "source_location": "L94",
       "_origin": "ast",
-      "id": "backend_models_movielistitem",
-      "community": 45,
-      "norm_label": "movielistitem"
+      "community": 65,
+      "norm_label": "movielistitem",
+      "id": "backend_models_movielistitem"
     },
     {
       "label": ".parse_genres()",
@@ -249,9 +269,9 @@
       "source_file": "backend/models.py",
       "source_location": "L105",
       "_origin": "ast",
-      "id": "backend_models_movielistitem_parse_genres",
-      "community": 45,
-      "norm_label": ".parse_genres()"
+      "community": 68,
+      "norm_label": ".parse_genres()",
+      "id": "backend_models_movielistitem_parse_genres"
     },
     {
       "label": "PaginatedResponse",
@@ -259,9 +279,9 @@
       "source_file": "backend/models.py",
       "source_location": "L113",
       "_origin": "ast",
-      "id": "backend_models_paginatedresponse",
-      "community": 1,
-      "norm_label": "paginatedresponse"
+      "community": 65,
+      "norm_label": "paginatedresponse",
+      "id": "backend_models_paginatedresponse"
     },
     {
       "label": "GenreListResponse",
@@ -269,9 +289,9 @@
       "source_file": "backend/models.py",
       "source_location": "L125",
       "_origin": "ast",
-      "id": "backend_models_genrelistresponse",
       "community": 1,
-      "norm_label": "genrelistresponse"
+      "norm_label": "genrelistresponse",
+      "id": "backend_models_genrelistresponse"
     },
     {
       "label": "StatsResponse",
@@ -279,9 +299,9 @@
       "source_file": "backend/models.py",
       "source_location": "L133",
       "_origin": "ast",
-      "id": "backend_models_statsresponse",
       "community": 1,
-      "norm_label": "statsresponse"
+      "norm_label": "statsresponse",
+      "id": "backend_models_statsresponse"
     },
     {
       "label": "LibraryResponse",
@@ -289,9 +309,9 @@
       "source_file": "backend/models.py",
       "source_location": "L145",
       "_origin": "ast",
-      "id": "backend_models_libraryresponse",
       "community": 1,
-      "norm_label": "libraryresponse"
+      "norm_label": "libraryresponse",
+      "id": "backend_models_libraryresponse"
     },
     {
       "label": "LibraryListResponse",
@@ -299,9 +319,9 @@
       "source_file": "backend/models.py",
       "source_location": "L157",
       "_origin": "ast",
-      "id": "backend_models_librarylistresponse",
-      "community": 1,
-      "norm_label": "librarylistresponse"
+      "community": 65,
+      "norm_label": "librarylistresponse",
+      "id": "backend_models_librarylistresponse"
     },
     {
       "label": "LibraryCreateRequest",
@@ -309,9 +329,9 @@
       "source_file": "backend/models.py",
       "source_location": "L165",
       "_origin": "ast",
-      "id": "backend_models_librarycreaterequest",
-      "community": 40,
-      "norm_label": "librarycreaterequest"
+      "community": 65,
+      "norm_label": "librarycreaterequest",
+      "id": "backend_models_librarycreaterequest"
     },
     {
       "label": "LibraryUpdateRequest",
@@ -319,9 +339,9 @@
       "source_file": "backend/models.py",
       "source_location": "L174",
       "_origin": "ast",
-      "id": "backend_models_libraryupdaterequest",
-      "community": 40,
-      "norm_label": "libraryupdaterequest"
+      "community": 65,
+      "norm_label": "libraryupdaterequest",
+      "id": "backend_models_libraryupdaterequest"
     },
     {
       "label": "LibraryDetailResponse",
@@ -329,9 +349,9 @@
       "source_file": "backend/models.py",
       "source_location": "L183",
       "_origin": "ast",
-      "id": "backend_models_librarydetailresponse",
       "community": 40,
-      "norm_label": "librarydetailresponse"
+      "norm_label": "librarydetailresponse",
+      "id": "backend_models_librarydetailresponse"
     },
     {
       "label": "ScanRequest",
@@ -339,9 +359,9 @@
       "source_file": "backend/models.py",
       "source_location": "L201",
       "_origin": "ast",
-      "id": "backend_models_scanrequest",
-      "community": 45,
-      "norm_label": "scanrequest"
+      "community": 65,
+      "norm_label": "scanrequest",
+      "id": "backend_models_scanrequest"
     },
     {
       "label": "TmdbUpdateRequest",
@@ -349,9 +369,9 @@
       "source_file": "backend/models.py",
       "source_location": "L206",
       "_origin": "ast",
-      "id": "backend_models_tmdbupdaterequest",
-      "community": 45,
-      "norm_label": "tmdbupdaterequest"
+      "community": 65,
+      "norm_label": "tmdbupdaterequest",
+      "id": "backend_models_tmdbupdaterequest"
     },
     {
       "label": "MigrationRequest",
@@ -359,9 +379,9 @@
       "source_file": "backend/models.py",
       "source_location": "L211",
       "_origin": "ast",
-      "id": "backend_models_migrationrequest",
-      "community": 40,
-      "norm_label": "migrationrequest"
+      "community": 65,
+      "norm_label": "migrationrequest",
+      "id": "backend_models_migrationrequest"
     },
     {
       "label": "TaskResponse",
@@ -369,9 +389,9 @@
       "source_file": "backend/models.py",
       "source_location": "L217",
       "_origin": "ast",
-      "id": "backend_models_taskresponse",
       "community": 40,
-      "norm_label": "taskresponse"
+      "norm_label": "taskresponse",
+      "id": "backend_models_taskresponse"
     },
     {
       "label": "TaskListResponse",
@@ -379,9 +399,9 @@
       "source_file": "backend/models.py",
       "source_location": "L229",
       "_origin": "ast",
-      "id": "backend_models_tasklistresponse",
-      "community": 40,
-      "norm_label": "tasklistresponse"
+      "community": 65,
+      "norm_label": "tasklistresponse",
+      "id": "backend_models_tasklistresponse"
     },
     {
       "label": "TaskLogsResponse",
@@ -389,9 +409,9 @@
       "source_file": "backend/models.py",
       "source_location": "L233",
       "_origin": "ast",
-      "id": "backend_models_tasklogsresponse",
-      "community": 40,
-      "norm_label": "tasklogsresponse"
+      "community": 65,
+      "norm_label": "tasklogsresponse",
+      "id": "backend_models_tasklogsresponse"
     },
     {
       "label": "Accept a JSON string or a plain list and always return ``list[str]``.",
@@ -399,9 +419,9 @@
       "source_file": "backend/models.py",
       "source_location": "L17",
       "_origin": "ast",
-      "id": "backend_models_rationale_17",
-      "community": 45,
-      "norm_label": "accept a json string or a plain list and always return ``list[str]``."
+      "community": 68,
+      "norm_label": "accept a json string or a plain list and always return ``list[str]``.",
+      "id": "backend_models_rationale_17"
     },
     {
       "label": "Body for launching a channel scan.",
@@ -409,9 +429,9 @@
       "source_file": "backend/models.py",
       "source_location": "L202",
       "_origin": "ast",
-      "id": "backend_models_rationale_202",
-      "community": 45,
-      "norm_label": "body for launching a channel scan."
+      "community": 65,
+      "norm_label": "body for launching a channel scan.",
+      "id": "backend_models_rationale_202"
     },
     {
       "label": "Body for launching a TMDB update.",
@@ -419,9 +439,9 @@
       "source_file": "backend/models.py",
       "source_location": "L207",
       "_origin": "ast",
-      "id": "backend_models_rationale_207",
-      "community": 45,
-      "norm_label": "body for launching a tmdb update."
+      "community": 65,
+      "norm_label": "body for launching a tmdb update.",
+      "id": "backend_models_rationale_207"
     },
     {
       "label": "tv_database.py",
@@ -429,9 +449,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "backend_tv_database",
-      "community": 42,
-      "norm_label": "tv_database.py"
+      "community": 1,
+      "norm_label": "tv_database.py",
+      "id": "backend_tv_database"
     },
     {
       "label": "SeriesQueries",
@@ -439,9 +459,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L16",
       "_origin": "ast",
-      "id": "backend_tv_database_seriesqueries",
-      "community": 46,
-      "norm_label": "seriesqueries"
+      "community": 14,
+      "norm_label": "seriesqueries",
+      "id": "backend_tv_database_seriesqueries"
     },
     {
       "label": ".__init__()",
@@ -449,9 +469,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L19",
       "_origin": "ast",
-      "id": "backend_tv_database_seriesqueries_init",
-      "community": 46,
-      "norm_label": ".__init__()"
+      "community": 14,
+      "norm_label": ".__init__()",
+      "id": "backend_tv_database_seriesqueries_init"
     },
     {
       "label": "._get_session()",
@@ -459,9 +479,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L22",
       "_origin": "ast",
-      "id": "backend_tv_database_seriesqueries_get_session",
-      "community": 46,
-      "norm_label": "._get_session()"
+      "community": 14,
+      "norm_label": "._get_session()",
+      "id": "backend_tv_database_seriesqueries_get_session"
     },
     {
       "label": "Session",
@@ -469,9 +489,9 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "backend_tv_database_py_session",
-      "community": 46,
-      "norm_label": "session"
+      "community": 14,
+      "norm_label": "session",
+      "id": "backend_tv_database_py_session"
     },
     {
       "label": ".get_tv_libraries()",
@@ -479,9 +499,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L29",
       "_origin": "ast",
-      "id": "backend_tv_database_seriesqueries_get_tv_libraries",
-      "community": 46,
-      "norm_label": ".get_tv_libraries()"
+      "community": 14,
+      "norm_label": ".get_tv_libraries()",
+      "id": "backend_tv_database_seriesqueries_get_tv_libraries"
     },
     {
       "label": "Any",
@@ -489,9 +509,9 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "backend_tv_database_py_any",
-      "community": 46,
-      "norm_label": "any"
+      "community": 14,
+      "norm_label": "any",
+      "id": "backend_tv_database_py_any"
     },
     {
       "label": ".get_tv_library_by_slug()",
@@ -499,9 +519,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L62",
       "_origin": "ast",
-      "id": "backend_tv_database_seriesqueries_get_tv_library_by_slug",
-      "community": 46,
-      "norm_label": ".get_tv_library_by_slug()"
+      "community": 14,
+      "norm_label": ".get_tv_library_by_slug()",
+      "id": "backend_tv_database_seriesqueries_get_tv_library_by_slug"
     },
     {
       "label": ".get_series()",
@@ -509,9 +529,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L97",
       "_origin": "ast",
-      "id": "backend_tv_database_seriesqueries_get_series",
-      "community": 46,
-      "norm_label": ".get_series()"
+      "community": 14,
+      "norm_label": ".get_series()",
+      "id": "backend_tv_database_seriesqueries_get_series"
     },
     {
       "label": ".get_series_detail()",
@@ -519,9 +539,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L206",
       "_origin": "ast",
-      "id": "backend_tv_database_seriesqueries_get_series_detail",
-      "community": 46,
-      "norm_label": ".get_series_detail()"
+      "community": 14,
+      "norm_label": ".get_series_detail()",
+      "id": "backend_tv_database_seriesqueries_get_series_detail"
     },
     {
       "label": ".get_genres()",
@@ -529,9 +549,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L272",
       "_origin": "ast",
-      "id": "backend_tv_database_seriesqueries_get_genres",
-      "community": 46,
-      "norm_label": ".get_genres()"
+      "community": 14,
+      "norm_label": ".get_genres()",
+      "id": "backend_tv_database_seriesqueries_get_genres"
     },
     {
       "label": ".get_stats()",
@@ -539,9 +559,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L301",
       "_origin": "ast",
-      "id": "backend_tv_database_seriesqueries_get_stats",
-      "community": 46,
-      "norm_label": ".get_stats()"
+      "community": 14,
+      "norm_label": ".get_stats()",
+      "id": "backend_tv_database_seriesqueries_get_stats"
     },
     {
       "label": ".get_featured_tv_series()",
@@ -549,9 +569,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L323",
       "_origin": "ast",
-      "id": "backend_tv_database_seriesqueries_get_featured_tv_series",
-      "community": 46,
-      "norm_label": ".get_featured_tv_series()"
+      "community": 14,
+      "norm_label": ".get_featured_tv_series()",
+      "id": "backend_tv_database_seriesqueries_get_featured_tv_series"
     },
     {
       "label": ".get_featured_tv_series_by_id()",
@@ -559,9 +579,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L340",
       "_origin": "ast",
-      "id": "backend_tv_database_seriesqueries_get_featured_tv_series_by_id",
-      "community": 46,
-      "norm_label": ".get_featured_tv_series_by_id()"
+      "community": 14,
+      "norm_label": ".get_featured_tv_series_by_id()",
+      "id": "backend_tv_database_seriesqueries_get_featured_tv_series_by_id"
     },
     {
       "label": ".create_featured_tv_series()",
@@ -569,9 +589,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L356",
       "_origin": "ast",
-      "id": "backend_tv_database_seriesqueries_create_featured_tv_series",
-      "community": 46,
-      "norm_label": ".create_featured_tv_series()"
+      "community": 14,
+      "norm_label": ".create_featured_tv_series()",
+      "id": "backend_tv_database_seriesqueries_create_featured_tv_series"
     },
     {
       "label": ".update_featured_tv_series()",
@@ -579,9 +599,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L377",
       "_origin": "ast",
-      "id": "backend_tv_database_seriesqueries_update_featured_tv_series",
-      "community": 46,
-      "norm_label": ".update_featured_tv_series()"
+      "community": 14,
+      "norm_label": ".update_featured_tv_series()",
+      "id": "backend_tv_database_seriesqueries_update_featured_tv_series"
     },
     {
       "label": ".delete_featured_tv_series()",
@@ -589,9 +609,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L405",
       "_origin": "ast",
-      "id": "backend_tv_database_seriesqueries_delete_featured_tv_series",
-      "community": 46,
-      "norm_label": ".delete_featured_tv_series()"
+      "community": 14,
+      "norm_label": ".delete_featured_tv_series()",
+      "id": "backend_tv_database_seriesqueries_delete_featured_tv_series"
     },
     {
       "label": "Read-only query layer for TV series and libraries.",
@@ -599,9 +619,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L17",
       "_origin": "ast",
-      "id": "backend_tv_database_rationale_17",
-      "community": 46,
-      "norm_label": "read-only query layer for tv series and libraries."
+      "community": 14,
+      "norm_label": "read-only query layer for tv series and libraries.",
+      "id": "backend_tv_database_rationale_17"
     },
     {
       "label": "tv_models.py",
@@ -609,9 +629,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "backend_tv_models",
-      "community": 40,
-      "norm_label": "tv_models.py"
+      "community": 46,
+      "norm_label": "tv_models.py",
+      "id": "backend_tv_models"
     },
     {
       "label": "_parse_genres()",
@@ -619,9 +639,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L12",
       "_origin": "ast",
-      "id": "backend_tv_models_parse_genres",
-      "community": 45,
-      "norm_label": "_parse_genres()"
+      "community": 69,
+      "norm_label": "_parse_genres()",
+      "id": "backend_tv_models_parse_genres"
     },
     {
       "label": "Any",
@@ -629,9 +649,9 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "backend_tv_models_py_any",
-      "community": 45,
-      "norm_label": "any"
+      "community": 69,
+      "norm_label": "any",
+      "id": "backend_tv_models_py_any"
     },
     {
       "label": "TVLibraryResponse",
@@ -639,9 +659,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L29",
       "_origin": "ast",
-      "id": "backend_tv_models_tvlibraryresponse",
       "community": 46,
-      "norm_label": "tvlibraryresponse"
+      "norm_label": "tvlibraryresponse",
+      "id": "backend_tv_models_tvlibraryresponse"
     },
     {
       "label": "TVLibraryListResponse",
@@ -649,9 +669,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L40",
       "_origin": "ast",
-      "id": "backend_tv_models_tvlibrarylistresponse",
       "community": 46,
-      "norm_label": "tvlibrarylistresponse"
+      "norm_label": "tvlibrarylistresponse",
+      "id": "backend_tv_models_tvlibrarylistresponse"
     },
     {
       "label": "TVLibraryCreateRequest",
@@ -659,9 +679,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L44",
       "_origin": "ast",
-      "id": "backend_tv_models_tvlibrarycreaterequest",
-      "community": 40,
-      "norm_label": "tvlibrarycreaterequest"
+      "community": 67,
+      "norm_label": "tvlibrarycreaterequest",
+      "id": "backend_tv_models_tvlibrarycreaterequest"
     },
     {
       "label": "TVLibraryUpdateRequest",
@@ -669,9 +689,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L53",
       "_origin": "ast",
-      "id": "backend_tv_models_tvlibraryupdaterequest",
-      "community": 40,
-      "norm_label": "tvlibraryupdaterequest"
+      "community": 67,
+      "norm_label": "tvlibraryupdaterequest",
+      "id": "backend_tv_models_tvlibraryupdaterequest"
     },
     {
       "label": "TVLibraryDetailResponse",
@@ -679,9 +699,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L62",
       "_origin": "ast",
-      "id": "backend_tv_models_tvlibrarydetailresponse",
-      "community": 40,
-      "norm_label": "tvlibrarydetailresponse"
+      "community": 67,
+      "norm_label": "tvlibrarydetailresponse",
+      "id": "backend_tv_models_tvlibrarydetailresponse"
     },
     {
       "label": "TmdbTVResponse",
@@ -689,9 +709,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L79",
       "_origin": "ast",
-      "id": "backend_tv_models_tmdbtvresponse",
-      "community": 45,
-      "norm_label": "tmdbtvresponse"
+      "community": 69,
+      "norm_label": "tmdbtvresponse",
+      "id": "backend_tv_models_tmdbtvresponse"
     },
     {
       "label": ".parse_genres()",
@@ -699,9 +719,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L96",
       "_origin": "ast",
-      "id": "backend_tv_models_tmdbtvresponse_parse_genres",
-      "community": 45,
-      "norm_label": ".parse_genres()"
+      "community": 69,
+      "norm_label": ".parse_genres()",
+      "id": "backend_tv_models_tmdbtvresponse_parse_genres"
     },
     {
       "label": ".poster_url()",
@@ -709,9 +729,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L101",
       "_origin": "ast",
-      "id": "backend_tv_models_tmdbtvresponse_poster_url",
-      "community": 45,
-      "norm_label": ".poster_url()"
+      "community": 69,
+      "norm_label": ".poster_url()",
+      "id": "backend_tv_models_tmdbtvresponse_poster_url"
     },
     {
       "label": ".backdrop_url()",
@@ -719,9 +739,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L108",
       "_origin": "ast",
-      "id": "backend_tv_models_tmdbtvresponse_backdrop_url",
-      "community": 45,
-      "norm_label": ".backdrop_url()"
+      "community": 69,
+      "norm_label": ".backdrop_url()",
+      "id": "backend_tv_models_tmdbtvresponse_backdrop_url"
     },
     {
       "label": "SeriesDetailResponse",
@@ -729,9 +749,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L118",
       "_origin": "ast",
-      "id": "backend_tv_models_seriesdetailresponse",
       "community": 46,
-      "norm_label": "seriesdetailresponse"
+      "norm_label": "seriesdetailresponse",
+      "id": "backend_tv_models_seriesdetailresponse"
     },
     {
       "label": "SeriesListItem",
@@ -739,9 +759,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L129",
       "_origin": "ast",
-      "id": "backend_tv_models_serieslistitem",
-      "community": 45,
-      "norm_label": "serieslistitem"
+      "community": 65,
+      "norm_label": "serieslistitem",
+      "id": "backend_tv_models_serieslistitem"
     },
     {
       "label": ".parse_genres()",
@@ -749,9 +769,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L140",
       "_origin": "ast",
-      "id": "backend_tv_models_serieslistitem_parse_genres",
-      "community": 45,
-      "norm_label": ".parse_genres()"
+      "community": 69,
+      "norm_label": ".parse_genres()",
+      "id": "backend_tv_models_serieslistitem_parse_genres"
     },
     {
       "label": "SeriesPaginatedResponse",
@@ -759,9 +779,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L148",
       "_origin": "ast",
-      "id": "backend_tv_models_seriespaginatedresponse",
       "community": 46,
-      "norm_label": "seriespaginatedresponse"
+      "norm_label": "seriespaginatedresponse",
+      "id": "backend_tv_models_seriespaginatedresponse"
     },
     {
       "label": "SeriesGenreListResponse",
@@ -769,9 +789,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L160",
       "_origin": "ast",
-      "id": "backend_tv_models_seriesgenrelistresponse",
       "community": 46,
-      "norm_label": "seriesgenrelistresponse"
+      "norm_label": "seriesgenrelistresponse",
+      "id": "backend_tv_models_seriesgenrelistresponse"
     },
     {
       "label": "SeriesStatsResponse",
@@ -779,9 +799,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L168",
       "_origin": "ast",
-      "id": "backend_tv_models_seriesstatsresponse",
       "community": 46,
-      "norm_label": "seriesstatsresponse"
+      "norm_label": "seriesstatsresponse",
+      "id": "backend_tv_models_seriesstatsresponse"
     },
     {
       "label": "FeaturedTVResponse",
@@ -789,9 +809,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L178",
       "_origin": "ast",
-      "id": "backend_tv_models_featuredtvresponse",
-      "community": 40,
-      "norm_label": "featuredtvresponse"
+      "community": 70,
+      "norm_label": "featuredtvresponse",
+      "id": "backend_tv_models_featuredtvresponse"
     },
     {
       "label": "FeaturedTVListResponse",
@@ -799,9 +819,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L187",
       "_origin": "ast",
-      "id": "backend_tv_models_featuredtvlistresponse",
-      "community": 40,
-      "norm_label": "featuredtvlistresponse"
+      "community": 46,
+      "norm_label": "featuredtvlistresponse",
+      "id": "backend_tv_models_featuredtvlistresponse"
     },
     {
       "label": "FeaturedTVCreateRequest",
@@ -809,9 +829,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L191",
       "_origin": "ast",
-      "id": "backend_tv_models_featuredtvcreaterequest",
-      "community": 40,
-      "norm_label": "featuredtvcreaterequest"
+      "community": 70,
+      "norm_label": "featuredtvcreaterequest",
+      "id": "backend_tv_models_featuredtvcreaterequest"
     },
     {
       "label": "FeaturedTVUpdateRequest",
@@ -819,9 +839,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L199",
       "_origin": "ast",
-      "id": "backend_tv_models_featuredtvupdaterequest",
-      "community": 40,
-      "norm_label": "featuredtvupdaterequest"
+      "community": 70,
+      "norm_label": "featuredtvupdaterequest",
+      "id": "backend_tv_models_featuredtvupdaterequest"
     },
     {
       "label": "Accept a JSON string or a plain list and always return ``list[str]``.",
@@ -829,9 +849,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L13",
       "_origin": "ast",
-      "id": "backend_tv_models_rationale_13",
-      "community": 45,
-      "norm_label": "accept a json string or a plain list and always return ``list[str]``."
+      "community": 69,
+      "norm_label": "accept a json string or a plain list and always return ``list[str]``.",
+      "id": "backend_tv_models_rationale_13"
     },
     {
       "label": "App.jsx",
@@ -839,9 +859,9 @@
       "source_file": "frontend/src/App.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "frontend_src_app",
       "community": 21,
-      "norm_label": "app.jsx"
+      "norm_label": "app.jsx",
+      "id": "frontend_src_app"
     },
     {
       "label": "App()",
@@ -849,9 +869,9 @@
       "source_file": "frontend/src/App.jsx",
       "source_location": "L26",
       "_origin": "ast",
-      "id": "frontend_src_app_app",
       "community": 21,
-      "norm_label": "app()"
+      "norm_label": "app()",
+      "id": "frontend_src_app_app"
     },
     {
       "label": "LibraryView()",
@@ -859,9 +879,9 @@
       "source_file": "frontend/src/App.jsx",
       "source_location": "L237",
       "_origin": "ast",
-      "id": "frontend_src_app_libraryview",
       "community": 21,
-      "norm_label": "libraryview()"
+      "norm_label": "libraryview()",
+      "id": "frontend_src_app_libraryview"
     },
     {
       "label": "SeriesView()",
@@ -869,9 +889,9 @@
       "source_file": "frontend/src/App.jsx",
       "source_location": "L321",
       "_origin": "ast",
-      "id": "frontend_src_app_seriesview",
       "community": 21,
-      "norm_label": "seriesview()"
+      "norm_label": "seriesview()",
+      "id": "frontend_src_app_seriesview"
     },
     {
       "label": "AdminDashboard.jsx",
@@ -879,9 +899,9 @@
       "source_file": "frontend/src/components/AdminDashboard.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "frontend_src_components_admindashboard",
       "community": 21,
-      "norm_label": "admindashboard.jsx"
+      "norm_label": "admindashboard.jsx",
+      "id": "frontend_src_components_admindashboard"
     },
     {
       "label": "LibraryForm()",
@@ -889,9 +909,9 @@
       "source_file": "frontend/src/components/AdminDashboard.jsx",
       "source_location": "L34",
       "_origin": "ast",
-      "id": "frontend_src_components_admindashboard_libraryform",
       "community": 21,
-      "norm_label": "libraryform()"
+      "norm_label": "libraryform()",
+      "id": "frontend_src_components_admindashboard_libraryform"
     },
     {
       "label": "TVLibraryForm()",
@@ -899,9 +919,9 @@
       "source_file": "frontend/src/components/AdminDashboard.jsx",
       "source_location": "L112",
       "_origin": "ast",
-      "id": "frontend_src_components_admindashboard_tvlibraryform",
       "community": 21,
-      "norm_label": "tvlibraryform()"
+      "norm_label": "tvlibraryform()",
+      "id": "frontend_src_components_admindashboard_tvlibraryform"
     },
     {
       "label": "MigrateForm()",
@@ -909,9 +929,9 @@
       "source_file": "frontend/src/components/AdminDashboard.jsx",
       "source_location": "L190",
       "_origin": "ast",
-      "id": "frontend_src_components_admindashboard_migrateform",
       "community": 21,
-      "norm_label": "migrateform()"
+      "norm_label": "migrateform()",
+      "id": "frontend_src_components_admindashboard_migrateform"
     },
     {
       "label": "FeaturedTVForm()",
@@ -919,9 +939,9 @@
       "source_file": "frontend/src/components/AdminDashboard.jsx",
       "source_location": "L255",
       "_origin": "ast",
-      "id": "frontend_src_components_admindashboard_featuredtvform",
       "community": 21,
-      "norm_label": "featuredtvform()"
+      "norm_label": "featuredtvform()",
+      "id": "frontend_src_components_admindashboard_featuredtvform"
     },
     {
       "label": "TaskLogViewer()",
@@ -929,9 +949,9 @@
       "source_file": "frontend/src/components/AdminDashboard.jsx",
       "source_location": "L378",
       "_origin": "ast",
-      "id": "frontend_src_components_admindashboard_tasklogviewer",
       "community": 21,
-      "norm_label": "tasklogviewer()"
+      "norm_label": "tasklogviewer()",
+      "id": "frontend_src_components_admindashboard_tasklogviewer"
     },
     {
       "label": "AdminDashboard()",
@@ -939,9 +959,9 @@
       "source_file": "frontend/src/components/AdminDashboard.jsx",
       "source_location": "L434",
       "_origin": "ast",
-      "id": "frontend_src_components_admindashboard_admindashboard",
       "community": 21,
-      "norm_label": "admindashboard()"
+      "norm_label": "admindashboard()",
+      "id": "frontend_src_components_admindashboard_admindashboard"
     },
     {
       "label": "LibraryGrid.jsx",
@@ -949,9 +969,9 @@
       "source_file": "frontend/src/components/LibraryGrid.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "frontend_src_components_librarygrid",
       "community": 21,
-      "norm_label": "librarygrid.jsx"
+      "norm_label": "librarygrid.jsx",
+      "id": "frontend_src_components_librarygrid"
     },
     {
       "label": "LibraryGrid()",
@@ -959,9 +979,9 @@
       "source_file": "frontend/src/components/LibraryGrid.jsx",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "frontend_src_components_librarygrid_librarygrid",
       "community": 21,
-      "norm_label": "librarygrid()"
+      "norm_label": "librarygrid()",
+      "id": "frontend_src_components_librarygrid_librarygrid"
     },
     {
       "label": "admin.py",
@@ -1049,7 +1069,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L184",
       "_origin": "ast",
-      "community": 40,
+      "community": 3,
       "norm_label": "admin_delete_library()",
       "id": "backend_routers_admin_admin_delete_library"
     },
@@ -1139,7 +1159,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L345",
       "_origin": "ast",
-      "community": 40,
+      "community": 67,
       "norm_label": "admin_list_tv_libraries()",
       "id": "backend_routers_admin_admin_list_tv_libraries"
     },
@@ -1149,7 +1169,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L381",
       "_origin": "ast",
-      "community": 40,
+      "community": 67,
       "norm_label": "admin_create_tv_library()",
       "id": "backend_routers_admin_admin_create_tv_library"
     },
@@ -1159,7 +1179,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L408",
       "_origin": "ast",
-      "community": 40,
+      "community": 67,
       "norm_label": "admin_update_tv_library()",
       "id": "backend_routers_admin_admin_update_tv_library"
     },
@@ -1199,7 +1219,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L513",
       "_origin": "ast",
-      "community": 50,
+      "community": 3,
       "norm_label": "admin_upload_image()",
       "id": "backend_routers_admin_admin_upload_image"
     },
@@ -1209,7 +1229,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 50,
+      "community": 3,
       "norm_label": "uploadfile",
       "id": "uploadfile"
     },
@@ -1219,7 +1239,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L540",
       "_origin": "ast",
-      "community": 40,
+      "community": 46,
       "norm_label": "admin_list_featured_tv()",
       "id": "backend_routers_admin_admin_list_featured_tv"
     },
@@ -1229,7 +1249,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L547",
       "_origin": "ast",
-      "community": 40,
+      "community": 70,
       "norm_label": "admin_create_featured_tv()",
       "id": "backend_routers_admin_admin_create_featured_tv"
     },
@@ -1239,7 +1259,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L555",
       "_origin": "ast",
-      "community": 40,
+      "community": 70,
       "norm_label": "admin_update_featured_tv()",
       "id": "backend_routers_admin_admin_update_featured_tv"
     },
@@ -1299,7 +1319,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L185",
       "_origin": "ast",
-      "community": 40,
+      "community": 3,
       "norm_label": "delete a library and all associated movies/messages.",
       "id": "backend_routers_admin_rationale_185"
     },
@@ -1389,7 +1409,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L346",
       "_origin": "ast",
-      "community": 40,
+      "community": 67,
       "norm_label": "list all tv libraries with detailed stats.",
       "id": "backend_routers_admin_rationale_346"
     },
@@ -1399,7 +1419,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L382",
       "_origin": "ast",
-      "community": 40,
+      "community": 67,
       "norm_label": "create a new tv series library.",
       "id": "backend_routers_admin_rationale_382"
     },
@@ -1409,7 +1429,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L409",
       "_origin": "ast",
-      "community": 40,
+      "community": 67,
       "norm_label": "update tv series library details.",
       "id": "backend_routers_admin_rationale_409"
     },
@@ -1449,7 +1469,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L514",
       "_origin": "ast",
-      "community": 50,
+      "community": 3,
       "norm_label": "upload a custom image/poster file and return the access url.",
       "id": "backend_routers_admin_rationale_514"
     },
@@ -1459,7 +1479,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L541",
       "_origin": "ast",
-      "community": 40,
+      "community": 46,
       "norm_label": "return all manually managed featured tv series entries.",
       "id": "backend_routers_admin_rationale_541"
     },
@@ -1469,7 +1489,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L548",
       "_origin": "ast",
-      "community": 40,
+      "community": 70,
       "norm_label": "create a new manually managed featured tv series entry.",
       "id": "backend_routers_admin_rationale_548"
     },
@@ -1479,7 +1499,7 @@
       "source_file": "backend/routers/admin.py",
       "source_location": "L556",
       "_origin": "ast",
-      "community": 40,
+      "community": 70,
       "norm_label": "update an existing featured tv series entry.",
       "id": "backend_routers_admin_rationale_556"
     },
@@ -1509,7 +1529,7 @@
       "source_file": "database/models.py",
       "source_location": "L11",
       "_origin": "ast",
-      "community": 40,
+      "community": 3,
       "norm_label": "library",
       "id": "database_models_library"
     },
@@ -1569,7 +1589,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 50,
+      "community": 3,
       "norm_label": "path",
       "id": "path"
     },
@@ -1609,7 +1629,7 @@
       "source_file": "database/tv_models.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 42,
+      "community": 1,
       "norm_label": "tv_models.py",
       "id": "database_tv_models"
     },
@@ -1649,7 +1669,7 @@
       "source_file": "database/tv_models.py",
       "source_location": "L64",
       "_origin": "ast",
-      "community": 42,
+      "community": 1,
       "norm_label": "featuredtvseries",
       "id": "database_tv_models_featuredtvseries"
     },
@@ -1689,7 +1709,7 @@
       "source_file": "database/tv_models.py",
       "source_location": "L65",
       "_origin": "ast",
-      "community": 42,
+      "community": 1,
       "norm_label": "manually managed trending/popular/currently airing tv series independent of scra",
       "id": "database_tv_models_rationale_65"
     },
@@ -1739,7 +1759,7 @@
       "source_file": "backend/app.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 42,
+      "community": 1,
       "norm_label": "app.py",
       "id": "backend_app"
     },
@@ -1749,7 +1769,7 @@
       "source_file": "backend/app.py",
       "source_location": "L32",
       "_origin": "ast",
-      "community": 42,
+      "community": 1,
       "norm_label": "global_exception_handler()",
       "id": "backend_app_global_exception_handler"
     },
@@ -1759,7 +1779,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 42,
+      "community": 1,
       "norm_label": "request",
       "id": "backend_app_py_request"
     },
@@ -1769,7 +1789,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 42,
+      "community": 1,
       "norm_label": "exception",
       "id": "exception"
     },
@@ -1779,7 +1799,7 @@
       "source_file": "backend/app.py",
       "source_location": "L43",
       "_origin": "ast",
-      "community": 42,
+      "community": 1,
       "norm_label": "securityheadersmiddleware",
       "id": "backend_app_securityheadersmiddleware"
     },
@@ -1789,7 +1809,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 42,
+      "community": 1,
       "norm_label": "basehttpmiddleware",
       "id": "basehttpmiddleware"
     },
@@ -1799,7 +1819,7 @@
       "source_file": "backend/app.py",
       "source_location": "L44",
       "_origin": "ast",
-      "community": 42,
+      "community": 1,
       "norm_label": ".dispatch()",
       "id": "backend_app_securityheadersmiddleware_dispatch"
     },
@@ -1809,7 +1829,7 @@
       "source_file": "backend/app.py",
       "source_location": "L123",
       "_origin": "ast",
-      "community": 42,
+      "community": 1,
       "norm_label": "root()",
       "id": "backend_app_root"
     },
@@ -1819,7 +1839,7 @@
       "source_file": "backend/app.py",
       "source_location": "L124",
       "_origin": "ast",
-      "community": 42,
+      "community": 1,
       "norm_label": "health-check / welcome endpoint.",
       "id": "backend_app_rationale_124"
     },
@@ -2679,7 +2699,7 @@
       "source_file": "backend/routers/series.py",
       "source_location": "L21",
       "_origin": "ast",
-      "community": 46,
+      "community": 14,
       "norm_label": "_get_queries()",
       "id": "backend_routers_series_get_queries"
     },
@@ -2689,7 +2709,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 46,
+      "community": 14,
       "norm_label": "request",
       "id": "backend_routers_series_py_request"
     },
@@ -3039,7 +3059,7 @@
       "source_file": "backend/services/task_manager.py",
       "source_location": "L51",
       "_origin": "ast",
-      "community": 14,
+      "community": 19,
       "norm_label": ".to_dict()",
       "id": "backend_services_task_manager_taskinfo_to_dict"
     },
@@ -3049,7 +3069,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 14,
+      "community": 52,
       "norm_label": "any",
       "id": "any"
     },
@@ -3279,7 +3299,7 @@
       "source_file": "migrate_tv_channel_links.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 50,
+      "community": 66,
       "norm_label": "migrate_tv_channel_links.py",
       "id": "migrate_tv_channel_links"
     },
@@ -3289,7 +3309,7 @@
       "source_file": "migrate_tv_channel_links.py",
       "source_location": "L43",
       "_origin": "ast",
-      "community": 50,
+      "community": 66,
       "norm_label": "matchresult",
       "id": "migrate_tv_channel_links_matchresult"
     },
@@ -3299,7 +3319,7 @@
       "source_file": "migrate_tv_channel_links.py",
       "source_location": "L54",
       "_origin": "ast",
-      "community": 50,
+      "community": 66,
       "norm_label": "migrationstats",
       "id": "migrate_tv_channel_links_migrationstats"
     },
@@ -3309,7 +3329,7 @@
       "source_file": "migrate_tv_channel_links.py",
       "source_location": "L65",
       "_origin": "ast",
-      "community": 50,
+      "community": 66,
       "norm_label": "build_match_indexes()",
       "id": "migrate_tv_channel_links_build_match_indexes"
     },
@@ -3319,7 +3339,7 @@
       "source_file": "migrate_tv_channel_links.py",
       "source_location": "L90",
       "_origin": "ast",
-      "community": 50,
+      "community": 66,
       "norm_label": "match_message()",
       "id": "migrate_tv_channel_links_match_message"
     },
@@ -3329,7 +3349,7 @@
       "source_file": "migrate_tv_channel_links.py",
       "source_location": "L141",
       "_origin": "ast",
-      "community": 50,
+      "community": 66,
       "norm_label": "_safe()",
       "id": "migrate_tv_channel_links_safe"
     },
@@ -3339,7 +3359,7 @@
       "source_file": "migrate_tv_channel_links.py",
       "source_location": "L145",
       "_origin": "ast",
-      "community": 50,
+      "community": 66,
       "norm_label": "_build_telegram_url()",
       "id": "migrate_tv_channel_links_build_telegram_url"
     },
@@ -3349,7 +3369,7 @@
       "source_file": "migrate_tv_channel_links.py",
       "source_location": "L159",
       "_origin": "ast",
-      "community": 50,
+      "community": 66,
       "norm_label": "migrate_tv()",
       "id": "migrate_tv_channel_links_migrate_tv"
     },
@@ -3359,7 +3379,7 @@
       "source_file": "migrate_tv_channel_links.py",
       "source_location": "L313",
       "_origin": "ast",
-      "community": 50,
+      "community": 66,
       "norm_label": "main()",
       "id": "migrate_tv_channel_links_main"
     },
@@ -3369,7 +3389,7 @@
       "source_file": "migrate_tv_channel_links.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 50,
+      "community": 66,
       "norm_label": "migrate_tv_channel_links.py \u2014 migrate tv series telegram links to a new channel.",
       "id": "migrate_tv_channel_links_rationale_1"
     },
@@ -3379,7 +3399,7 @@
       "source_file": "migrate_tv_channel_links.py",
       "source_location": "L66",
       "_origin": "ast",
-      "community": 50,
+      "community": 66,
       "norm_label": "build lookup structures from existing tv series in library.",
       "id": "migrate_tv_channel_links_rationale_66"
     },
@@ -3389,7 +3409,7 @@
       "source_file": "migrate_tv_channel_links.py",
       "source_location": "L99",
       "_origin": "ast",
-      "community": 50,
+      "community": 66,
       "norm_label": "try to match a scraped series message to an existing tv series.",
       "id": "migrate_tv_channel_links_rationale_99"
     },
@@ -3399,7 +3419,7 @@
       "source_file": "migrate_tv_channel_links.py",
       "source_location": "L146",
       "_origin": "ast",
-      "community": 50,
+      "community": 66,
       "norm_label": "construct a direct telegram link for a message in a channel.",
       "id": "migrate_tv_channel_links_rationale_146"
     },
@@ -3939,7 +3959,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 0,
+      "community": 50,
       "norm_label": "message",
       "id": "message"
     },
@@ -3979,7 +3999,7 @@
       "source_file": "tmdb_tv_service.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 14,
+      "community": 52,
       "norm_label": "tmdb_tv_service.py",
       "id": "tmdb_tv_service"
     },
@@ -3989,7 +4009,7 @@
       "source_file": "tmdb_tv_service.py",
       "source_location": "L9",
       "_origin": "ast",
-      "community": 14,
+      "community": 52,
       "norm_label": "search_tv()",
       "id": "tmdb_tv_service_search_tv"
     },
@@ -3999,7 +4019,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 14,
+      "community": 52,
       "norm_label": "any",
       "id": "tmdb_tv_service_py_any"
     },
@@ -4009,7 +4029,7 @@
       "source_file": "tmdb_tv_service.py",
       "source_location": "L50",
       "_origin": "ast",
-      "community": 14,
+      "community": 52,
       "norm_label": "get_tv_details()",
       "id": "tmdb_tv_service_get_tv_details"
     },
@@ -4019,7 +4039,7 @@
       "source_file": "tmdb_tv_service.py",
       "source_location": "L10",
       "_origin": "ast",
-      "community": 14,
+      "community": 52,
       "norm_label": "search tmdb by tv series title and return the best matching result.      returne",
       "id": "tmdb_tv_service_rationale_10"
     },
@@ -4029,7 +4049,7 @@
       "source_file": "tmdb_tv_service.py",
       "source_location": "L51",
       "_origin": "ast",
-      "community": 14,
+      "community": 52,
       "norm_label": "fetch detailed tmdb metadata for a tv series.      returned keys:     - poster_p",
       "id": "tmdb_tv_service_rationale_51"
     },
@@ -4039,7 +4059,7 @@
       "source_file": "update_tmdb_tv.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 52,
+      "community": 42,
       "norm_label": "update_tmdb_tv.py",
       "id": "update_tmdb_tv"
     },
@@ -4049,7 +4069,7 @@
       "source_file": "update_tmdb_tv.py",
       "source_location": "L30",
       "_origin": "ast",
-      "community": 52,
+      "community": 42,
       "norm_label": "_safe()",
       "id": "update_tmdb_tv_safe"
     },
@@ -4059,7 +4079,7 @@
       "source_file": "update_tmdb_tv.py",
       "source_location": "L35",
       "_origin": "ast",
-      "community": 52,
+      "community": 42,
       "norm_label": "clean_title_and_extract_year()",
       "id": "update_tmdb_tv_clean_title_and_extract_year"
     },
@@ -4069,7 +4089,7 @@
       "source_file": "update_tmdb_tv.py",
       "source_location": "L66",
       "_origin": "ast",
-      "community": 52,
+      "community": 42,
       "norm_label": "tmdbtvclient",
       "id": "update_tmdb_tv_tmdbtvclient"
     },
@@ -4089,7 +4109,7 @@
       "source_file": "update_tmdb_tv.py",
       "source_location": "L73",
       "_origin": "ast",
-      "community": 52,
+      "community": 42,
       "norm_label": ".request()",
       "id": "update_tmdb_tv_tmdbtvclient_request"
     },
@@ -4099,7 +4119,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 52,
+      "community": 42,
       "norm_label": "any",
       "id": "update_tmdb_tv_py_any"
     },
@@ -4109,7 +4129,7 @@
       "source_file": "update_tmdb_tv.py",
       "source_location": "L112",
       "_origin": "ast",
-      "community": 52,
+      "community": 42,
       "norm_label": ".search_tv()",
       "id": "update_tmdb_tv_tmdbtvclient_search_tv"
     },
@@ -4119,7 +4139,7 @@
       "source_file": "update_tmdb_tv.py",
       "source_location": "L147",
       "_origin": "ast",
-      "community": 52,
+      "community": 42,
       "norm_label": ".get_tv_details()",
       "id": "update_tmdb_tv_tmdbtvclient_get_tv_details"
     },
@@ -4129,7 +4149,7 @@
       "source_file": "update_tmdb_tv.py",
       "source_location": "L161",
       "_origin": "ast",
-      "community": 52,
+      "community": 42,
       "norm_label": "stats",
       "id": "update_tmdb_tv_stats"
     },
@@ -4149,7 +4169,7 @@
       "source_file": "update_tmdb_tv.py",
       "source_location": "L171",
       "_origin": "ast",
-      "community": 52,
+      "community": 42,
       "norm_label": ".increment_processed()",
       "id": "update_tmdb_tv_stats_increment_processed"
     },
@@ -4159,7 +4179,7 @@
       "source_file": "update_tmdb_tv.py",
       "source_location": "L176",
       "_origin": "ast",
-      "community": 52,
+      "community": 42,
       "norm_label": ".increment_matched()",
       "id": "update_tmdb_tv_stats_increment_matched"
     },
@@ -4169,7 +4189,7 @@
       "source_file": "update_tmdb_tv.py",
       "source_location": "L180",
       "_origin": "ast",
-      "community": 52,
+      "community": 42,
       "norm_label": ".increment_not_found()",
       "id": "update_tmdb_tv_stats_increment_not_found"
     },
@@ -4179,7 +4199,7 @@
       "source_file": "update_tmdb_tv.py",
       "source_location": "L184",
       "_origin": "ast",
-      "community": 52,
+      "community": 42,
       "norm_label": ".increment_errors()",
       "id": "update_tmdb_tv_stats_increment_errors"
     },
@@ -4189,7 +4209,7 @@
       "source_file": "update_tmdb_tv.py",
       "source_location": "L189",
       "_origin": "ast",
-      "community": 52,
+      "community": 42,
       "norm_label": "process_series()",
       "id": "update_tmdb_tv_process_series"
     },
@@ -4209,7 +4229,7 @@
       "source_file": "update_tmdb_tv.py",
       "source_location": "L267",
       "_origin": "ast",
-      "community": 52,
+      "community": 42,
       "norm_label": "main()",
       "id": "update_tmdb_tv_main"
     },
@@ -4219,7 +4239,7 @@
       "source_file": "update_tmdb_tv.py",
       "source_location": "L31",
       "_origin": "ast",
-      "community": 52,
+      "community": 42,
       "norm_label": "return a console-safe version of *text* (handles windows cp1252).",
       "id": "update_tmdb_tv_rationale_31"
     },
@@ -4229,7 +4249,7 @@
       "source_file": "update_tmdb_tv.py",
       "source_location": "L36",
       "_origin": "ast",
-      "community": 52,
+      "community": 42,
       "norm_label": "clean tv series titles before searching tmdb.",
       "id": "update_tmdb_tv_rationale_36"
     },
@@ -4309,7 +4329,7 @@
       "source_file": "config.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 50,
+      "community": 3,
       "norm_label": "config.py",
       "id": "config"
     },
@@ -4319,7 +4339,7 @@
       "source_file": "config.py",
       "source_location": "L15",
       "_origin": "ast",
-      "community": 50,
+      "community": 3,
       "norm_label": "settings",
       "id": "config_settings"
     },
@@ -4329,7 +4349,7 @@
       "source_file": "config.py",
       "source_location": "L29",
       "_origin": "ast",
-      "community": 50,
+      "community": 3,
       "norm_label": "_required_env()",
       "id": "config_required_env"
     },
@@ -4339,7 +4359,7 @@
       "source_file": "config.py",
       "source_location": "L36",
       "_origin": "ast",
-      "community": 50,
+      "community": 3,
       "norm_label": "_int_env()",
       "id": "config_int_env"
     },
@@ -4349,7 +4369,7 @@
       "source_file": "config.py",
       "source_location": "L47",
       "_origin": "ast",
-      "community": 50,
+      "community": 3,
       "norm_label": "_path_env()",
       "id": "config_path_env"
     },
@@ -4359,7 +4379,7 @@
       "source_file": "config.py",
       "source_location": "L55",
       "_origin": "ast",
-      "community": 50,
+      "community": 3,
       "norm_label": "_get_app_env()",
       "id": "config_get_app_env"
     },
@@ -4399,7 +4419,7 @@
       "source_file": "scraper/telegram_client.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 0,
+      "community": 3,
       "norm_label": "telegram_client.py",
       "id": "scraper_telegram_client"
     },
@@ -4409,7 +4429,7 @@
       "source_file": "scraper/telegram_client.py",
       "source_location": "L12",
       "_origin": "ast",
-      "community": 0,
+      "community": 3,
       "norm_label": "get_telegram_client()",
       "id": "scraper_telegram_client_get_telegram_client"
     },
@@ -4419,7 +4439,7 @@
       "source_file": "scraper/telegram_client.py",
       "source_location": "L13",
       "_origin": "ast",
-      "community": 0,
+      "community": 3,
       "norm_label": "create, authenticate, and cleanly disconnect a telethon client.",
       "id": "scraper_telegram_client_rationale_13"
     },
@@ -4429,7 +4449,7 @@
       "source_file": "tmdb_service.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 14,
+      "community": 52,
       "norm_label": "tmdb_service.py",
       "id": "tmdb_service"
     },
@@ -4439,7 +4459,7 @@
       "source_file": "tmdb_service.py",
       "source_location": "L24",
       "_origin": "ast",
-      "community": 14,
+      "community": 52,
       "norm_label": "search_movie()",
       "id": "tmdb_service_search_movie"
     },
@@ -4449,7 +4469,7 @@
       "source_file": "tmdb_service.py",
       "source_location": "L59",
       "_origin": "ast",
-      "community": 14,
+      "community": 52,
       "norm_label": "get_movie_details()",
       "id": "tmdb_service_get_movie_details"
     },
@@ -4459,7 +4479,7 @@
       "source_file": "tmdb_service.py",
       "source_location": "L88",
       "_origin": "ast",
-      "community": 14,
+      "community": 52,
       "norm_label": "build_poster_url()",
       "id": "tmdb_service_build_poster_url"
     },
@@ -4469,7 +4489,7 @@
       "source_file": "tmdb_service.py",
       "source_location": "L95",
       "_origin": "ast",
-      "community": 14,
+      "community": 52,
       "norm_label": "_tmdb_get()",
       "id": "tmdb_service_tmdb_get"
     },
@@ -4479,7 +4499,7 @@
       "source_file": "tmdb_service.py",
       "source_location": "L135",
       "_origin": "ast",
-      "community": 14,
+      "community": 52,
       "norm_label": "_choose_best_match()",
       "id": "tmdb_service_choose_best_match"
     },
@@ -4489,7 +4509,7 @@
       "source_file": "tmdb_service.py",
       "source_location": "L171",
       "_origin": "ast",
-      "community": 14,
+      "community": 52,
       "norm_label": "_normalize_title()",
       "id": "tmdb_service_normalize_title"
     },
@@ -4499,7 +4519,7 @@
       "source_file": "tmdb_service.py",
       "source_location": "L25",
       "_origin": "ast",
-      "community": 14,
+      "community": 52,
       "norm_label": "search tmdb by movie title and return the best matching result.      returned",
       "id": "tmdb_service_rationale_25"
     },
@@ -4509,7 +4529,7 @@
       "source_file": "tmdb_service.py",
       "source_location": "L60",
       "_origin": "ast",
-      "community": 14,
+      "community": 52,
       "norm_label": "fetch detailed tmdb metadata for a movie.      returned keys:     - poster_pa",
       "id": "tmdb_service_rationale_60"
     },
@@ -5299,7 +5319,7 @@
       "source_file": "fix_message_id_constraint.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 50,
+      "community": 3,
       "norm_label": "fix_message_id_constraint.py",
       "id": "fix_message_id_constraint"
     },
@@ -5309,7 +5329,7 @@
       "source_file": "fix_message_id_constraint.py",
       "source_location": "L22",
       "_origin": "ast",
-      "community": 50,
+      "community": 3,
       "norm_label": "migrate()",
       "id": "fix_message_id_constraint_migrate"
     },
@@ -5319,7 +5339,7 @@
       "source_file": "fix_message_id_constraint.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 50,
+      "community": 3,
       "norm_label": "fix_message_id_constraint.py \u2014 one-time schema migration.  removes the old uniqu",
       "id": "fix_message_id_constraint_rationale_1"
     },
@@ -5839,7 +5859,7 @@
       "source_file": "main.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 0,
+      "community": 3,
       "norm_label": "main.py",
       "id": "main"
     },
@@ -5849,7 +5869,7 @@
       "source_file": "main.py",
       "source_location": "L12",
       "_origin": "ast",
-      "community": 0,
+      "community": 3,
       "norm_label": "_safe()",
       "id": "main_safe"
     },
@@ -5859,7 +5879,7 @@
       "source_file": "main.py",
       "source_location": "L19",
       "_origin": "ast",
-      "community": 0,
+      "community": 3,
       "norm_label": "run()",
       "id": "main_run"
     },
@@ -5869,7 +5889,7 @@
       "source_file": "main.py",
       "source_location": "L13",
       "_origin": "ast",
-      "community": 0,
+      "community": 3,
       "norm_label": "return a console-safe version of *text* (handles windows cp1252).",
       "id": "main_rationale_13"
     },
@@ -6339,7 +6359,7 @@
       "source_file": "scraper/scraper.py",
       "source_location": "L27",
       "_origin": "ast",
-      "community": 0,
+      "community": 3,
       "norm_label": "scrapestats",
       "id": "scraper_scraper_scrapestats"
     },
@@ -6409,7 +6429,7 @@
       "source_file": "scraper/scraper.py",
       "source_location": "L28",
       "_origin": "ast",
-      "community": 0,
+      "community": 3,
       "norm_label": "tracks statistics for a scraping run.",
       "id": "scraper_scraper_rationale_28"
     },
@@ -6589,7 +6609,7 @@
       "source_file": "test_tmdb.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 14,
+      "community": 52,
       "norm_label": "test_tmdb.py",
       "id": "test_tmdb"
     },
@@ -6599,7 +6619,7 @@
       "source_file": "test_tmdb.py",
       "source_location": "L8",
       "_origin": "ast",
-      "community": 14,
+      "community": 52,
       "norm_label": "main()",
       "id": "test_tmdb_main"
     },
@@ -7666,6 +7686,16 @@
   ],
   "links": [
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "migrate_supabase.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "migrate_supabase",
+      "target": "migrate_supabase_run_migration",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -7682,9 +7712,9 @@
       "source_file": "backend/database.py",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_database",
-      "target": "backend_database_moviequeries",
-      "confidence_score": 1.0
+      "target": "backend_database_moviequeries"
     },
     {
       "relation": "imports_from",
@@ -7693,9 +7723,9 @@
       "source_file": "backend/database.py",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_database",
-      "target": "database_models",
-      "confidence_score": 1.0
+      "target": "database_models"
     },
     {
       "relation": "imports_from",
@@ -7736,9 +7766,9 @@
       "source_file": "backend/database.py",
       "source_location": "L314",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_database_moviequeries",
-      "target": "backend_database_moviequeries_get_genres",
-      "confidence_score": 1.0
+      "target": "backend_database_moviequeries_get_genres"
     },
     {
       "relation": "method",
@@ -7746,9 +7776,9 @@
       "source_file": "backend/database.py",
       "source_location": "L45",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_database_moviequeries",
-      "target": "backend_database_moviequeries_get_libraries",
-      "confidence_score": 1.0
+      "target": "backend_database_moviequeries_get_libraries"
     },
     {
       "relation": "method",
@@ -7756,9 +7786,9 @@
       "source_file": "backend/database.py",
       "source_location": "L78",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_database_moviequeries",
-      "target": "backend_database_moviequeries_get_library_by_slug",
-      "confidence_score": 1.0
+      "target": "backend_database_moviequeries_get_library_by_slug"
     },
     {
       "relation": "method",
@@ -7766,9 +7796,9 @@
       "source_file": "backend/database.py",
       "source_location": "L218",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_database_moviequeries",
-      "target": "backend_database_moviequeries_get_movie",
-      "confidence_score": 1.0
+      "target": "backend_database_moviequeries_get_movie"
     },
     {
       "relation": "method",
@@ -7776,9 +7806,9 @@
       "source_file": "backend/database.py",
       "source_location": "L113",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_database_moviequeries",
-      "target": "backend_database_moviequeries_get_movies",
-      "confidence_score": 1.0
+      "target": "backend_database_moviequeries_get_movies"
     },
     {
       "relation": "method",
@@ -7786,9 +7816,9 @@
       "source_file": "backend/database.py",
       "source_location": "L38",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_database_moviequeries",
-      "target": "backend_database_moviequeries_get_session",
-      "confidence_score": 1.0
+      "target": "backend_database_moviequeries_get_session"
     },
     {
       "relation": "method",
@@ -7796,9 +7826,9 @@
       "source_file": "backend/database.py",
       "source_location": "L342",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_database_moviequeries",
-      "target": "backend_database_moviequeries_get_stats",
-      "confidence_score": 1.0
+      "target": "backend_database_moviequeries_get_stats"
     },
     {
       "relation": "method",
@@ -7806,9 +7836,9 @@
       "source_file": "backend/database.py",
       "source_location": "L31",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_database_moviequeries",
-      "target": "backend_database_moviequeries_init",
-      "confidence_score": 1.0
+      "target": "backend_database_moviequeries_init"
     },
     {
       "relation": "rationale_for",
@@ -7816,9 +7846,9 @@
       "source_file": "backend/database.py",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_database_rationale_24",
-      "target": "backend_database_moviequeries",
-      "confidence_score": 1.0
+      "target": "backend_database_moviequeries"
     },
     {
       "relation": "imports",
@@ -7959,9 +7989,9 @@
       "source_file": "backend/database.py",
       "source_location": "L315",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_database_moviequeries_get_genres",
-      "target": "backend_database_moviequeries_get_session",
-      "confidence_score": 1.0
+      "target": "backend_database_moviequeries_get_session"
     },
     {
       "relation": "calls",
@@ -7970,9 +8000,9 @@
       "source_file": "backend/database.py",
       "source_location": "L46",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_database_moviequeries_get_libraries",
-      "target": "backend_database_moviequeries_get_session",
-      "confidence_score": 1.0
+      "target": "backend_database_moviequeries_get_session"
     },
     {
       "relation": "calls",
@@ -7981,9 +8011,9 @@
       "source_file": "backend/database.py",
       "source_location": "L79",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_database_moviequeries_get_library_by_slug",
-      "target": "backend_database_moviequeries_get_session",
-      "confidence_score": 1.0
+      "target": "backend_database_moviequeries_get_session"
     },
     {
       "relation": "calls",
@@ -7992,9 +8022,9 @@
       "source_file": "backend/database.py",
       "source_location": "L219",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_database_moviequeries_get_movie",
-      "target": "backend_database_moviequeries_get_session",
-      "confidence_score": 1.0
+      "target": "backend_database_moviequeries_get_session"
     },
     {
       "relation": "calls",
@@ -8003,9 +8033,9 @@
       "source_file": "backend/database.py",
       "source_location": "L127",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_database_moviequeries_get_movies",
-      "target": "backend_database_moviequeries_get_session",
-      "confidence_score": 1.0
+      "target": "backend_database_moviequeries_get_session"
     },
     {
       "relation": "references",
@@ -8014,9 +8044,9 @@
       "source_file": "backend/database.py",
       "source_location": "L38",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_database_moviequeries_get_session",
-      "target": "backend_database_py_session",
-      "confidence_score": 1.0
+      "target": "backend_database_py_session"
     },
     {
       "relation": "calls",
@@ -8025,9 +8055,9 @@
       "source_file": "backend/database.py",
       "source_location": "L343",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_database_moviequeries_get_stats",
-      "target": "backend_database_moviequeries_get_session",
-      "confidence_score": 1.0
+      "target": "backend_database_moviequeries_get_session"
     },
     {
       "relation": "references",
@@ -8036,9 +8066,9 @@
       "source_file": "backend/database.py",
       "source_location": "L45",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_database_moviequeries_get_libraries",
-      "target": "backend_database_py_any",
-      "confidence_score": 1.0
+      "target": "backend_database_py_any"
     },
     {
       "relation": "references",
@@ -8047,9 +8077,9 @@
       "source_file": "backend/database.py",
       "source_location": "L78",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_database_moviequeries_get_library_by_slug",
-      "target": "backend_database_py_any",
-      "confidence_score": 1.0
+      "target": "backend_database_py_any"
     },
     {
       "relation": "references",
@@ -8058,9 +8088,9 @@
       "source_file": "backend/database.py",
       "source_location": "L218",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_database_moviequeries_get_movie",
-      "target": "backend_database_py_any",
-      "confidence_score": 1.0
+      "target": "backend_database_py_any"
     },
     {
       "relation": "references",
@@ -8069,9 +8099,9 @@
       "source_file": "backend/database.py",
       "source_location": "L113",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_database_moviequeries_get_movies",
-      "target": "backend_database_py_any",
-      "confidence_score": 1.0
+      "target": "backend_database_py_any"
     },
     {
       "relation": "references",
@@ -8080,9 +8110,9 @@
       "source_file": "backend/database.py",
       "source_location": "L342",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_database_moviequeries_get_stats",
-      "target": "backend_database_py_any",
-      "confidence_score": 1.0
+      "target": "backend_database_py_any"
     },
     {
       "relation": "contains",
@@ -8090,9 +8120,9 @@
       "source_file": "backend/models.py",
       "source_location": "L125",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models",
-      "target": "backend_models_genrelistresponse",
-      "confidence_score": 1.0
+      "target": "backend_models_genrelistresponse"
     },
     {
       "relation": "contains",
@@ -8100,9 +8130,9 @@
       "source_file": "backend/models.py",
       "source_location": "L165",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models",
-      "target": "backend_models_librarycreaterequest",
-      "confidence_score": 1.0
+      "target": "backend_models_librarycreaterequest"
     },
     {
       "relation": "contains",
@@ -8110,9 +8140,9 @@
       "source_file": "backend/models.py",
       "source_location": "L183",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models",
-      "target": "backend_models_librarydetailresponse",
-      "confidence_score": 1.0
+      "target": "backend_models_librarydetailresponse"
     },
     {
       "relation": "contains",
@@ -8120,9 +8150,9 @@
       "source_file": "backend/models.py",
       "source_location": "L157",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models",
-      "target": "backend_models_librarylistresponse",
-      "confidence_score": 1.0
+      "target": "backend_models_librarylistresponse"
     },
     {
       "relation": "contains",
@@ -8130,9 +8160,9 @@
       "source_file": "backend/models.py",
       "source_location": "L145",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models",
-      "target": "backend_models_libraryresponse",
-      "confidence_score": 1.0
+      "target": "backend_models_libraryresponse"
     },
     {
       "relation": "contains",
@@ -8140,9 +8170,9 @@
       "source_file": "backend/models.py",
       "source_location": "L174",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models",
-      "target": "backend_models_libraryupdaterequest",
-      "confidence_score": 1.0
+      "target": "backend_models_libraryupdaterequest"
     },
     {
       "relation": "contains",
@@ -8150,9 +8180,9 @@
       "source_file": "backend/models.py",
       "source_location": "L211",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models",
-      "target": "backend_models_migrationrequest",
-      "confidence_score": 1.0
+      "target": "backend_models_migrationrequest"
     },
     {
       "relation": "contains",
@@ -8160,9 +8190,9 @@
       "source_file": "backend/models.py",
       "source_location": "L81",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models",
-      "target": "backend_models_moviedetailresponse",
-      "confidence_score": 1.0
+      "target": "backend_models_moviedetailresponse"
     },
     {
       "relation": "contains",
@@ -8170,9 +8200,9 @@
       "source_file": "backend/models.py",
       "source_location": "L94",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models",
-      "target": "backend_models_movielistitem",
-      "confidence_score": 1.0
+      "target": "backend_models_movielistitem"
     },
     {
       "relation": "contains",
@@ -8180,9 +8210,9 @@
       "source_file": "backend/models.py",
       "source_location": "L113",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models",
-      "target": "backend_models_paginatedresponse",
-      "confidence_score": 1.0
+      "target": "backend_models_paginatedresponse"
     },
     {
       "relation": "contains",
@@ -8190,9 +8220,9 @@
       "source_file": "backend/models.py",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models",
-      "target": "backend_models_parse_genres",
-      "confidence_score": 1.0
+      "target": "backend_models_parse_genres"
     },
     {
       "relation": "contains",
@@ -8200,9 +8230,9 @@
       "source_file": "backend/models.py",
       "source_location": "L201",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models",
-      "target": "backend_models_scanrequest",
-      "confidence_score": 1.0
+      "target": "backend_models_scanrequest"
     },
     {
       "relation": "contains",
@@ -8210,9 +8240,9 @@
       "source_file": "backend/models.py",
       "source_location": "L133",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models",
-      "target": "backend_models_statsresponse",
-      "confidence_score": 1.0
+      "target": "backend_models_statsresponse"
     },
     {
       "relation": "contains",
@@ -8220,9 +8250,9 @@
       "source_file": "backend/models.py",
       "source_location": "L229",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models",
-      "target": "backend_models_tasklistresponse",
-      "confidence_score": 1.0
+      "target": "backend_models_tasklistresponse"
     },
     {
       "relation": "contains",
@@ -8230,9 +8260,9 @@
       "source_file": "backend/models.py",
       "source_location": "L233",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models",
-      "target": "backend_models_tasklogsresponse",
-      "confidence_score": 1.0
+      "target": "backend_models_tasklogsresponse"
     },
     {
       "relation": "contains",
@@ -8240,9 +8270,9 @@
       "source_file": "backend/models.py",
       "source_location": "L217",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models",
-      "target": "backend_models_taskresponse",
-      "confidence_score": 1.0
+      "target": "backend_models_taskresponse"
     },
     {
       "relation": "contains",
@@ -8250,9 +8280,9 @@
       "source_file": "backend/models.py",
       "source_location": "L71",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models",
-      "target": "backend_models_telegrammessageresponse",
-      "confidence_score": 1.0
+      "target": "backend_models_telegrammessageresponse"
     },
     {
       "relation": "contains",
@@ -8260,9 +8290,9 @@
       "source_file": "backend/models.py",
       "source_location": "L33",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models",
-      "target": "backend_models_tmdbmovieresponse",
-      "confidence_score": 1.0
+      "target": "backend_models_tmdbmovieresponse"
     },
     {
       "relation": "contains",
@@ -8270,9 +8300,9 @@
       "source_file": "backend/models.py",
       "source_location": "L206",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models",
-      "target": "backend_models_tmdbupdaterequest",
-      "confidence_score": 1.0
+      "target": "backend_models_tmdbupdaterequest"
     },
     {
       "relation": "imports_from",
@@ -8325,9 +8355,9 @@
       "source_file": "backend/models.py",
       "source_location": "L106",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models_movielistitem_parse_genres",
-      "target": "backend_models_parse_genres",
-      "confidence_score": 1.0
+      "target": "backend_models_parse_genres"
     },
     {
       "relation": "references",
@@ -8336,9 +8366,9 @@
       "source_file": "backend/models.py",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models_parse_genres",
-      "target": "backend_models_py_any",
-      "confidence_score": 1.0
+      "target": "backend_models_py_any"
     },
     {
       "relation": "rationale_for",
@@ -8346,9 +8376,9 @@
       "source_file": "backend/models.py",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models_rationale_17",
-      "target": "backend_models_parse_genres",
-      "confidence_score": 1.0
+      "target": "backend_models_parse_genres"
     },
     {
       "relation": "calls",
@@ -8357,9 +8387,9 @@
       "source_file": "backend/models.py",
       "source_location": "L50",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models_tmdbmovieresponse_parse_genres",
-      "target": "backend_models_parse_genres",
-      "confidence_score": 1.0
+      "target": "backend_models_parse_genres"
     },
     {
       "relation": "references",
@@ -8368,9 +8398,9 @@
       "source_file": "backend/models.py",
       "source_location": "L105",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models_movielistitem_parse_genres",
-      "target": "backend_models_py_any",
-      "confidence_score": 1.0
+      "target": "backend_models_py_any"
     },
     {
       "relation": "references",
@@ -8379,9 +8409,9 @@
       "source_file": "backend/models.py",
       "source_location": "L49",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models_tmdbmovieresponse_parse_genres",
-      "target": "backend_models_py_any",
-      "confidence_score": 1.0
+      "target": "backend_models_py_any"
     },
     {
       "relation": "method",
@@ -8389,9 +8419,9 @@
       "source_file": "backend/models.py",
       "source_location": "L61",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models_tmdbmovieresponse",
-      "target": "backend_models_tmdbmovieresponse_backdrop_url",
-      "confidence_score": 1.0
+      "target": "backend_models_tmdbmovieresponse_backdrop_url"
     },
     {
       "relation": "method",
@@ -8399,9 +8429,9 @@
       "source_file": "backend/models.py",
       "source_location": "L49",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models_tmdbmovieresponse",
-      "target": "backend_models_tmdbmovieresponse_parse_genres",
-      "confidence_score": 1.0
+      "target": "backend_models_tmdbmovieresponse_parse_genres"
     },
     {
       "relation": "method",
@@ -8409,9 +8439,9 @@
       "source_file": "backend/models.py",
       "source_location": "L54",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models_tmdbmovieresponse",
-      "target": "backend_models_tmdbmovieresponse_poster_url",
-      "confidence_score": 1.0
+      "target": "backend_models_tmdbmovieresponse_poster_url"
     },
     {
       "relation": "inherits",
@@ -8419,9 +8449,9 @@
       "source_file": "backend/models.py",
       "source_location": "L33",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models_tmdbmovieresponse",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -8469,9 +8499,9 @@
       "source_file": "backend/models.py",
       "source_location": "L125",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models_genrelistresponse",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -8479,9 +8509,9 @@
       "source_file": "backend/models.py",
       "source_location": "L165",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models_librarycreaterequest",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -8489,9 +8519,9 @@
       "source_file": "backend/models.py",
       "source_location": "L183",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models_librarydetailresponse",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -8499,9 +8529,9 @@
       "source_file": "backend/models.py",
       "source_location": "L157",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models_librarylistresponse",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -8509,9 +8539,9 @@
       "source_file": "backend/models.py",
       "source_location": "L145",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models_libraryresponse",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -8519,9 +8549,9 @@
       "source_file": "backend/models.py",
       "source_location": "L174",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models_libraryupdaterequest",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -8529,9 +8559,9 @@
       "source_file": "backend/models.py",
       "source_location": "L211",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models_migrationrequest",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -8539,9 +8569,9 @@
       "source_file": "backend/models.py",
       "source_location": "L81",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models_moviedetailresponse",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -8549,9 +8579,9 @@
       "source_file": "backend/models.py",
       "source_location": "L94",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models_movielistitem",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -8559,9 +8589,9 @@
       "source_file": "backend/models.py",
       "source_location": "L113",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models_paginatedresponse",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -8569,9 +8599,9 @@
       "source_file": "backend/models.py",
       "source_location": "L201",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models_scanrequest",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -8579,9 +8609,9 @@
       "source_file": "backend/models.py",
       "source_location": "L133",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models_statsresponse",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -8589,9 +8619,9 @@
       "source_file": "backend/models.py",
       "source_location": "L229",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models_tasklistresponse",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -8599,9 +8629,9 @@
       "source_file": "backend/models.py",
       "source_location": "L233",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models_tasklogsresponse",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -8609,9 +8639,9 @@
       "source_file": "backend/models.py",
       "source_location": "L217",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models_taskresponse",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -8619,9 +8649,9 @@
       "source_file": "backend/models.py",
       "source_location": "L71",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models_telegrammessageresponse",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -8629,9 +8659,9 @@
       "source_file": "backend/models.py",
       "source_location": "L206",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models_tmdbupdaterequest",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -8719,9 +8749,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L191",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models_featuredtvcreaterequest",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -8729,9 +8759,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L187",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models_featuredtvlistresponse",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -8739,9 +8769,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L178",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models_featuredtvresponse",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -8749,9 +8779,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L199",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models_featuredtvupdaterequest",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -8759,9 +8789,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L118",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models_seriesdetailresponse",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -8769,9 +8799,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L160",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models_seriesgenrelistresponse",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -8779,9 +8809,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L129",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models_serieslistitem",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -8789,9 +8819,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L148",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models_seriespaginatedresponse",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -8799,9 +8829,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L168",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models_seriesstatsresponse",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -8809,9 +8839,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L79",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models_tmdbtvresponse",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -8819,9 +8849,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L44",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models_tvlibrarycreaterequest",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -8829,9 +8859,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L62",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models_tvlibrarydetailresponse",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -8839,9 +8869,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L40",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models_tvlibrarylistresponse",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -8849,9 +8879,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models_tvlibraryresponse",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "inherits",
@@ -8859,9 +8889,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L53",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models_tvlibraryupdaterequest",
-      "target": "basemodel",
-      "confidence_score": 1.0
+      "target": "basemodel"
     },
     {
       "relation": "imports",
@@ -8891,9 +8921,9 @@
       "source_file": "backend/models.py",
       "source_location": "L105",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models_movielistitem",
-      "target": "backend_models_movielistitem_parse_genres",
-      "confidence_score": 1.0
+      "target": "backend_models_movielistitem_parse_genres"
     },
     {
       "relation": "imports",
@@ -9099,9 +9129,9 @@
       "source_file": "backend/models.py",
       "source_location": "L202",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models_rationale_202",
-      "target": "backend_models_scanrequest",
-      "confidence_score": 1.0
+      "target": "backend_models_scanrequest"
     },
     {
       "relation": "rationale_for",
@@ -9109,9 +9139,9 @@
       "source_file": "backend/models.py",
       "source_location": "L207",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_models_rationale_207",
-      "target": "backend_models_tmdbupdaterequest",
-      "confidence_score": 1.0
+      "target": "backend_models_tmdbupdaterequest"
     },
     {
       "relation": "imports",
@@ -9328,9 +9358,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_database",
-      "target": "backend_tv_database_seriesqueries",
-      "confidence_score": 1.0
+      "target": "backend_tv_database_seriesqueries"
     },
     {
       "relation": "imports_from",
@@ -9339,9 +9369,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_database",
-      "target": "database_models",
-      "confidence_score": 1.0
+      "target": "database_models"
     },
     {
       "relation": "imports_from",
@@ -9350,9 +9380,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_database",
-      "target": "database_tv_models",
-      "confidence_score": 1.0
+      "target": "database_tv_models"
     },
     {
       "relation": "imports",
@@ -9459,9 +9489,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_database_rationale_17",
-      "target": "backend_tv_database_seriesqueries",
-      "confidence_score": 1.0
+      "target": "backend_tv_database_seriesqueries"
     },
     {
       "relation": "method",
@@ -9469,9 +9499,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L356",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_database_seriesqueries",
-      "target": "backend_tv_database_seriesqueries_create_featured_tv_series",
-      "confidence_score": 1.0
+      "target": "backend_tv_database_seriesqueries_create_featured_tv_series"
     },
     {
       "relation": "method",
@@ -9479,9 +9509,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L405",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_database_seriesqueries",
-      "target": "backend_tv_database_seriesqueries_delete_featured_tv_series",
-      "confidence_score": 1.0
+      "target": "backend_tv_database_seriesqueries_delete_featured_tv_series"
     },
     {
       "relation": "method",
@@ -9489,9 +9519,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L323",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_database_seriesqueries",
-      "target": "backend_tv_database_seriesqueries_get_featured_tv_series",
-      "confidence_score": 1.0
+      "target": "backend_tv_database_seriesqueries_get_featured_tv_series"
     },
     {
       "relation": "method",
@@ -9499,9 +9529,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L340",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_database_seriesqueries",
-      "target": "backend_tv_database_seriesqueries_get_featured_tv_series_by_id",
-      "confidence_score": 1.0
+      "target": "backend_tv_database_seriesqueries_get_featured_tv_series_by_id"
     },
     {
       "relation": "method",
@@ -9509,9 +9539,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L272",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_database_seriesqueries",
-      "target": "backend_tv_database_seriesqueries_get_genres",
-      "confidence_score": 1.0
+      "target": "backend_tv_database_seriesqueries_get_genres"
     },
     {
       "relation": "method",
@@ -9519,9 +9549,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L97",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_database_seriesqueries",
-      "target": "backend_tv_database_seriesqueries_get_series",
-      "confidence_score": 1.0
+      "target": "backend_tv_database_seriesqueries_get_series"
     },
     {
       "relation": "method",
@@ -9529,9 +9559,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L206",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_database_seriesqueries",
-      "target": "backend_tv_database_seriesqueries_get_series_detail",
-      "confidence_score": 1.0
+      "target": "backend_tv_database_seriesqueries_get_series_detail"
     },
     {
       "relation": "method",
@@ -9539,9 +9569,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_database_seriesqueries",
-      "target": "backend_tv_database_seriesqueries_get_session",
-      "confidence_score": 1.0
+      "target": "backend_tv_database_seriesqueries_get_session"
     },
     {
       "relation": "method",
@@ -9549,9 +9579,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L301",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_database_seriesqueries",
-      "target": "backend_tv_database_seriesqueries_get_stats",
-      "confidence_score": 1.0
+      "target": "backend_tv_database_seriesqueries_get_stats"
     },
     {
       "relation": "method",
@@ -9559,9 +9589,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_database_seriesqueries",
-      "target": "backend_tv_database_seriesqueries_get_tv_libraries",
-      "confidence_score": 1.0
+      "target": "backend_tv_database_seriesqueries_get_tv_libraries"
     },
     {
       "relation": "method",
@@ -9569,9 +9599,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L62",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_database_seriesqueries",
-      "target": "backend_tv_database_seriesqueries_get_tv_library_by_slug",
-      "confidence_score": 1.0
+      "target": "backend_tv_database_seriesqueries_get_tv_library_by_slug"
     },
     {
       "relation": "method",
@@ -9579,9 +9609,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_database_seriesqueries",
-      "target": "backend_tv_database_seriesqueries_init",
-      "confidence_score": 1.0
+      "target": "backend_tv_database_seriesqueries_init"
     },
     {
       "relation": "method",
@@ -9589,9 +9619,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L377",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_database_seriesqueries",
-      "target": "backend_tv_database_seriesqueries_update_featured_tv_series",
-      "confidence_score": 1.0
+      "target": "backend_tv_database_seriesqueries_update_featured_tv_series"
     },
     {
       "relation": "calls",
@@ -9600,9 +9630,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L357",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_database_seriesqueries_create_featured_tv_series",
-      "target": "backend_tv_database_seriesqueries_get_session",
-      "confidence_score": 1.0
+      "target": "backend_tv_database_seriesqueries_get_session"
     },
     {
       "relation": "calls",
@@ -9611,9 +9641,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L406",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_database_seriesqueries_delete_featured_tv_series",
-      "target": "backend_tv_database_seriesqueries_get_session",
-      "confidence_score": 1.0
+      "target": "backend_tv_database_seriesqueries_get_session"
     },
     {
       "relation": "calls",
@@ -9622,9 +9652,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L324",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_database_seriesqueries_get_featured_tv_series",
-      "target": "backend_tv_database_seriesqueries_get_session",
-      "confidence_score": 1.0
+      "target": "backend_tv_database_seriesqueries_get_session"
     },
     {
       "relation": "calls",
@@ -9633,9 +9663,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L341",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_database_seriesqueries_get_featured_tv_series_by_id",
-      "target": "backend_tv_database_seriesqueries_get_session",
-      "confidence_score": 1.0
+      "target": "backend_tv_database_seriesqueries_get_session"
     },
     {
       "relation": "calls",
@@ -9644,9 +9674,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L273",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_database_seriesqueries_get_genres",
-      "target": "backend_tv_database_seriesqueries_get_session",
-      "confidence_score": 1.0
+      "target": "backend_tv_database_seriesqueries_get_session"
     },
     {
       "relation": "calls",
@@ -9655,9 +9685,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L116",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_database_seriesqueries_get_series",
-      "target": "backend_tv_database_seriesqueries_get_session",
-      "confidence_score": 1.0
+      "target": "backend_tv_database_seriesqueries_get_session"
     },
     {
       "relation": "calls",
@@ -9666,9 +9696,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L207",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_database_seriesqueries_get_series_detail",
-      "target": "backend_tv_database_seriesqueries_get_session",
-      "confidence_score": 1.0
+      "target": "backend_tv_database_seriesqueries_get_session"
     },
     {
       "relation": "references",
@@ -9677,9 +9707,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_database_seriesqueries_get_session",
-      "target": "backend_tv_database_py_session",
-      "confidence_score": 1.0
+      "target": "backend_tv_database_py_session"
     },
     {
       "relation": "calls",
@@ -9688,9 +9718,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L302",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_database_seriesqueries_get_stats",
-      "target": "backend_tv_database_seriesqueries_get_session",
-      "confidence_score": 1.0
+      "target": "backend_tv_database_seriesqueries_get_session"
     },
     {
       "relation": "calls",
@@ -9699,9 +9729,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_database_seriesqueries_get_tv_libraries",
-      "target": "backend_tv_database_seriesqueries_get_session",
-      "confidence_score": 1.0
+      "target": "backend_tv_database_seriesqueries_get_session"
     },
     {
       "relation": "calls",
@@ -9710,9 +9740,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L63",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_database_seriesqueries_get_tv_library_by_slug",
-      "target": "backend_tv_database_seriesqueries_get_session",
-      "confidence_score": 1.0
+      "target": "backend_tv_database_seriesqueries_get_session"
     },
     {
       "relation": "calls",
@@ -9721,9 +9751,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L378",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_database_seriesqueries_update_featured_tv_series",
-      "target": "backend_tv_database_seriesqueries_get_session",
-      "confidence_score": 1.0
+      "target": "backend_tv_database_seriesqueries_get_session"
     },
     {
       "relation": "references",
@@ -9732,9 +9762,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_database_seriesqueries_get_tv_libraries",
-      "target": "backend_tv_database_py_any",
-      "confidence_score": 1.0
+      "target": "backend_tv_database_py_any"
     },
     {
       "relation": "references",
@@ -9743,9 +9773,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L356",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_database_seriesqueries_create_featured_tv_series",
-      "target": "backend_tv_database_py_any",
-      "confidence_score": 1.0
+      "target": "backend_tv_database_py_any"
     },
     {
       "relation": "references",
@@ -9754,9 +9784,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L323",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_database_seriesqueries_get_featured_tv_series",
-      "target": "backend_tv_database_py_any",
-      "confidence_score": 1.0
+      "target": "backend_tv_database_py_any"
     },
     {
       "relation": "references",
@@ -9765,9 +9795,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L340",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_database_seriesqueries_get_featured_tv_series_by_id",
-      "target": "backend_tv_database_py_any",
-      "confidence_score": 1.0
+      "target": "backend_tv_database_py_any"
     },
     {
       "relation": "references",
@@ -9776,9 +9806,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L97",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_database_seriesqueries_get_series",
-      "target": "backend_tv_database_py_any",
-      "confidence_score": 1.0
+      "target": "backend_tv_database_py_any"
     },
     {
       "relation": "references",
@@ -9787,9 +9817,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L206",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_database_seriesqueries_get_series_detail",
-      "target": "backend_tv_database_py_any",
-      "confidence_score": 1.0
+      "target": "backend_tv_database_py_any"
     },
     {
       "relation": "references",
@@ -9798,9 +9828,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L301",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_database_seriesqueries_get_stats",
-      "target": "backend_tv_database_py_any",
-      "confidence_score": 1.0
+      "target": "backend_tv_database_py_any"
     },
     {
       "relation": "references",
@@ -9809,9 +9839,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L62",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_database_seriesqueries_get_tv_library_by_slug",
-      "target": "backend_tv_database_py_any",
-      "confidence_score": 1.0
+      "target": "backend_tv_database_py_any"
     },
     {
       "relation": "references",
@@ -9820,9 +9850,9 @@
       "source_file": "backend/tv_database.py",
       "source_location": "L377",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_database_seriesqueries_update_featured_tv_series",
-      "target": "backend_tv_database_py_any",
-      "confidence_score": 1.0
+      "target": "backend_tv_database_py_any"
     },
     {
       "relation": "imports_from",
@@ -9852,9 +9882,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L191",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models",
-      "target": "backend_tv_models_featuredtvcreaterequest",
-      "confidence_score": 1.0
+      "target": "backend_tv_models_featuredtvcreaterequest"
     },
     {
       "relation": "contains",
@@ -9862,9 +9892,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L187",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models",
-      "target": "backend_tv_models_featuredtvlistresponse",
-      "confidence_score": 1.0
+      "target": "backend_tv_models_featuredtvlistresponse"
     },
     {
       "relation": "contains",
@@ -9872,9 +9902,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L178",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models",
-      "target": "backend_tv_models_featuredtvresponse",
-      "confidence_score": 1.0
+      "target": "backend_tv_models_featuredtvresponse"
     },
     {
       "relation": "contains",
@@ -9882,9 +9912,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L199",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models",
-      "target": "backend_tv_models_featuredtvupdaterequest",
-      "confidence_score": 1.0
+      "target": "backend_tv_models_featuredtvupdaterequest"
     },
     {
       "relation": "contains",
@@ -9892,9 +9922,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models",
-      "target": "backend_tv_models_parse_genres",
-      "confidence_score": 1.0
+      "target": "backend_tv_models_parse_genres"
     },
     {
       "relation": "contains",
@@ -9902,9 +9932,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L118",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models",
-      "target": "backend_tv_models_seriesdetailresponse",
-      "confidence_score": 1.0
+      "target": "backend_tv_models_seriesdetailresponse"
     },
     {
       "relation": "contains",
@@ -9912,9 +9942,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L160",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models",
-      "target": "backend_tv_models_seriesgenrelistresponse",
-      "confidence_score": 1.0
+      "target": "backend_tv_models_seriesgenrelistresponse"
     },
     {
       "relation": "contains",
@@ -9922,9 +9952,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L129",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models",
-      "target": "backend_tv_models_serieslistitem",
-      "confidence_score": 1.0
+      "target": "backend_tv_models_serieslistitem"
     },
     {
       "relation": "contains",
@@ -9932,9 +9962,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L148",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models",
-      "target": "backend_tv_models_seriespaginatedresponse",
-      "confidence_score": 1.0
+      "target": "backend_tv_models_seriespaginatedresponse"
     },
     {
       "relation": "contains",
@@ -9942,9 +9972,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L168",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models",
-      "target": "backend_tv_models_seriesstatsresponse",
-      "confidence_score": 1.0
+      "target": "backend_tv_models_seriesstatsresponse"
     },
     {
       "relation": "contains",
@@ -9952,9 +9982,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L79",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models",
-      "target": "backend_tv_models_tmdbtvresponse",
-      "confidence_score": 1.0
+      "target": "backend_tv_models_tmdbtvresponse"
     },
     {
       "relation": "contains",
@@ -9962,9 +9992,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L44",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models",
-      "target": "backend_tv_models_tvlibrarycreaterequest",
-      "confidence_score": 1.0
+      "target": "backend_tv_models_tvlibrarycreaterequest"
     },
     {
       "relation": "contains",
@@ -9972,9 +10002,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L62",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models",
-      "target": "backend_tv_models_tvlibrarydetailresponse",
-      "confidence_score": 1.0
+      "target": "backend_tv_models_tvlibrarydetailresponse"
     },
     {
       "relation": "contains",
@@ -9982,9 +10012,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L40",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models",
-      "target": "backend_tv_models_tvlibrarylistresponse",
-      "confidence_score": 1.0
+      "target": "backend_tv_models_tvlibrarylistresponse"
     },
     {
       "relation": "contains",
@@ -9992,9 +10022,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models",
-      "target": "backend_tv_models_tvlibraryresponse",
-      "confidence_score": 1.0
+      "target": "backend_tv_models_tvlibraryresponse"
     },
     {
       "relation": "contains",
@@ -10002,9 +10032,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L53",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models",
-      "target": "backend_tv_models_tvlibraryupdaterequest",
-      "confidence_score": 1.0
+      "target": "backend_tv_models_tvlibraryupdaterequest"
     },
     {
       "relation": "references",
@@ -10013,9 +10043,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models_parse_genres",
-      "target": "backend_tv_models_py_any",
-      "confidence_score": 1.0
+      "target": "backend_tv_models_py_any"
     },
     {
       "relation": "rationale_for",
@@ -10023,9 +10053,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models_rationale_13",
-      "target": "backend_tv_models_parse_genres",
-      "confidence_score": 1.0
+      "target": "backend_tv_models_parse_genres"
     },
     {
       "relation": "calls",
@@ -10034,9 +10064,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L141",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models_serieslistitem_parse_genres",
-      "target": "backend_tv_models_parse_genres",
-      "confidence_score": 1.0
+      "target": "backend_tv_models_parse_genres"
     },
     {
       "relation": "calls",
@@ -10045,9 +10075,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L97",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models_tmdbtvresponse_parse_genres",
-      "target": "backend_tv_models_parse_genres",
-      "confidence_score": 1.0
+      "target": "backend_tv_models_parse_genres"
     },
     {
       "relation": "references",
@@ -10056,9 +10086,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L140",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models_serieslistitem_parse_genres",
-      "target": "backend_tv_models_py_any",
-      "confidence_score": 1.0
+      "target": "backend_tv_models_py_any"
     },
     {
       "relation": "references",
@@ -10067,9 +10097,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L96",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models_tmdbtvresponse_parse_genres",
-      "target": "backend_tv_models_py_any",
-      "confidence_score": 1.0
+      "target": "backend_tv_models_py_any"
     },
     {
       "relation": "imports",
@@ -10209,9 +10239,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L108",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models_tmdbtvresponse",
-      "target": "backend_tv_models_tmdbtvresponse_backdrop_url",
-      "confidence_score": 1.0
+      "target": "backend_tv_models_tmdbtvresponse_backdrop_url"
     },
     {
       "relation": "method",
@@ -10219,9 +10249,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L96",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models_tmdbtvresponse",
-      "target": "backend_tv_models_tmdbtvresponse_parse_genres",
-      "confidence_score": 1.0
+      "target": "backend_tv_models_tmdbtvresponse_parse_genres"
     },
     {
       "relation": "method",
@@ -10229,9 +10259,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L101",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models_tmdbtvresponse",
-      "target": "backend_tv_models_tmdbtvresponse_poster_url",
-      "confidence_score": 1.0
+      "target": "backend_tv_models_tmdbtvresponse_poster_url"
     },
     {
       "relation": "imports",
@@ -10261,9 +10291,9 @@
       "source_file": "backend/tv_models.py",
       "source_location": "L140",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backend_tv_models_serieslistitem",
-      "target": "backend_tv_models_serieslistitem_parse_genres",
-      "confidence_score": 1.0
+      "target": "backend_tv_models_serieslistitem_parse_genres"
     },
     {
       "relation": "imports",
@@ -10458,9 +10488,9 @@
       "source_file": "frontend/src/App.jsx",
       "source_location": "L26",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_src_app",
-      "target": "frontend_src_app_app",
-      "confidence_score": 1.0
+      "target": "frontend_src_app_app"
     },
     {
       "relation": "contains",
@@ -10468,9 +10498,9 @@
       "source_file": "frontend/src/App.jsx",
       "source_location": "L237",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_src_app",
-      "target": "frontend_src_app_libraryview",
-      "confidence_score": 1.0
+      "target": "frontend_src_app_libraryview"
     },
     {
       "relation": "contains",
@@ -10478,9 +10508,9 @@
       "source_file": "frontend/src/App.jsx",
       "source_location": "L321",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_src_app",
-      "target": "frontend_src_app_seriesview",
-      "confidence_score": 1.0
+      "target": "frontend_src_app_seriesview"
     },
     {
       "relation": "imports_from",
@@ -10489,9 +10519,9 @@
       "source_file": "frontend/src/App.jsx",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_src_app",
-      "target": "frontend_src_components_admindashboard",
-      "confidence_score": 1.0
+      "target": "frontend_src_components_admindashboard"
     },
     {
       "relation": "imports",
@@ -10500,9 +10530,9 @@
       "source_file": "frontend/src/App.jsx",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_src_app",
-      "target": "frontend_src_components_admindashboard_admindashboard",
-      "confidence_score": 1.0
+      "target": "frontend_src_components_admindashboard_admindashboard"
     },
     {
       "relation": "imports_from",
@@ -10511,9 +10541,9 @@
       "source_file": "frontend/src/App.jsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_src_app",
-      "target": "frontend_src_components_librarygrid",
-      "confidence_score": 1.0
+      "target": "frontend_src_components_librarygrid"
     },
     {
       "relation": "imports",
@@ -10522,9 +10552,9 @@
       "source_file": "frontend/src/App.jsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_src_app",
-      "target": "frontend_src_components_librarygrid_librarygrid",
-      "confidence_score": 1.0
+      "target": "frontend_src_components_librarygrid_librarygrid"
     },
     {
       "relation": "imports_from",
@@ -10554,9 +10584,9 @@
       "source_file": "frontend/src/components/AdminDashboard.jsx",
       "source_location": "L434",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_src_components_admindashboard",
-      "target": "frontend_src_components_admindashboard_admindashboard",
-      "confidence_score": 1.0
+      "target": "frontend_src_components_admindashboard_admindashboard"
     },
     {
       "relation": "contains",
@@ -10564,9 +10594,9 @@
       "source_file": "frontend/src/components/AdminDashboard.jsx",
       "source_location": "L255",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_src_components_admindashboard",
-      "target": "frontend_src_components_admindashboard_featuredtvform",
-      "confidence_score": 1.0
+      "target": "frontend_src_components_admindashboard_featuredtvform"
     },
     {
       "relation": "contains",
@@ -10574,9 +10604,9 @@
       "source_file": "frontend/src/components/AdminDashboard.jsx",
       "source_location": "L34",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_src_components_admindashboard",
-      "target": "frontend_src_components_admindashboard_libraryform",
-      "confidence_score": 1.0
+      "target": "frontend_src_components_admindashboard_libraryform"
     },
     {
       "relation": "contains",
@@ -10584,9 +10614,9 @@
       "source_file": "frontend/src/components/AdminDashboard.jsx",
       "source_location": "L190",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_src_components_admindashboard",
-      "target": "frontend_src_components_admindashboard_migrateform",
-      "confidence_score": 1.0
+      "target": "frontend_src_components_admindashboard_migrateform"
     },
     {
       "relation": "contains",
@@ -10594,9 +10624,9 @@
       "source_file": "frontend/src/components/AdminDashboard.jsx",
       "source_location": "L378",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_src_components_admindashboard",
-      "target": "frontend_src_components_admindashboard_tasklogviewer",
-      "confidence_score": 1.0
+      "target": "frontend_src_components_admindashboard_tasklogviewer"
     },
     {
       "relation": "contains",
@@ -10604,9 +10634,9 @@
       "source_file": "frontend/src/components/AdminDashboard.jsx",
       "source_location": "L112",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_src_components_admindashboard",
-      "target": "frontend_src_components_admindashboard_tvlibraryform",
-      "confidence_score": 1.0
+      "target": "frontend_src_components_admindashboard_tvlibraryform"
     },
     {
       "relation": "contains",
@@ -10614,9 +10644,9 @@
       "source_file": "frontend/src/components/LibraryGrid.jsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_src_components_librarygrid",
-      "target": "frontend_src_components_librarygrid_librarygrid",
-      "confidence_score": 1.0
+      "target": "frontend_src_components_librarygrid_librarygrid"
     },
     {
       "relation": "imports_from",
@@ -22433,5 +22463,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "0ba597ef61ef4ce3c4b5adb3b7884059ef38a3f6"
+  "built_at_commit": "b35715190ebbc2634d50428eb05f3cfade3cd665"
 }

@@ -1,0 +1,509 @@
+ OK
+[IMPORT LOG] Saving movie to DB: Only Mine (2019)
+[IMPORT LOG] Saving telegram message ID: 18615
+[IMPORT LOG] Linking movie_id=18649 to tmdb_movie_id=3109
+[IMPORT LOG] Saving movie to DB: Only Mine (2019)
+[IMPORT LOG] Saving telegram message ID: 18614
+[IMPORT LOG] Linking movie_id=18649 to tmdb_movie_id=3109
+[IMPORT LOG] Saving movie to DB: Only Mine (2019)
+[IMPORT LOG] Saving telegram message ID: 18613
+[IMPORT LOG] Linking movie_id=18649 to tmdb_movie_id=3109
+[IMPORT LOG] Saving movie to DB: Moonlight 2016
+[IMPORT LOG] Saving telegram message ID: 18611
+[IMPORT LOG] Linking movie_id=18650 to tmdb_movie_id=2817
+[IMPORT LOG] Saving movie to DB: Moonlight 2016
+[IMPORT LOG] Saving telegram message ID: 18610
+[IMPORT LOG] Linking movie_id=18650 to tmdb_movie_id=2817
+[IMPORT LOG] Saving movie to DB: Moonlight 2016
+[IMPORT LOG] Saving telegram message ID: 18609
+[IMPORT LOG] Linking movie_id=18650 to tmdb_movie_id=2817
+[IMPORT LOG] Saving movie to DB: Moonlight 2016
+[IMPORT LOG] Saving telegram message ID: 18608
+[IMPORT LOG] Linking movie_id=18650 to tmdb_movie_id=2817
+[IMPORT LOG] Saving movie to DB: Laggies (2014)
+[IMPORT LOG] Saving telegram message ID: 18607
+[IMPORT LOG] Linking movie_id=18651 to tmdb_movie_id=2433
+[IMPORT LOG] Saving movie to DB: The Last Heist (2016)
+[IMPORT LOG] Saving telegram message ID: 18605
+[IMPORT LOG] Linking movie_id=18652 to tmdb_movie_id=4530
+[IMPORT LOG] Saving movie to DB: The Last Heist (2016)
+[IMPORT LOG] Saving telegram message ID: 18604
+[IMPORT LOG] Linking movie_id=18652 to tmdb_movie_id=4530
+[IMPORT LOG] Saving movie to DB: Ferris Bueller's Day Off (1986)
+[IMPORT LOG] Saving telegram message ID: 18602
+[IMPORT LOG] First TMDB lookup for: Ferris Bueller s Day Off (1986)
+INFO:     Shutting down
+INFO:     127.0.0.1:55677 - "GET /api/libraries/general-movies/telegram/task-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55681 - "GET /api/libraries/general-movies/telegram/task-status HTTP/1.1" 200 OK
+INFO:     Waiting for background tasks to complete. (CTRL+C to force quit)
+[IMPORT LOG] Saving TMDB movie to DB for TMDB ID: 9377
+[IMPORT LOG] Linking movie_id=18653 to tmdb_movie_id=1570
+[IMPORT LOG] Saving movie to DB: Ferris Bueller's Day Off (1986)
+[IMPORT LOG] Saving telegram message ID: 18601
+[IMPORT LOG] Linking movie_id=18653 to tmdb_movie_id=1570
+[IMPORT LOG] Saving movie to DB: Ferris Bueller's Day Off (1986)
+[IMPORT LOG] Saving telegram message ID: 18600
+[IMPORT LOG] Linking movie_id=18653 to tmdb_movie_id=1570
+[IMPORT LOG] Saving movie to DB: Ferris Bueller's Day Off (1986)
+[IMPORT LOG] Saving telegram message ID: 18599
+[IMPORT LOG] Linking movie_id=18653 to tmdb_movie_id=1570
+[IMPORT LOG] Saving movie to DB: Berlin Syndrome (2017)
+[IMPORT LOG] Saving telegram message ID: 18597
+[IMPORT LOG] Linking movie_id=18654 to tmdb_movie_id=688
+[IMPORT LOG] Saving movie to DB: Berlin Syndrome (2017)
+[IMPORT LOG] Saving telegram message ID: 18596
+[IMPORT LOG] Linking movie_id=18654 to tmdb_movie_id=688
+[IMPORT LOG] Saving movie to DB: Berlin Syndrome (2017)
+[IMPORT LOG] Saving telegram message ID: 18595
+[IMPORT LOG] Linking movie_id=18654 to tmdb_movie_id=688
+[IMPORT LOG] Saving movie to DB: Lolita (1962)
+[IMPORT LOG] Saving telegram message ID: 18593
+[IMPORT LOG] Linking movie_id=18655 to tmdb_movie_id=2557
+[IMPORT LOG] Saving movie to DB: Lolita (1962)
+[IMPORT LOG] Saving telegram message ID: 18592
+[IMPORT LOG] Linking movie_id=18655 to tmdb_movie_id=2557
+[IMPORT LOG] Saving movie to DB: Lolita (1962)
+[IMPORT LOG] Saving telegram message ID: 18591
+[IMPORT LOG] Linking movie_id=18655 to tmdb_movie_id=2557
+[IMPORT LOG] Saving movie to DB: Lolita (1962)
+[IMPORT LOG] Saving telegram message ID: 18590
+[IMPORT LOG] Linking movie_id=18655 to tmdb_movie_id=2557
+[IMPORT LOG] Saving movie to DB: Corpse Bride (2005)
+[IMPORT LOG] Saving telegram message ID: 18588
+[IMPORT LOG] Linking movie_id=18656 to tmdb_movie_id=1111
+[IMPORT LOG] Saving movie to DB: Corpse Bride (2005)
+[IMPORT LOG] Saving telegram message ID: 18587
+[IMPORT LOG] Linking movie_id=18656 to tmdb_movie_id=1111
+[IMPORT LOG] Saving movie to DB: Taking Lives (2004)
+[IMPORT LOG] Saving telegram message ID: 18585
+[IMPORT LOG] Linking movie_id=18657 to tmdb_movie_id=3983
+[IMPORT LOG] Saving movie to DB: Taking Lives
+[IMPORT LOG] Saving telegram message ID: 18584
+[IMPORT LOG] Linking movie_id=18658 to tmdb_movie_id=3983
+[IMPORT LOG] Saving movie to DB: A Prayer Before Dawn (2017)
+[IMPORT LOG] Saving telegram message ID: 18582
+[IMPORT LOG] Linking movie_id=18659 to tmdb_movie_id=262
+[IMPORT LOG] Saving movie to DB: A Prayer Before Dawn
+[IMPORT LOG] Saving telegram message ID: 18581
+[IMPORT LOG] Linking movie_id=18660 to tmdb_movie_id=262
+[IMPORT LOG] Saving movie to DB: A Perfect Getaway
+[IMPORT LOG] Saving telegram message ID: 18579
+[IMPORT LOG] Linking movie_id=18661 to tmdb_movie_id=260
+[IMPORT LOG] Saving movie to DB: A Perfect Getaway
+[IMPORT LOG] Saving telegram message ID: 18578
+[IMPORT LOG] Linking movie_id=18661 to tmdb_movie_id=260
+[IMPORT LOG] Saving movie to DB: A Perfect Getaway
+[IMPORT LOG] Saving telegram message ID: 18577
+[IMPORT LOG] Linking movie_id=18661 to tmdb_movie_id=260
+[IMPORT LOG] Saving movie to DB: A Perfect Getaway
+[IMPORT LOG] Saving telegram message ID: 18576
+[IMPORT LOG] Linking movie_id=18661 to tmdb_movie_id=260
+[IMPORT LOG] Saving movie to DB: A Perfect Getaway
+[IMPORT LOG] Saving telegram message ID: 18575
+[IMPORT LOG] Linking movie_id=18661 to tmdb_movie_id=260
+[IMPORT LOG] Saving movie to DB: A Perfect Getaway
+[IMPORT LOG] Saving telegram message ID: 18574
+[IMPORT LOG] Linking movie_id=18661 to tmdb_movie_id=260
+[IMPORT LOG] Saving movie to DB: ( The Phantom of the Opera ) 2004
+[IMPORT LOG] Saving telegram message ID: 18573
+[IMPORT LOG] Linking movie_id=18662 to tmdb_movie_id=69
+[IMPORT LOG] Saving movie to DB: The Phantom of the Opera ( )
+[IMPORT LOG] Saving telegram message ID: 18572
+[IMPORT LOG] Linking movie_id=18663 to tmdb_movie_id=69
+[IMPORT LOG] Saving movie to DB: Hands Of Stone 2016
+[IMPORT LOG] Saving telegram message ID: 18571
+[IMPORT LOG] Linking movie_id=18664 to tmdb_movie_id=1873
+[IMPORT LOG] Saving movie to DB: Hands Of Stone 2016
+[IMPORT LOG] Saving telegram message ID: 18570
+[IMPORT LOG] Linking movie_id=18664 to tmdb_movie_id=1873
+[IMPORT LOG] Saving movie to DB: Hands of stone 2016
+[IMPORT LOG] Saving telegram message ID: 18569
+[IMPORT LOG] Linking movie_id=18665 to tmdb_movie_id=1873
+[IMPORT LOG] Saving movie to DB: ( Official Secrets ) 2019
+[IMPORT LOG] Saving telegram message ID: 18568
+[IMPORT LOG] Linking movie_id=18666 to tmdb_movie_id=53
+[IMPORT LOG] Saving movie to DB: Official Secrets ( )
+[IMPORT LOG] Saving telegram message ID: 18567
+[IMPORT LOG] Linking movie_id=18667 to tmdb_movie_id=53
+[IMPORT LOG] Saving movie to DB: Chinese zodiac
+[IMPORT LOG] Saving telegram message ID: 18565
+[IMPORT LOG] Linking movie_id=18668 to tmdb_movie_id=1013
+[IMPORT LOG] Saving movie to DB: Whatever It Takes 2000
+[IMPORT LOG] Saving telegram message ID: 18563
+[IMPORT LOG] Linking movie_id=18669 to tmdb_movie_id=5514
+[IMPORT LOG] Saving movie to DB: Being John Malkovich (1999)
+[IMPORT LOG] Saving telegram message ID: 18561
+[IMPORT LOG] Linking movie_id=18670 to tmdb_movie_id=676
+[IMPORT LOG] Saving movie to DB: Being John Malkovich (1999)
+[IMPORT LOG] Saving telegram message ID: 18560
+[IMPORT LOG] Linking movie_id=18670 to tmdb_movie_id=676
+[IMPORT LOG] Saving movie to DB: Being John Malkovich (1999)
+[IMPORT LOG] Saving telegram message ID: 18559
+[IMPORT LOG] Linking movie_id=18670 to tmdb_movie_id=676
+[IMPORT LOG] Saving movie to DB: C'mon C'mon (2021)
+[IMPORT LOG] Saving telegram message ID: 18557
+[IMPORT LOG] First TMDB lookup for: C mon C mon (2021)
+[IMPORT LOG] Saving TMDB movie to DB for TMDB ID: 632617
+[IMPORT LOG] Linking movie_id=18671 to tmdb_movie_id=913
+[IMPORT LOG] Saving movie to DB: C'mon C'mon
+[IMPORT LOG] Saving telegram message ID: 18556
+[IMPORT LOG] First TMDB lookup for: C mon C mon (None)
+[IMPORT LOG] Saving TMDB movie to DB for TMDB ID: 632617
+[IMPORT LOG] Linking movie_id=18672 to tmdb_movie_id=913
+[IMPORT LOG] Saving movie to DB: Letters from Iwo Jima (2006)
+[IMPORT LOG] Saving telegram message ID: 18554
+[IMPORT LOG] Linking movie_id=18673 to tmdb_movie_id=2498
+[IMPORT LOG] Saving movie to DB: Letters from Iwo Jima (2006)
+[IMPORT LOG] Saving telegram message ID: 18553
+[IMPORT LOG] Linking movie_id=18673 to tmdb_movie_id=2498
+[IMPORT LOG] Saving movie to DB: Letters from Iwo Jima (2006)
+[IMPORT LOG] Saving telegram message ID: 18552
+[IMPORT LOG] Linking movie_id=18673 to tmdb_movie_id=2498
+[IMPORT LOG] Saving movie to DB: Letters from Iwo Jima (2006)
+[IMPORT LOG] Saving telegram message ID: 18551
+[IMPORT LOG] Linking movie_id=18673 to tmdb_movie_id=2498
+[IMPORT LOG] Saving movie to DB: Letters from Iwo Jima (2006)
+[IMPORT LOG] Saving telegram message ID: 18550
+[IMPORT LOG] Linking movie_id=18673 to tmdb_movie_id=2498
+[IMPORT LOG] Saving movie to DB: Radium Girls 2020
+[IMPORT LOG] Saving telegram message ID: 18548
+[IMPORT LOG] Linking movie_id=18674 to tmdb_movie_id=3360
+[IMPORT LOG] Saving movie to DB: Radium Girls 2020
+[IMPORT LOG] Saving telegram message ID: 18547
+[IMPORT LOG] Linking movie_id=18674 to tmdb_movie_id=3360
+[IMPORT LOG] Saving movie to DB: Radium Girls 2020
+[IMPORT LOG] Saving telegram message ID: 18546
+[IMPORT LOG] Linking movie_id=18674 to tmdb_movie_id=3360
+[IMPORT LOG] Saving movie to DB: Radium Girls 2020
+[IMPORT LOG] Saving telegram message ID: 18545
+[IMPORT LOG] Linking movie_id=18674 to tmdb_movie_id=3360
+[IMPORT LOG] Saving movie to DB: Take the Lead (2006)
+[IMPORT LOG] Saving telegram message ID: 18543
+[IMPORT LOG] Linking movie_id=18675 to tmdb_movie_id=3981
+[IMPORT LOG] Saving movie to DB: Take the Lead (2006)
+[IMPORT LOG] Saving telegram message ID: 18542
+[IMPORT LOG] Linking movie_id=18675 to tmdb_movie_id=3981
+[IMPORT LOG] Saving movie to DB: Take the Lead (2006)
+[IMPORT LOG] Saving telegram message ID: 18541
+[IMPORT LOG] Linking movie_id=18675 to tmdb_movie_id=3981
+[IMPORT LOG] Saving movie to DB: The Transporter Refueled (2015)
+[IMPORT LOG] Saving telegram message ID: 18539
+[IMPORT LOG] Linking movie_id=18676 to tmdb_movie_id=4936
+[IMPORT LOG] Saving movie to DB: The Transporter Refueled (2015)
+[IMPORT LOG] Saving telegram message ID: 18538
+[IMPORT LOG] Linking movie_id=18676 to tmdb_movie_id=4936
+[IMPORT LOG] Saving movie to DB: The Transporter Refueled (2015)
+[IMPORT LOG] Saving telegram message ID: 18537
+[IMPORT LOG] Linking movie_id=18676 to tmdb_movie_id=4936
+[IMPORT LOG] Saving movie to DB: The Transporter Refueled (2015)
+[IMPORT LOG] Saving telegram message ID: 18536
+[IMPORT LOG] Linking movie_id=18676 to tmdb_movie_id=4936
+[IMPORT LOG] Saving movie to DB: The Transporter Refueled (2015)
+[IMPORT LOG] Saving telegram message ID: 18535
+[IMPORT LOG] Linking movie_id=18676 to tmdb_movie_id=4936
+[IMPORT LOG] Saving movie to DB: The Transporter Refueled (2015)
+[IMPORT LOG] Saving telegram message ID: 18534
+[IMPORT LOG] Linking movie_id=18676 to tmdb_movie_id=4936
+[IMPORT LOG] Saving movie to DB: The Transporter Refueled (2015)
+[IMPORT LOG] Saving telegram message ID: 18533
+[IMPORT LOG] Linking movie_id=18676 to tmdb_movie_id=4936
+[IMPORT LOG] Saving movie to DB: The Transporter Refueled (2015)
+[IMPORT LOG] Saving telegram message ID: 18532
+[IMPORT LOG] Linking movie_id=18676 to tmdb_movie_id=4936
+[IMPORT LOG] Saving movie to DB: Prey ( 2007 )
+[IMPORT LOG] Saving telegram message ID: 18530
+[IMPORT LOG] Linking movie_id=18677 to tmdb_movie_id=3304
+[IMPORT LOG] Saving movie to DB: The Transporter 3 (2008)
+[IMPORT LOG] Saving telegram message ID: 18528
+[IMPORT LOG] First TMDB lookup for: The Transporter 3 (2008)
+[IMPORT LOG] Saving TMDB movie to DB for TMDB ID: 13387
+[IMPORT LOG] Linking movie_id=18678 to tmdb_movie_id=4933
+[IMPORT LOG] Saving movie to DB: The Transporter 3 (2008)
+[IMPORT LOG] Saving telegram message ID: 18527
+[IMPORT LOG] Linking movie_id=18678 to tmdb_movie_id=4933
+[IMPORT LOG] Saving movie to DB: The Transporter 3 (2008)
+[IMPORT LOG] Saving telegram message ID: 18526
+[IMPORT LOG] Linking movie_id=18678 to tmdb_movie_id=4933
+[IMPORT LOG] Saving movie to DB: The Transporter 3 (2008)
+[IMPORT LOG] Saving telegram message ID: 18525
+[IMPORT LOG] Linking movie_id=18678 to tmdb_movie_id=4933
+[IMPORT LOG] Saving movie to DB: The Transporter 3 (2008)
+[IMPORT LOG] Saving telegram message ID: 18524
+[IMPORT LOG] Linking movie_id=18678 to tmdb_movie_id=4933
+[IMPORT LOG] Saving movie to DB: The Transporter 3 (2008)
+[IMPORT LOG] Saving telegram message ID: 18523
+[IMPORT LOG] Linking movie_id=18678 to tmdb_movie_id=4933
+[IMPORT LOG] Saving movie to DB: The Transporter 3 (2008)
+[IMPORT LOG] Saving telegram message ID: 18522
+[IMPORT LOG] Linking movie_id=18678 to tmdb_movie_id=4933
+[IMPORT LOG] Saving movie to DB: The Transporter 3 (2008)
+[IMPORT LOG] Saving telegram message ID: 18521
+[IMPORT LOG] Linking movie_id=18678 to tmdb_movie_id=4933
+[IMPORT LOG] Saving movie to DB: The Transporter 3 (2008)
+[IMPORT LOG] Saving telegram message ID: 18520
+[IMPORT LOG] Linking movie_id=18678 to tmdb_movie_id=4933
+[IMPORT LOG] Saving movie to DB: Transporter 3 (2008)
+[IMPORT LOG] Saving telegram message ID: 18519
+[IMPORT LOG] Linking movie_id=18679 to tmdb_movie_id=4933
+[IMPORT LOG] Saving movie to DB: Zombie Tidal Wave (2019)
+[IMPORT LOG] Saving telegram message ID: 18517
+[IMPORT LOG] Linking movie_id=18680 to tmdb_movie_id=5651
+[IMPORT LOG] Saving movie to DB: Zombie Tidal Wave (2019)
+[IMPORT LOG] Saving telegram message ID: 18516
+[IMPORT LOG] Linking movie_id=18680 to tmdb_movie_id=5651
+[IMPORT LOG] Saving movie to DB: Zombie Tidal Wave ( )
+[IMPORT LOG] Saving telegram message ID: 18515
+[IMPORT LOG] Linking movie_id=18681 to tmdb_movie_id=5651
+[IMPORT LOG] Saving movie to DB: Intruders (2011)
+[IMPORT LOG] Saving telegram message ID: 18513
+[IMPORT LOG] Linking movie_id=18682 to tmdb_movie_id=2194
+[IMPORT LOG] Saving movie to DB: Intruders (2011)
+[IMPORT LOG] Saving telegram message ID: 18512
+[IMPORT LOG] Linking movie_id=18682 to tmdb_movie_id=2194
+[IMPORT LOG] Saving movie to DB: Intruders (2011)
+[IMPORT LOG] Saving telegram message ID: 18511
+[IMPORT LOG] Linking movie_id=18682 to tmdb_movie_id=2194
+[IMPORT LOG] Saving movie to DB: Intruders
+[IMPORT LOG] Saving telegram message ID: 18510
+[IMPORT LOG] Linking movie_id=18683 to tmdb_movie_id=2194
+[IMPORT LOG] Saving movie to DB: Short term 12 (2013)
+[IMPORT LOG] Saving telegram message ID: 18508
+[IMPORT LOG] Linking movie_id=18684 to tmdb_movie_id=3660
+[IMPORT LOG] Saving movie to DB: Short term 12
+[IMPORT LOG] Saving telegram message ID: 18507
+[IMPORT LOG] Linking movie_id=18685 to tmdb_movie_id=3660
+[IMPORT LOG] Saving movie to DB: Mommy (2014)
+[IMPORT LOG] Saving telegram message ID: 18505
+[IMPORT LOG] Linking movie_id=18686 to tmdb_movie_id=2789
+[IMPORT LOG] Saving movie to DB: Mommy (2014)
+[IMPORT LOG] Saving telegram message ID: 18504
+[IMPORT LOG] Linking movie_id=18686 to tmdb_movie_id=2789
+[IMPORT LOG] Saving movie to DB: Mommy (2014)
+[IMPORT LOG] Saving telegram message ID: 18503
+[IMPORT LOG] Linking movie_id=18686 to tmdb_movie_id=2789
+[IMPORT LOG] Saving movie to DB: The Kindergarten Teacher
+[IMPORT LOG] Saving telegram message ID: 18501
+[IMPORT LOG] Linking movie_id=18687 to tmdb_movie_id=4509
+[IMPORT LOG] Saving movie to DB: The Kindergarten Teacher (2018)
+[IMPORT LOG] Saving telegram message ID: 18500
+[IMPORT LOG] Linking movie_id=18688 to tmdb_movie_id=4509
+[IMPORT LOG] Saving movie to DB: No Sudden Move 2021
+[IMPORT LOG] Saving telegram message ID: 18498
+[IMPORT LOG] Linking movie_id=18689 to tmdb_movie_id=2985
+[IMPORT LOG] Saving movie to DB: No Sudden Move 2021
+[IMPORT LOG] Saving telegram message ID: 18497
+[IMPORT LOG] Linking movie_id=18689 to tmdb_movie_id=2985
+[IMPORT LOG] Saving movie to DB: No Sudden Move 2021
+[IMPORT LOG] Saving telegram message ID: 18496
+[IMPORT LOG] Linking movie_id=18689 to tmdb_movie_id=2985
+[IMPORT LOG] Saving movie to DB: No Sudden Move (2021)
+[IMPORT LOG] Saving telegram message ID: 18495
+[IMPORT LOG] Linking movie_id=18690 to tmdb_movie_id=2985
+[IMPORT LOG] Saving movie to DB: Dial M for Murder (1954)
+[IMPORT LOG] Saving telegram message ID: 18493
+[IMPORT LOG] Linking movie_id=18691 to tmdb_movie_id=1291
+[IMPORT LOG] Saving movie to DB: Resident Evil Degeneration 2008
+[IMPORT LOG] Saving telegram message ID: 18491
+[IMPORT LOG] First TMDB lookup for: Resident Evil Degeneration (2008)
+[IMPORT LOG] Saving TMDB movie to DB for TMDB ID: 13648
+[IMPORT LOG] Linking movie_id=18692 to tmdb_movie_id=11
+[IMPORT LOG] Saving movie to DB: Resident Evil Degeneration 2008
+[IMPORT LOG] Saving telegram message ID: 18490
+[IMPORT LOG] Linking movie_id=18692 to tmdb_movie_id=11
+[IMPORT LOG] Saving movie to DB: Resident Evil Degeneration 2008
+[IMPORT LOG] Saving telegram message ID: 18489
+[IMPORT LOG] Linking movie_id=18692 to tmdb_movie_id=11
+[IMPORT LOG] Saving movie to DB: Resident Evil Degeneration 2008
+[IMPORT LOG] Saving telegram message ID: 18488
+[IMPORT LOG] Linking movie_id=18692 to tmdb_movie_id=11
+[IMPORT LOG] Saving movie to DB: Resident Evil Degeneration 2008
+[IMPORT LOG] Saving telegram message ID: 18487
+[IMPORT LOG] Linking movie_id=18692 to tmdb_movie_id=11
+[IMPORT LOG] Saving movie to DB: "Resident Evil Degeneration"
+[IMPORT LOG] Saving telegram message ID: 18486
+[IMPORT LOG] First TMDB lookup for: Resident Evil Degeneration (None)
+[IMPORT LOG] Saving movie to DB: Resident Evil Degeneration 2008
+[IMPORT LOG] Saving telegram message ID: 18487
+[IMPORT LOG] Linking movie_id=18692 to tmdb_movie_id=11
+[IMPORT LOG] Saving movie to DB: "Resident Evil Degeneration"
+[IMPORT LOG] Saving telegram message ID: 18486
+[IMPORT LOG] First TMDB lookup for: Resident Evil Degeneration (None)
+[IMPORT LOG] Saving telegram message ID: 18486
+[IMPORT LOG] First TMDB lookup for: Resident Evil Degeneration (None)
+[IMPORT LOG] First TMDB lookup for: Resident Evil Degeneration (None)
+[IMPORT LOG] Saving TMDB movie to DB for TMDB ID: 13648
+[IMPORT LOG] Linking movie_id=18693 to tmdb_movie_id=11
+[IMPORT LOG] Saving movie to DB: The Transporter Refueled (2015)
+[IMPORT LOG] Saving telegram message ID: 18484
+[IMPORT LOG] Linking movie_id=18676 to tmdb_movie_id=4936
+[IMPORT LOG] Saving movie to DB: Prey ( 2007 )
+[IMPORT LOG] Saving telegram message ID: 18484
+[IMPORT LOG] Linking movie_id=18676 to tmdb_movie_id=4936
+[IMPORT LOG] Saving movie to DB: Prey ( 2007 )
+[IMPORT LOG] Saving telegram message ID: 18482
+[IMPORT LOG] Linking movie_id=18677 to tmdb_movie_id=3304
+[IMPORT LOG] Saving movie to DB: The Transporter 3 (2008)
+[IMPORT LOG] Saving telegram message ID: 18480
+[IMPORT LOG] Linking movie_id=18678 to tmdb_movie_id=4933
+[IMPORT LOG] Saving movie to DB: The Transporter 3 (2008)
+[IMPORT LOG] Saving telegram message ID: 18479
+[IMPORT LOG] Linking movie_id=18678 to tmdb_movie_id=4933
+[IMPORT LOG] Saving movie to DB: The 400 Blows (1957)
+[IMPORT LOG] Saving telegram message ID: 18478
+[IMPORT LOG] Linking movie_id=18694 to tmdb_movie_id=4048
+[IMPORT LOG] Saving movie to DB: French Exit (2020)
+[IMPORT LOG] Saving telegram message ID: 18476
+[IMPORT LOG] Linking movie_id=18695 to tmdb_movie_id=1667
+[IMPORT LOG] Saving movie to DB: French Exit (2020)
+[IMPORT LOG] Saving telegram message ID: 18475
+[IMPORT LOG] Linking movie_id=18695 to tmdb_movie_id=1667
+[IMPORT LOG] Saving movie to DB: Noelle (2019)
+[IMPORT LOG] Saving telegram message ID: 18473
+[IMPORT LOG] Linking movie_id=18696 to tmdb_movie_id=3001
+[IMPORT LOG] Saving movie to DB: Noelle (2019)
+[IMPORT LOG] Saving telegram message ID: 18472
+[IMPORT LOG] Linking movie_id=18696 to tmdb_movie_id=3001
+[IMPORT LOG] Saving movie to DB: The da vinci code (2006)
+[IMPORT LOG] Saving telegram message ID: 18470
+[IMPORT LOG] Linking movie_id=18697 to tmdb_movie_id=4224
+[IMPORT LOG] Saving movie to DB: The Da Vinci Code (2006)
+[IMPORT LOG] Saving telegram message ID: 18469
+[IMPORT LOG] Linking movie_id=18698 to tmdb_movie_id=4224
+[IMPORT LOG] Saving movie to DB: The Da Vinci Code (2006)
+[IMPORT LOG] Saving telegram message ID: 18468
+[IMPORT LOG] Linking movie_id=18697 to tmdb_movie_id=4224
+[IMPORT LOG] Saving movie to DB: The Da Vinci Code (2006)
+[IMPORT LOG] Saving telegram message ID: 18467
+[IMPORT LOG] Linking movie_id=18697 to tmdb_movie_id=4224
+[IMPORT LOG] Saving movie to DB: Love across time
+[IMPORT LOG] Saving telegram message ID: 18465
+[IMPORT LOG] Linking movie_id=18699 to tmdb_movie_id=2585
+[IMPORT LOG] Saving movie to DB: Love across time
+[IMPORT LOG] Saving telegram message ID: 18464
+[IMPORT LOG] Linking movie_id=18699 to tmdb_movie_id=2585
+[IMPORT LOG] Saving movie to DB: What Dreams May Come (1998)
+[IMPORT LOG] Saving telegram message ID: 18462
+[IMPORT LOG] Linking movie_id=18700 to tmdb_movie_id=5498
+[IMPORT LOG] Saving movie to DB: What Dreams May Come (1998)
+[IMPORT LOG] Saving telegram message ID: 18461
+[IMPORT LOG] Linking movie_id=18700 to tmdb_movie_id=5498
+[IMPORT LOG] Saving movie to DB: Torpedo U 235 (2019)
+[IMPORT LOG] Saving telegram message ID: 18459
+[IMPORT LOG] First TMDB lookup for: Torpedo U 235 (2019)
+[IMPORT LOG] Saving TMDB movie to DB for TMDB ID: 554022
+[IMPORT LOG] Linking movie_id=18701 to tmdb_movie_id=5252
+[IMPORT LOG] Saving movie to DB: Torpedo U 235 (2019)
+[IMPORT LOG] Saving telegram message ID: 18458
+[IMPORT LOG] Linking movie_id=18701 to tmdb_movie_id=5252
+[IMPORT LOG] Saving movie to DB: Torpedo U 235 (2019)
+[IMPORT LOG] Saving telegram message ID: 18457
+[IMPORT LOG] Linking movie_id=18701 to tmdb_movie_id=5252
+[IMPORT LOG] Saving movie to DB: Master (2016)
+[IMPORT LOG] Saving telegram message ID: 18455
+[IMPORT LOG] Linking movie_id=18702 to tmdb_movie_id=2673
+[IMPORT LOG] Saving movie to DB: Master (2016)
+[IMPORT LOG] Saving telegram message ID: 18454
+[IMPORT LOG] Linking movie_id=18702 to tmdb_movie_id=2673
+[IMPORT LOG] Saving movie to DB: Master (2016)
+[IMPORT LOG] Saving telegram message ID: 18453
+[IMPORT LOG] Linking movie_id=18702 to tmdb_movie_id=2673
+[IMPORT LOG] Saving movie to DB: Master (2016)
+[IMPORT LOG] Saving telegram message ID: 18452
+[IMPORT LOG] Linking movie_id=18702 to tmdb_movie_id=2673
+[IMPORT LOG] Saving movie to DB: The Roundup 2022
+[IMPORT LOG] Saving telegram message ID: 18450
+[IMPORT LOG] Linking movie_id=18703 to tmdb_movie_id=4805
+[IMPORT LOG] Saving movie to DB: The Roundup 2022
+[IMPORT LOG] Saving telegram message ID: 18449
+[IMPORT LOG] Linking movie_id=18703 to tmdb_movie_id=4805
+[IMPORT LOG] Saving movie to DB: The Roundup 2022
+[IMPORT LOG] Saving telegram message ID: 18448
+[IMPORT LOG] Linking movie_id=18703 to tmdb_movie_id=4805
+[IMPORT LOG] Saving movie to DB: The Roundup 2022
+[IMPORT LOG] Saving telegram message ID: 18447
+[IMPORT LOG] Linking movie_id=18703 to tmdb_movie_id=4805
+[IMPORT LOG] Saving movie to DB: The Outlaws (1) 2017
+[IMPORT LOG] Saving telegram message ID: 18446
+[IMPORT LOG] First TMDB lookup for: The Outlaws 1 (2017)
+[IMPORT LOG] Saving TMDB movie to DB for TMDB ID: 479718
+[IMPORT LOG] Linking movie_id=18704 to tmdb_movie_id=4703
+[IMPORT LOG] Saving movie to DB: The Outlaws 2017
+[IMPORT LOG] Saving telegram message ID: 18445
+[IMPORT LOG] Linking movie_id=18705 to tmdb_movie_id=4703
+[IMPORT LOG] Saving movie to DB: The Outlaws (1) 2017
+[IMPORT LOG] Saving telegram message ID: 18444
+[IMPORT LOG] Linking movie_id=18704 to tmdb_movie_id=4703
+[IMPORT LOG] Saving movie to DB: The Outlaws 2017
+[IMPORT LOG] Saving telegram message ID: 18443
+[IMPORT LOG] Saving telegram message IDtmdb_movie_id=4703: 18440                                 Elite (2011)
+[IMPORT LOG] Linking movie_id=18706 to : 18441
+tmdb_movie_id=2362                     tmdb_movie_id=2362
+[IMPORT LOG] Saving movie to DB: Killer Elite (2011) elite (2011)                          : 18440
+[IMPORT LOG] Saving telegram message IDtmdb_movie_id=2362: 18439                                 elite (2011)
+[IMPORT LOG] Linking movie_id=18707 to : 18439
+tmdb_movie_id=2362                     tmdb_movie_id=2362
+[IMPORT LOG] Saving movie to DB: Killer Elite (2011)
+[IMPORT LOG] Saving telegram message ID: 18438
+[IMPORT LOG] Linking movie_id=18706 to 
+tmdb_movie_id=2362
+[IMPORT LOG] Saving movie to DB: Killer Elite (2011)
+[IMPORT LOG] Saving telegram message ID: 18437
+[IMPORT LOG] Linking movie_id=18706 to 
+tmdb_movie_id=2362
+[IMPORT LOG] Saving movie to DB: The Man with the Iron Fists
+[IMPORT LOG] Saving telegram message ID: 18435
+[IMPORT LOG] Linking movie_id=18708 to 
+tmdb_movie_id=4606
+[IMPORT LOG] Saving movie to DB: The Man with the Iron Fists
+[IMPORT LOG] Saving telegram message ID: 18434
+8708 to tmdb_movie_id=4606     8708 to 
+[IMPORT LOG] Saving movie to DB: The Man With the Iron Fists 2: The Ma012
+[IMPORT LOG] Saving telegram message IDssage ID: 18433
+[IMPORT LOG] Linking movie_id=18709 to 8709 to tmdb_movie_id=4606     
+[IMPORT LOG] Saving movie to DB: Search: Searching (2018)
+[IMPORT LOG] Saving telegram message ID: 18431
+[IMPORT LOG] Linking movie_id=18710 to tmdb_movie_id=3594     
+[IMPORT LOG] Saving movie to DB: Searching (2018)
+[IMPORT LOG] Saving telegram message ID: 18430
+[IMPORT LOG] Linking movie_id=18710 to tmdb_movie_id=3594     
+[IMPORT LOG] Saving movie to DB: Searching (2018)
+[IMPORT LOG] Saving telegram message ID: 18429
+[IMPORT LOG] Linking movie_id=18710 to tmdb_movie_id=3594     
+[IMPORT LOG] Saving movie to DB: Searching (2018)
+[IMPORT LOG] Saving telegram message ID: 18428
+[IMPORT LOG] Linking movie_id=18710 to tmdb_movie_id=3594     
+[IMPORT LOG] Saving movie to DB: Wag The Dog (1997)
+[IMPORT LOG] Saving telegram message ID: 18426
+[IMPORT LOG] Linking movie_id=18711 to tmdb_movie_id=5448
+[IMPORT LOG] Saving movie to DB: Wag The Dog
+[IMPORT LOG] Saving telegram message ID: 18425
+[IMPORT LOG] Linking movie_id=18712 to tmdb_movie_id=5448
+[IMPORT LOG] Saving movie to DB: How to Train Your Dragon (2010)
+[IMPORT LOG] Saving telegram message ID: 18423
+[IMPORT LOG] Linking movie_id=18713 to tmdb_movie_id=2051
+[IMPORT LOG] Saving movie to DB: How to Train Your Dragon (2010)
+[IMPORT LOG] Saving telegram message ID: 18422
+[IMPORT LOG] Linking movie_id=18713 to tmdb_movie_id=2051
+[IMPORT LOG] Saving movie to DB: How to Train Your Dragon (2010)
+[IMPORT LOG] Saving telegram message ID: 18421
+[IMPORT LOG] Linking movie_id=18713 to tmdb_movie_id=2051
+[IMPORT LOG] Saving movie to DB: How to Train Your Dragon (2010) 8.1 10
+[IMPORT LOG] Saving telegram message ID: 18420
+[IMPORT LOG] First TMDB lookup for: How to Train Your Dragon 81 10 (2010)
+Server sent a very old message with ID 7660859410164827137, ignoring (see FAQ for details)
+Server sent a very old message with ID 7660859440219470849, ignoring (see FAQ for details)
+Server sent a very old message with ID 7660859455839870977, ignoring (see FAQ for details)
+Server sent a very old message with ID 7660859650889952257, ignoring (see FAQ for details)
+[IMPORT LOG] Saving movie to DB: Virgin Territory 2007
+[IMPORT LOG] Saving telegram message ID: 18418
+[IMPORT LOG] Linking movie_id=18715 to tmdb_movie_id=5438
+[IMPORT LOG] Saving movie to DB: Virgin Territory 2007
+[IMPORT LOG] Saving telegram message ID: 18417
+[IMPORT LOG] Linking movie_id=18715 to tmdb_movie_id=5438
+[IMPORT LOG] Saving movie to DB: Drive.Me.Crazy.1999
+[IMPORT LOG] Saving telegram message ID: 18415
+[IMPORT LOG] First TMDB lookup for: DriveMeCrazy (1999)
+[IMPORT LOG] Saving TMDB movie to DB for TMDB ID: 14429
+[IMPORT LOG] Linking movie_id=18716 to tmdb_movie_id=1386
+[IMPORT LOG] Saving movie to DB: Drive.Me.Crazy.1999
+[IMPORT LOG] Saving telegram message ID: 18414
